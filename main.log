@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.30)  30 JUN 2015 20:51
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.30)  15 JUL 2015 00:52
 entering extended mode
 **main.tex
-(D:\Code\tesis-CIMBUC\tomo\main.tex
+(D:\Code\tomo\main.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -200,7 +200,7 @@ Package babel Info: Making . an active character on input line 585.
 Package babel Info: Making < an active character on input line 630.
 Package babel Info: Making > an active character on input line 630.
 ))
-(D:\Code\tesis-CIMBUC\tomo\main.aux)
+(D:\Code\tomo\main.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
@@ -291,8 +291,8 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
 
 [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <D:/Code/tesis-CIMBUC/tomo
-/img/logo-uc.png>]
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <D:/Code/tomo/img/logo-uc.
+png>]
 File: ./img/logo-uc.png Graphic file (type png)
  <use ./img/logo-uc.png>
 Package pdftex.def Info: ./img/logo-uc.png used on input line 64.
@@ -304,23 +304,23 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <17.28> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 102.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 104.
- [2] [3] [4]
+ [2] [3] [4] [5]
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\microtype\mt-cmr.cfg"
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 143.
+(Font)              <10.95> on input line 154.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 143.
+(Font)              <8> on input line 154.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 143.
+(Font)              <6> on input line 154.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 144.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 155.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 144.
- [5]
-[6] [7] [8]
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 155.
+ [6]
+[7] [8]
 Missing character: There is no ‚ in font phvr7t!
 Missing character: There is no Ä in font phvr7t!
 Missing character: There is no ú in font phvr7t!
@@ -339,43 +339,36 @@ Missing character: There is no ú in font phvr7t!
 Missing character: There is no ‚ in font phvr7t!
 Missing character: There is no Ä in font phvr7t!
 Missing character: There is no ù in font phvr7t!
- [9]
-Missing character: There is no ‚ in font phvr7t!
-Missing character: There is no Ä in font phvr7t!
-Missing character: There is no ú in font phvr7t!
-Missing character: There is no ‚ in font phvr7t!
-Missing character: There is no Ä in font phvr7t!
-Missing character: There is no ù in font phvr7t!
- [10]
+ [9] [10]
 <img/investigacion-accion.png, id=42, 436.5108pt x 242.8272pt>
 File: img/investigacion-accion.png Graphic file (type png)
 
 <use img/investigacion-accion.png>
-Package pdftex.def Info: img/investigacion-accion.png used on input line 198.
+Package pdftex.def Info: img/investigacion-accion.png used on input line 210.
 (pdftex.def)             Requested size: 336.11433pt x 186.97751pt.
- [11 <D:/Code/tesis-CIMBUC/tomo/img/investigacion-accion.png>]
+ [11 <D:/Code/tomo/img/investigacion-accion.png>]
 Missing character: There is no √ in font phvr7t!
 Missing character: There is no ≥ in font phvr7t!
 Missing character: There is no √ in font phvr7t!
 Missing character: There is no ≥ in font phvr7t!
- [12] [13] [14] [15] (D:\Code\tesis-CIMBUC\tomo\main.aux) )
+ [12] [13] [14] [15] (D:\Code\tomo\main.aux) )
 (\end occurred inside a group at level 1)
 
 ### semi simple group (level 1) entered at line 5 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 5386 strings out of 493921
- 82865 string characters out of 3144870
+ 5389 strings out of 493921
+ 82804 string characters out of 3144870
  180641 words of memory out of 3000000
  8437 multiletter control sequences out of 15000+200000
- 32441 words of font info for 170 fonts, out of 3000000 for 9000
+ 32554 words of font info for 172 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 36i,10n,38p,1316b,3990s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,10n,38p,1041b,3990s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.
 enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/
 Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (16 pages, 106908 bytes).
+Output written on main.pdf (16 pages, 106517 bytes).
 PDF statistics:
  72 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
