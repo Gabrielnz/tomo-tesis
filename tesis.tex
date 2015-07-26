@@ -13,6 +13,8 @@
 \usepackage[font={footnotesize}]{caption} % tamano para la descripcion de las tablas
 \captionsetup{labelformat=empty} % elimina el prefijo de los nombres de las tablas
 \usepackage{array}
+\usepackage{float}
+\usepackage{makecell}
 \usepackage{graphicx}
 \usepackage[spanish,es-tabla,english]{babel}
 \usepackage[authoryear,datebegin]{flexbib}
@@ -27,7 +29,17 @@
 	}
 }
 
-\newcommand{\titulo}{SOFTWARE PARA EL ESPECTROFOT\'{O}METRO ``MINISCAN XE PLUS'' USADO EN EL DIAGN\'{O}STICO DE PATOLOG\'{I}AS DERMATOL\'{O}GICAS EN PACIENTES. CASO DE ESTUDIO: CIMBUC.}
+\newcommand{\titulo}{SOFTWARE PARA EL ESPECTROFOT\'{O}METRO MINISCAN XE PLUS USADO EN EL DIAGN\'{O}STICO DE PATOLOG\'{I}AS DERMATOL\'{O}GICAS EN PACIENTES. CASO DE ESTUDIO: CIMBUC.}
+
+\makeatletter
+\renewcommand{\@chapapp}{Cap\'{i}tulo}% Not necessary...
+\newenvironment{chapquote}[2][2em]
+  {\setlength{\@tempdima}{#1}%
+   \def\chapquote@author{#2}%
+   \parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
+   \itshape}
+  {\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
+\makeatother
 
 \begin{document}
 	\selectlanguage{spanish}
