@@ -19,7 +19,10 @@
 \usepackage[spanish,es-tabla,english]{babel}
 \usepackage[authoryear,datebegin]{flexbib}
 \bibliographystyle{flexbib}
-\usepackage{fancyhdr}
+%header de los capitulos
+%\usepackage{fancyhdr}
+%\fancyhead{}
+%\fancyhead[C]{\leftmark}
 
 \newcommand{\membrete}{
 	\includegraphics[width=0.15\textwidth]{./img/logo-uc.png}~\\[1cm]
@@ -47,7 +50,7 @@
 	\include{portada}
 	\include{resumen}
 	\newpage
-	\pagestyle{fancy}
+	%\pagestyle{fancy}
 	\include{introduccion}
 	\newpage
 	\include{capitulo_1}
