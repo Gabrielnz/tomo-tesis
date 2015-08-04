@@ -3,5 +3,6 @@
 *.txt
 *.blg
 *.synctex.gz
+*.synctex.gz(busy)
 *.log
 *.bbl

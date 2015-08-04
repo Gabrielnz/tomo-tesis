@@ -1,13 +1,12 @@
 %Configuracion del tipo de documento, los margenes, la sangria y el interlineado
 \documentclass[12pt, a4paper]{report}
-\usepackage[top=2.5cm, bottom=2.5cm, left=3cm,right=2.5cm]{geometry}
-\usepackage{setspace} %colocar interlineado
-\spacing{1.5} % interlineado 1.5
-\setlength{\parindent}{1cm} % sangria
+\usepackage[top=3cm, bottom=3cm, left=4cm,right=3cm]{geometry}
+\usepackage{setspace} %interlineado
+\setlength{\parindent}{7mm} % sangria
 \setlength{\parskip}{\baselineskip} %espacio entre parrafos
 \usepackage{microtype} %realiza micro-arreglos en los parrafos para que queden mas justificados
-\renewcommand{\rmdefault}{phv} % Arial
-\renewcommand{\sfdefault}{phv} % Arial
+%\renewcommand{\rmdefault}{phv} % Arial
+%\renewcommand{\sfdefault}{phv} % Arial
 \usepackage{placeins} % ayuda a que las tablas no queden en medio de los textos
 \usepackage{tabulary} %tabla que ajusta celdas al texto
 \usepackage[font={footnotesize}]{caption} % tamano para la descripcion de las tablas
@@ -16,43 +15,48 @@
 \usepackage{float}
 \usepackage{makecell}
 \usepackage{graphicx}
-\usepackage[spanish,es-tabla,english]{babel}
+\usepackage[spanish,es-tabla]{babel}
 \usepackage[authoryear,datebegin]{flexbib}
 \bibliographystyle{flexbib}
-%header de los capitulos
-%\usepackage{fancyhdr}
-%\fancyhead{}
-%\fancyhead[C]{\leftmark}
+\usepackage{fancyhdr}%header de los capitulos
+\fancyhead{}
+\fancyhead[L]{\leftmark}
 
 \newcommand{\membrete}{
 	\includegraphics[width=0.15\textwidth]{./img/logo-uc.png}~\\[1cm]
 
-	\textsc{ UNIVERSIDAD DE CARABOBO \\	
-	Facultad Experimental de Ciencias y Tecnolog\'{i}a\\
-	Departamento de Computaci\'{o}n
-	}
+	UNIVERSIDAD DE CARABOBO \\	
+	FACULTAD EXPERIMENTAL DE CIENCIAS Y TECNOLOG\'{I}A\\
+	DEPARTAMENTO DE COMPUTACI\'{O}N
+	
 }
 
-\newcommand{\titulo}{SOFTWARE PARA EL ESPECTROFOT\'{O}METRO MINISCAN XE PLUS USADO EN EL DIAGN\'{O}STICO DE PATOLOG\'{I}AS DERMATOL\'{O}GICAS EN PACIENTES. CASO DE ESTUDIO: CIMBUC.}
+\newcommand{\titulo}{\textbf{SOFTWARE PARA EL ESPECTROFOT\'{O}METRO MINISCAN XE PLUS USADO EN EL DIAGN\'{O}STICO DE PATOLOG\'{I}AS DERMATOL\'{O}GICAS EN PACIENTES. CASO DE ESTUDIO: CIMBUC.}}
 
-\makeatletter
-\renewcommand{\@chapapp}{Cap\'{i}tulo}% Not necessary...
-\newenvironment{chapquote}[2][2em]
-  {\setlength{\@tempdima}{#1}%
-   \def\chapquote@author{#2}%
-   \parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
-   \itshape}
-  {\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
-\makeatother
+\newcommand{\fecha}{Naguanagua, \today.}
+
+\newcommand{\anchotabla}{14cm}
+
+%\newcommand{\sangriareferencias}{\hspace{7mm}}
+
+%\newcommand{\espacioreferencias}{\vspace{2.5mm}}
+
+\renewcommand\thechapter{\Roman{chapter}}
+
+\renewcommand\thesection{\arabic{chapter}.\arabic{section}}
+
+\selectlanguage{spanish}
 
 \begin{document}
-	\selectlanguage{spanish}
-	\include{portada}
+	\include{portada_0}
+	\include{portada_1}
+	\include{dedicatoria}
+	\include{agradecimientos}
 	\include{resumen}
-	\newpage
-	%\pagestyle{fancy}
+	\pagestyle{fancy}
 	\include{introduccion}
 	\newpage
+	\spacing{1.5} % interlineado
 	\include{capitulo_1}
 	\newpage
 	\include{capitulo_2}
@@ -66,5 +70,7 @@
 	%\nocite{HunterLab-manual}	
 	%\nocite{MiniScanXEPlus-manual}
 	\nocite{*}
+	\renewcommand\bibname{Referencias}
+	%\include{bibliografia}
 	\bibliography{bibliografia}
 \end{document}

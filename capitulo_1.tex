@@ -1,11 +1,9 @@
-\chapter{\label{cap:1}El Problema}
+\chapter{El Problema}
 
-\begin{chapquote}{Richard Stallman}
-<<Software privativo significa que priva a los usuarios de su libertad.>>
-\end{chapquote}
+En este cap\'{i}tulo se presenta la problem\'{a}tica que motiva al desarrollo de este trabajo de investigac\'{i}on, as\'{i} como tambi\'{e}n la importancia que tiene para el \'{a}mbito m\'{e}dico dermatol\'{o}gico, y los objetivos a lograr con la investigaci\'{o}n.
 
-	\section{Planteamiento del Problema}	
-\cite{Bersha} indica que el color y la apariencia de la piel humana es importante en el campo de la medicina. Durante el diagn\'{o}stico de enfermedades de la piel, la observaci\'{o}n cuidadosa y la evaluaci\'{o}n visual del \'{a}rea sospechada es siempre el primer paso, y el m\'{a}s importante. Esto es seguido generalmente por una escisi\'{o}n o biopsia por punci\'{o}n, en la que se extrae una muestra de tejido de la piel para un an\'{a}lisis microsc\'{o}pico. La observaci\'{o}n visual suele ser subjetiva, y los pacientes a menudo se someten a cicatrices y dolor durante la biopsia. Por otro lado, las t\'{e}cnicas \'{o}pticas son por lo general no invasivas, y sus resultados son a menudo objetivos. Durante el diagn\'{o}stico no invasivo, no se crea ninguna ruptura en la piel, y los pacientes no se someten al dolor ni a cicatrices durante el tratamiento.
+	\section{Planteamiento del problema}	
+El color y la apariencia de la piel humana es importante en el campo de la medicina. Durante el diagn\'{o}stico de enfermedades de la piel, la observaci\'{o}n cuidadosa y la evaluaci\'{o}n visual del \'{a}rea sospechada es siempre el primer paso, y el m\'{a}s importante. Esto es seguido generalmente por una escisi\'{o}n o biopsia por punci\'{o}n, en la que se extrae una muestra de tejido de la piel para un an\'{a}lisis microsc\'{o}pico. La observaci\'{o}n visual suele ser subjetiva, y los pacientes a menudo se someten a cicatrices y dolor durante la biopsia. Por otro lado, las t\'{e}cnicas \'{o}pticas son por lo general no invasivas, y sus resultados son a menudo objetivos. Durante el diagn\'{o}stico no invasivo, no se crea ninguna ruptura en la piel, y los pacientes no se someten al dolor ni a cicatrices durante el tratamiento. \cite{Bersha}.
 
 Los avances tecnol\'{o}gicos de la actualidad permiten emplear t\'{e}cnicas de \'{o}ptica, que tienen la capacidad de estudiar  las propiedades estructurales y bioqu\'{i}micas del tejido biol\'{o}gico, de manera precisa y no invasiva. Los instrumentos que emplean tales t\'{e}cnicas son de gran ayuda para los m\'{e}dicos dermat\'{o}logos, raz\'{o}n por la cual dichos instrumentos han tomado suma importancia en el \'{a}rea m\'{e}dica dermatol\'{o}gica.
 
@@ -23,7 +21,7 @@ Motivado a lo anterior, se desarroll\'{o} un nuevo software modificable y extens
 
 Finalmente, con esta investigaci\'{o}n se espera fomentar la utilizaci\'{o}n del \mbox{MiniScan} XE Plus por medio del nuevo software, mejorar la capacitaci\'{o}n del personal m\'{e}dico dermatol\'{o}gico para su debido uso, reducir el tiempo de las consultas con los pacientes, y, por \'{u}ltimo, aportar una base s\'{o}lida sobre la cual se puedan desarrollar nuevos proyectos.
 
-	\section{Justificaci\'{o}n}
+	\section{Justificaci\'{o}n de la investigaci\'{o}n}
 	
 	Empezando con la interfaz gr\'{a}fica de usuario, \cite{Sommerville} se\~{n}ala que el dise\~{n}o cuidadoso de la misma es una parte fundamental del proceso de dise\~{n}o general del software. Si un software debe alcanzar su potencial m\'{a}ximo, es fundamental que su interfaz gr\'{a}fica de usuario sea dise\~{n}ada para ajustarse a las habilidades, experiencia y expectativas de sus usuarios previstos. Un buen dise\~{n}o de la interfaz gr\'{a}fica de usuario es cr\'{i}tico para la confiabilidad del software. Muchos de los llamados errores de usuario son causados porque las interfaces gr\'{a}ficas de usuario no consideran las habilidades de los usuarios reales y su entorno de trabajo.
 
@@ -39,7 +37,7 @@ El conjunto espec\'{i}fico de atributos que se espera de un software de calidad 
 			\caption{\textbf{Tabla 1.} \textit{Atributos esenciales de un software de calidad} (Fuente: Sommerville, 2005).}
 			\centering
 			\setlength{\extrarowheight}{3.5pt}
-			\begin{tabulary}{15cm}{|c|J|}
+			\begin{tabulary}{\anchotabla}{|c|J|}
 				
 				\hline
 				\thead{\textbf{\small{Caracter\'{i}stica}}} & \thead{\textbf{\small{Descripci\'{o}n}}}\\ \hline
@@ -55,13 +53,11 @@ Debido a que el HunterLab Universal Software es privativo, el CIMBUC no dispone 
 
 Las razones descritas anteriormente justifican la necesidad del desarrollo de un nuevo software para el uso del MiniScan XE Plus, que sea amigable, modificable y extensible; que ofrezca las funciones que necesitan los dermat\'{o}logos para establecer diagn\'{o}sticos, y que emplee el uso del formato de historia m\'{e}dica con el que trabajan. Por \'{u}ltimo, se ha tomado como caso de estudio el CIMBUC.
 
-	\newpage
+	\section{Objetivos}
 
-	\section{Objetivos de la Investigaci\'{o}n}
-En la siguiente secci\'{o}n se especifican los objetivos del trabajo, distinguiendo entre el objetivo general y los objetivos espec\'{i}ficos.
-		\subsection{Objetivo General}
+		\subsection{Objetivo general}
 	Desarrollar un software para el espectrofot\'{o}metro MiniScan XE Plus, usado en el diagn\'{o}stico de patolog\'{i}as dermatol\'{o}gicas en pacientes, tomando como caso de estudio el CIMBUC.
-		\subsection{Objetivos Espec\'{i}ficos}
+		\subsection{Objetivos espec\'{i}ficos}
 			\begin{itemize}
 				\item Investigar el estado del arte referente a las caracter\'{i}sticas de software para espectrofot\'{o}metros de reflexi\'{o}n difusa, el dise\~{n}o y la calidad del software.
 				\item Seleccionar una metodolog\'{i}a de investigaci\'{o}n y una metodolog\'{i}a de desarrollo para el nuevo software.
