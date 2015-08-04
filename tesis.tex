@@ -1,10 +1,9 @@
-%Configuracion del tipo de documento, los margenes, la sangria y el interlineado
 \documentclass[12pt, a4paper]{report}
 \usepackage[top=3cm, bottom=3cm, left=4cm,right=3cm]{geometry}
 \usepackage{setspace} %interlineado
 \setlength{\parindent}{7mm} % sangria
 \setlength{\parskip}{\baselineskip} %espacio entre parrafos
-\usepackage{microtype} %realiza micro-arreglos en los parrafos para que queden mas justificados
+\usepackage{microtype} %realiza micro-arreglos en los parrafos para que queden mejor justificados
 %\renewcommand{\rmdefault}{phv} % Arial
 %\renewcommand{\sfdefault}{phv} % Arial
 \usepackage{placeins} % ayuda a que las tablas no queden en medio de los textos
@@ -20,7 +19,7 @@
 \bibliographystyle{flexbib}
 \usepackage{fancyhdr}%header de los capitulos
 \fancyhead{}
-\fancyhead[L]{\leftmark}
+\fancyhead[L]{\nouppercase{\leftmark}}
 
 \newcommand{\membrete}{
 	\includegraphics[width=0.15\textwidth]{./img/logo-uc.png}~\\[1cm]
@@ -36,6 +35,8 @@
 \newcommand{\fecha}{Naguanagua, \today.}
 
 \newcommand{\anchotabla}{14cm}
+
+\newcommand{\altocelda}{2pt}
 
 %\newcommand{\sangriareferencias}{\hspace{7mm}}
 
@@ -67,10 +68,7 @@
 	\newpage
 	\include{capitulo_5}
 	\newpage
-	%\nocite{HunterLab-manual}	
-	%\nocite{MiniScanXEPlus-manual}
 	\nocite{*}
 	\renewcommand\bibname{Referencias}
-	%\include{bibliografia}
 	\bibliography{bibliografia}
 \end{document}
