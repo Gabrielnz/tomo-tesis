@@ -9,12 +9,12 @@
 
 	Esta metodolog\'{i}a tiene una doble finalidad: generar un beneficio al cliente de la investigaci\'{o}n y al mismo tiempo, generar conocimiento de investigaci\'{o}n relevante. Por lo tanto, es una forma de investigar de car\'{a}cter colaborativo que busca unir teor\'{i}a y la pr\'{a}ctica entre investigadores y practicantes, mediante un proceso de naturaleza c\'{i}clica.
 
-	La representaci\'{o}n m\'{a}s habitual de la Investigaci\'{o}n-Acci\'{o}n es la descrita por \cite{Baskerville}, en forma de cinco fases que conforman un ciclo, las cuales se muestran en la Figura 1 y se describen a continuaci\'{o}n:
+	La representaci\'{o}n m\'{a}s habitual de la Investigaci\'{o}n-Acci\'{o}n es la descrita por \cite{Baskerville}, en forma de cinco fases que conforman un ciclo, las cuales se muestran en la figura 3.1 y se describen a continuaci\'{o}n:
 
 	\begin{figure}
 		\centering
 		\includegraphics[scale=0.77]{img/investigacion-accion.png}
-			\caption{\textbf{Figura 1.} \textit{Car\'{a}cter c\'{i}clico de la Investigaci\'{o}n-Acci\'{o}n} (Fuente: Baskerville, 1999).}
+			\caption{\textit{Car\'{a}cter c\'{i}clico de la Investigaci\'{o}n-Acci\'{o}n} (Fuente: Baskerville, 1999).}
 	\end{figure}
 
 	\begin{itemize}
@@ -25,12 +25,11 @@
 		\item \textbf{Fase de reflexi\'{o}n:} se toman los conocimientos adquiridos en la Investigaci\'{o}n-Acci\'{o}n. Si las acciones ejecutadas no fueron exitosas, los conocimientos pueden proporcionar la base para el diagn\'{o}stico de un nuevo ciclo de Investigaci\'{o}n-Acci\'{o}n.
 	\end{itemize}
 
-En la Tabla 2 se muestran las actividades de la presente investigaci\'{o}n, haciendo correspondencia a cada una de las fases de la Investigaci\'{o}n-Acci\'{o}n descritas por \cite{Baskerville}.
+En la tabla 3.1 se muestran las actividades de la presente investigaci\'{o}n, haciendo correspondencia a cada una de las fases de la Investigaci\'{o}n-Acci\'{o}n descritas por \cite{Baskerville}.
 
-\FloatBarrier %you shall not pass table!!
-	\begin{table}[htb]
+	\begin{table}[t]
 		\small
-		\caption{\textbf{Tabla 2.} \textit{Actividades del proyecto seg\'{u}n la Investigaci\'{o}n-Acci\'{o}n} (Fuente: Autor).}
+		\caption{\textit{Actividades del proyecto seg\'{u}n la Investigaci\'{o}n-Acci\'{o}n} (Fuente: Autor).}
 		\centering
 		\setlength{\extrarowheight}{\altocelda}
 		\begin{tabulary}{\anchotabla}{|c|J|}
@@ -44,19 +43,17 @@ En la Tabla 2 se muestran las actividades de la presente investigaci\'{o}n, haci
 			\textbf{Reflexi\'{o}n} & Presentar los resultados y los an\'{a}lisis de las pruebas realizadas.\\ \hline
 		\end{tabulary}
 	\end{table}
-\FloatBarrier %you shall not pass table!!
 
 	\section{Metodolog\'{i}a de desarrollo de software}
 Para que el desarrollo del nuevo software cumpliera con los objetivos propuestos la presente investigaci\'{o}n, y tomando en cuenta los lineamientos planteados por la ingenier\'{i}a del software, se realiz\'{o} una revisi\'{o}n del enfoque que deber\'{i}a tener la metodolog\'{i}a de desarrollo a utilizar.
 
 Seg\'{u}n \cite{Sommerville}, en los a\~{n}os 80 y a principios de los 90, exist\'{i}a una opini\'{o}n general de que la mejor forma de obtener un mejor software era a trav\'{e}s de una planificaci\'{o}n cuidadosa del proyecto, una garant\'{i}a de calidad formalizada, la utilizaci\'{o}n de m\'{e}todos de an\'{a}lisis y dise\~{n}o soportados por herramientas \textit{CASE}, y por medio de procesos de desarrollo de software controlados y rigurosos. El software que segu\'{i}a lo mencionado previamente, era desarrollado por grandes equipos que a veces trabajaban para compa\~{n}\'{i}as diferentes, que a menudo estaban dispersos geogr\'{a}ficamente y trabajaban en el software durante largos periodos de tiempo.
 
-Ahora bien, debido a que no se dispuso de un equipo grande para el desarrollo del nuevo software, y a que no se iba a trabajar en este durante un largo periodo de tiempo, se eligi\'{o} la utilizaci\'{o}n de una metodolog\'{i}a de desarrollo de enfoque \'{a}gil. Acorde con \cite{Sommerville}, los m\'{e}todos \'{a}giles dependen de un enfoque iterativo para la especificaci\'{o}n, desarrollo y entrega del software, y est\'{a}n pensados para entregar software funcional de forma r\'{a}pida a los clientes, quienes pueden entonces proponer que se incluyan en iteraciones posteriores del software nuevos requerimientos o cambios en los mismos. Si bien los m\'{e}todos \'{a}giles proponen procesos diferentes para el desarrollo y entrega incrementales de software, comparten unos principios en com\'{u}n, los cuales son ilustrados en la Tabla 3.
+Ahora bien, debido a que no se dispuso de un equipo grande para el desarrollo del nuevo software, y a que no se iba a trabajar en este durante un largo periodo de tiempo, se eligi\'{o} la utilizaci\'{o}n de una metodolog\'{i}a de desarrollo de enfoque \'{a}gil. Acorde con \cite{Sommerville}, los m\'{e}todos \'{a}giles dependen de un enfoque iterativo para la especificaci\'{o}n, desarrollo y entrega del software, y est\'{a}n pensados para entregar software funcional de forma r\'{a}pida a los clientes, quienes pueden entonces proponer que se incluyan en iteraciones posteriores del software nuevos requerimientos o cambios en los mismos. Si bien los m\'{e}todos \'{a}giles proponen procesos diferentes para el desarrollo y entrega incrementales de software, comparten unos principios en com\'{u}n, los cuales son ilustrados en la tabla 3.2.
 
-\FloatBarrier %you shall not pass table!!
-	\begin{table}[htb]
+	\begin{table}[t]
 		\small
-		\caption{\textbf{Tabla 3.} \textit{Principios de los m\'{e}todos \'{a}giles} (Fuente: Sommerville, 2005).}
+		\caption{\textit{Principios de los m\'{e}todos \'{a}giles} (Fuente: Sommerville, 2005).}
 		\centering
 		\setlength{\extrarowheight}{\altocelda}
 		\begin{tabulary}{\anchotabla}{|c|J|}
@@ -69,7 +66,6 @@ Ahora bien, debido a que no se dispuso de un equipo grande para el desarrollo de
 			\textbf{Mantener la simplicidad} & Se debe centrar la simplicidad tanto en el software a desarrollar como en el proceso de desarrollo. Donde sea posible, se trabaja activamente para eliminar la complejidad del software.\\ \hline
 		\end{tabulary}
 	\end{table}
-\FloatBarrier %you shall not pass table!!
 
 		\subsection{SCRUM}
 De acuerdo con \cite{Schwaber&Sutherland}, esta metodolog\'{i}a \'{a}gil es un marco de trabajo de procesos, que ha sido utilizado para gestionar el desarrollo de productos complejos desde principios de los a\~{n}os 90. SCRUM muestra la eficacia relativa de las pr\'{a}cticas de gesti\'{o}n de productos y las pr\'{a}cticas de desarrollo.
@@ -122,12 +118,13 @@ La estructura de desarrollo de SCRUM se basa en ciclos de trabajo llamados \text
 				
 			\end{itemize}
 			
-En esta metodolog\'{i}a se pueden emplear varias t\'{e}cnicas y procesos. Dicho lo anterior, adicionalmente a la utilizaci\'{o}n de SCRUM, se incluyeron algunos artefactos de la metodolog\'{i}a RUP (Rational Unified Process) descrita por \cite{Kroll&Kruchten}, para as\'{i} generar suficiente documentaci\'{o}n durante el dise\~{n}o y el desarrollo del nuevo software. La configuraci\'{o}n de la metodolog\'{i}a SCRUM utlizada, en conjunto con los artefactos elegidos de la metodolog\'{i}a RUP, es la ilustrada en la Tabla 5.
+En esta metodolog\'{i}a se pueden emplear varias t\'{e}cnicas y procesos. Dicho lo anterior, adicionalmente a la utilizaci\'{o}n de SCRUM, se incluyeron algunos artefactos de la metodolog\'{i}a RUP (Rational Unified Process) descrita por \cite{Kroll&Kruchten}, para as\'{i} generar suficiente documentaci\'{o}n durante el dise\~{n}o y el desarrollo del nuevo software. La configuraci\'{o}n de la metodolog\'{i}a SCRUM utlizada, en conjunto con los artefactos elegidos de la metodolog\'{i}a RUP, es la ilustrada en la tabla 3.3.
 
-\FloatBarrier %you shall not pass table!!
-		\begin{table}[htb]
+		\newpage
+		\null
+		\begin{table}[t]
 			\small
-			\caption{\textbf{Tabla 5.} \textit{Configuraci\'{o}n de los artefactos a utilizar de SCRUM y RUP} (Fuente: Autor).}
+			\caption{\textit{Configuraci\'{o}n de los artefactos a utilizar de SCRUM y RUP} (Fuente: Autor).}
 			\centering
 			\setlength{\extrarowheight}{\altocelda}
 			\begin{tabulary}{\anchotabla}{|J|}
@@ -144,4 +141,4 @@ En esta metodolog\'{i}a se pueden emplear varias t\'{e}cnicas y procesos. Dicho 
 		\textbf{Diagrama de casos de uso: }muestra los procesos del negocio que son proporcionados para los actores del negocio.\\ \hline
 			\end{tabulary}
 		\end{table}
-\FloatBarrier %you shall not pass table!!
+		\vfill

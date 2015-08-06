@@ -6,3 +6,7 @@
 *.synctex.gz(busy)
 *.log
 *.bbl
+*.idx
+*.lof
+*.lot
+*.toc
