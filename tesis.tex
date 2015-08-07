@@ -3,7 +3,7 @@
 \usepackage{setspace} %interlineado
 \setlength{\parindent}{7mm} % sangria
 \setlength{\parskip}{\baselineskip} %espacio entre parrafos
-\usepackage{microtype} %realiza micro-arreglos en los parrafos para que queden mejor justificados
+\usepackage{microtype} %micro-arreglos en los parrafos para que queden mejor justificados
 %\renewcommand{\rmdefault}{phv} % Arial
 %\renewcommand{\sfdefault}{phv} % Arial
 \usepackage{placeins} % ayuda a que las tablas no queden en medio de los textos
@@ -13,11 +13,12 @@
 \usepackage{float}
 \usepackage{makecell}
 \usepackage{graphicx}
-\usepackage[spanish,es-tabla]{babel}
+\usepackage[spanish,es-tabla,es-lcroman]{babel}
+\selectlanguage{spanish}
 \usepackage[authoryear,datebegin]{flexbib}
 \bibliographystyle{flexbib}
 \usepackage{fancyhdr}
-\pagestyle{fancy}
+%\pagestyle{fancy}
 \fancyhead{}
 %\fancyfoot{}
 \fancyhead[L]{\nouppercase{\leftmark}}
@@ -44,7 +45,6 @@
 	Prof. Patricia Guerrero \\
 	Prof. Harold Vasquez
 }
-%\newcommand{\titulo}{\textbf{SOFTWARE PARA EL ESPECTROFOT\'{O}METRO MINISCAN XE PLUS USADO EN EL DIAGN\'{O}STICO DE PATOLOG\'{I}%AS DERMATOL\'{O}GICAS EN PACIENTES. CASO DE ESTUDIO: CIMBUC.}}
 
 \newcommand{\fecha}{Naguanagua, 
 \ifcase \month \or Enero\or Febrero\or Marzo\or Abril\or Mayo\or Junio\or Julio\or Agosto\or Septiembre\or Octubre\or Noviembre\or Diciembre\fi \space de \the\year.} 
@@ -52,10 +52,6 @@
 \newcommand{\anchotabla}{14cm}
 
 \newcommand{\altocelda}{2pt}
-
-%\newcommand{\sangriareferencias}{\hspace{7mm}}
-
-%\newcommand{\espacioreferencias}{\vspace{2.5mm}}
 
 \renewcommand\thechapter{\Roman{chapter}}
 
@@ -65,18 +61,17 @@
 
 \renewcommand\thetable{\arabic{chapter}.\arabic{table}}
 
-\selectlanguage{spanish}
+\renewcommand\bibname{Referencias}
 
 \begin{document}
 	\include{portada_0}
 	\include{portada_1}
-	\pagenumbering{roman}
+	\pagenumbering{roman}%numeracion romana
 	\include{dedicatoria}
 	\include{agradecimientos}
-	\thispagestyle{plain}
 	\include{resumen}
-	\thispagestyle{fancy}
-	\pagenumbering{arabic}
+	\pagestyle{fancy}%estilo del header
+	\pagenumbering{arabic}%numeracion arabica
 	\include{introduccion}
 	\tableofcontents
 	\listoffigures
@@ -88,6 +83,5 @@
 	\include{capitulo_4}
 	\include{capitulo_5}
 	\nocite{*}
-	\renewcommand\bibname{Referencias}
 	\bibliography{bibliografia}
 \end{document}
