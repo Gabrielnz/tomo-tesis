@@ -2,10 +2,119 @@
 
 En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desarrollo del presente trabajo de investigaci\'{o}n, siguiendo la metodolog\'{i}a Investigaci\'{o}n-Acci\'{o}n, y la configuraci\'{o}n de la metodolog\'{i}a SCRUM junto con los artefactos inclu\'{i}dos de la metodolog\'{i}a RUP.
 
-\section{Pila del producto \textit{(product backlog)}}
-	\blindtext
+\section{Visi\'{o}n}
 	
-	\begin{table}[t]
+	\subsection{Enunciado del problema}
+	
+	%\begin{table}[t]
+		%\small
+		%\caption[Enunciado del problema]{\textit{Enunciado del problema} (Fuente: Autor).}
+		%\centering
+		%\setlength{\extrarowheight}{\altocelda}
+		%\begin{tabulary}{\anchotabla}{|c|J|}
+		%	\hline
+		%	\textbf{El problema} & Se est\'{a} utilizando el HunterLab Universal Software para el manejo del espectrofot\'{o}metro de reflexi\'{o}n difusa MiniScan XE Plus, que est\'{a} en ingl\'{e}s, es comercial, privativo y fue descontinuado.\\ \hline
+		%	\textbf{Afecta a} & Los dermat\'{o}logos y los investigadores del Centro de Investigaciones M\'{e}dicas y Biotecnol\'{o}gicas de la Universidad de Carabobo (CIMBUC).\\ \hline
+		%	\textbf{El impacto causado} & Los dermat\'{o}logos e investigadores encuentran el HunterLab Universal Software dif\'{i}cil de utilizar, e imposible de adaptar a sus necesidades, lo que ralentiza la actividad de medici\'{o}n con el MiniScan XE Plus, genera la necesidad de disponer de personal especializado para su debido uso, y disminuye el potencial de dicho instrumento.\\ \hline
+		%	\textbf{Una soluci\'{o}n satisfactoria} & Disponer de un software para el uso del MiniScan XE Plus que est\'{e} en espa\~{n}ol, que sea amigable y mantenible, permitiendo que se adapte a las necesidades de los dermat\'{o}logos e investigadores.\\ \hline
+		%\end{tabulary}
+	%\end{table}
+	
+	El problema que se presenta es que se est\'{a} utilizando el HunterLab Universal Software para el manejo del espectrofot\'{o}metro de reflexi\'{o}n difusa MiniScan XE Plus, que est\'{a} en ingl\'{e}s, es comercial, privativo y fue descontinuado; esto afecta a los dermat\'{o}logos y los investigadores del Centro de Investigaciones M\'{e}dicas y Biotecnol\'{o}gicas de la Universidad de Carabobo (CIMBUC).
+	
+	El impacto causado por esto es que los dermat\'{o}logos e investigadores encuentran el HunterLab Universal Software dif\'{i}cil de utilizar, e imposible de adaptar a sus necesidades, lo que ralentiza la actividad de medici\'{o}n con el MiniScan XE Plus, genera la necesidad de disponer de personal especializado para su debido uso, y disminuye el potencial de dicho instrumento.
+	
+	Una soluci\'{o}n satisfactoria ser\'{i}a disponer de un software para el uso del \mbox{MiniScan} XE Plus que est\'{e} en espa\~{n}ol, que sea amigable y mantenible, permitiendo que se adapte a las necesidades de los dermat\'{o}logos e investigadores.
+	
+	\subsection{Descripci\'{o}n de los usuarios}
+	
+		\begin{table}[h]
+		\small
+		\caption[Actores del negocio]{\textit{Actores del negocio} (Fuente: Autor).}
+		\centering
+		\setlength{\extrarowheight}{\altocelda}
+		\begin{tabulary}{\anchotabla}{|c|J|}
+			\hline
+			\thead{\textbf{\small{Actor}}} & \thead{\textbf{\small{Descripci\'{o}n}}}\\ \hline
+			\textbf{Dermat\'{o}logo} & 
+			Realiza mediciones a los pacientes.
+			
+			Determina diagn\'{o}sticos a los pacientes.
+			
+			Gestiona los resultados de las mediciones.
+		\\ \hline
+			\textbf{Investigador} &
+			Realiza mediciones a los pacientes.
+			
+			Realiza actividades de investigaci\'{o}n.
+			
+			Gestiona los resultados de las mediciones.\\ \hline
+		\end{tabulary}
+	\end{table}
+	
+			\begin{table}[h]
+		\small
+		\caption[Usuarios del software]{\textit{Usuarios del software} (Fuente: Autor).}
+		\centering
+		\setlength{\extrarowheight}{\altocelda}
+		\begin{tabulary}{\anchotabla}{|c|L|c|c|}
+			\hline
+			\thead{\textbf{\small{Usuario}}} & \thead{\textbf{\small{Responsabilidad}}} & \thead{\textbf{\small{Experiencia}}} & \thead{\textbf{\small{Uso}}}\\ \hline
+			\textbf{Dermat\'{o}logo} &
+			Calibrar el instrumento.
+			
+			Realizar mediciones.
+			
+			Gestionar los resultados. &
+			Baja. &
+			Alto.\\ \hline
+			
+			\textbf{Investigador} &
+			Calibrar el instrumento.
+			
+			Realizar mediciones.
+			
+			Gestionar los resultados. &
+			Media. &
+			Alto.\\ \hline
+		\end{tabulary}
+	\end{table}
+	
+	\subsection{Resumen del producto}
+	
+	El software Spectrasoft es una aplicaci\'{o}n para el uso del MiniScan XE Plus, la recuperaci\'{o}n de los datos de medici\'{o}n de dicho instrumento, la generaci\'{o}n de resultados relevantes y la gesti\'{o}n de los mismos, el cu\'{a}l est\'{a} orientado a las actividades m\'{e}dicas dermatol\'{o}gicas y de investigaci\'{o}n del Centro de Investigaciones M\'{e}dicas y Biotecnol\'{o}gicas de la Universidad de Carabobo (CIMBUC). La tabla 4.3 resume los beneficios y las caracter\'{i}sticas m\'{a}s importantes que provee el producto.
+	
+	\begin{table}[h]
+		\small
+		\caption[Beneficios y caracter\'{i}sticas principales del producto]{\textit{Beneficios y caracter\'{i}sticas principales del producto} (Fuente: Autor).}
+		\centering
+		\setlength{\extrarowheight}{\altocelda}
+		\begin{tabulary}{\anchotabla}{|J|J|}
+			\hline
+			\thead{\textbf{\small{Beneficio al cliente}}} & \thead{\textbf{\small{Caracter\'{i}stica que lo soporta}}}\\ \hline
+			Los dermat\'{o}logos y los investigadores pueden conectarse con el MiniScan XE Plus, calibrarlo y realizar mediciones con este instrumento. & 
+			Comunicaci\'{o}n con el MiniScan XE Plus y acceso a las caracter\'{i}sticas comunmente utilizadas por el mismo.\\ \hline
+			Se dispone de informaci\'{o}n relevante para el diagn\'{o}stico de patolog\'{i}as en la piel de los pacientes. &
+			Muestra de los datos espectrales obtenidos de las mediciones, representaci\'{o}n gr\'{a}fica de los mismos, y c\'{a}lculo coordenadas, \'{i}ndices y coeficientes asociados a dichos datos.\\ \hline
+			Se pueden gestionar los resultados de las mediciones empleando el uso del formato con el que trabajan los dermat\'{o}logos y los investigadores. &
+			Guardado de los resultados en archivos port\'{a}tiles que poseen el formato que utilizan los dermat\'{o}logos y los investigadores, y cargado de los mismos al Spectrasoft para su visualizaci\'{o}n.\\ \hline
+			Los dermat\'{o}logos y los investigadores pueden utilizar el Spectrasoft con facilidad. &
+			Interfaz gr\'{a}fica de usuario en espa\~{n}ol, la cual ofrece \'{u}nicamente las funciones que necesitan los dermat\'{o}logos y los investigadores.\\ \hline
+			El Spectrasoft se puede adaptar a futuras necesidades de los dermat\'{o}logos y los investigadores. &
+			C\'{o}digo abierto disponible para realizar cualquier modificaci\'{o}n y/o extensi\'{o}n.\\ \hline
+		\end{tabulary}
+	\end{table}
+	
+	\subsection{Principales restricciones}
+	
+	El software debe desarrollarse utilizando el lenguaje de programaci\'{o}n C++, empleando \'{u}nicamente tecnolog\'{i}as gratuitas, y, en la medida de lo posible, de c\'{o}digo abierto. Este debe ser capaz de ejecutarse en sistemas operativos Windows actuales.
+	
+	La comunicaci\'{o}n entre el software y el MiniScan XE Plus debe lograrse tanto por medio de un puerto serial, como por medio de un adaptador USB.
+	
+\section{Pila del producto \textit{(product backlog)}}
+	Tal como fue descrito en el cap\'{i}tulo anterior, es una lista de \'{i}tems de trabajo descritos en un nivel funcional, que necesitan ser realizados a lo largo del tiempo del desarrollo del software Spectrasoft. En la tabla 4.4 se muestran dichos \'{i}tems.
+	
+	\begin{table}[h]
 		\small
 		\caption[Requerimientos funcionales del software]{\textit{Requerimientos funcionales del software} (Fuente: Autor).}
 		\centering
@@ -13,25 +122,28 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 		\begin{tabulary}{\anchotabla}{|c|J|c|}
 			\hline
 			\thead{\textbf{\small{C\'{o}digo}}} & \thead{\textbf{\small{Requerimiento}}} & \thead{\textbf{\small{Prioridad}}}\\ \hline
-			\textbf{RF01} & Recuperar los 31 puntos espectrales de la medici\'{o}n con el MiniScan XE Plus y mostrarlos en su forma num\'{e}rica. & Esencial\\ \hline
+			
+			\textbf{RF01} & Estandarizar o calibrar el MiniScan XE Plus. & Esencial\\ \hline
+			
+			\textbf{RF02} & Recuperar los 31 puntos espectrales de la medici\'{o}n con el MiniScan XE Plus y mostrarlos en su forma num\'{e}rica. & Esencial\\ \hline
 
-			\textbf{RF02} & Graficar una curva de reflectancia difusa a partir de los 31 puntos espectrales recuperados. & Esencial\\ \hline
-			\textbf{RF03} & Graficar una curva de absorbancia aparente a partir de los 31 puntos espectrales recuperados. & Esencial\\ \hline
-			\textbf{RF04} & Calcular y mostrar las coordenadas del sistema \textit{CIE XYZ 1964}. & Esencial\\ \hline
-			\textbf{RF05} & Calcular y mostrar las coordenadas del sistema \textit{CIE L*a*b* 1976}. & Esencial\\ \hline
-			\textbf{RF06} & Calcular y mostrar el coeficiente de absorci\'{o}n de la epidermis. & Esencial\\ \hline
-			\textbf{RF07} & Calcular y mostrar el coeficiente de esparcimiento de la epidermis. & Esencial\\ \hline
-			\textbf{RF08} & Calcular y mostrar el \'{i}ndice de eritema. & Esencial\\ \hline
-			\textbf{RF09} & Guardar los resultados en un archivo port\'{a}til, empleando el uso del formato de historia m\'{e}dica de los dermat\'{o}logos. & Esencial\\ \hline
-			\textbf{RF10} & Abrir y cargar los resultados guardados en el archivo port\'{a}til. & Esencial\\ \hline
+			\textbf{RF03} & Graficar una curva de reflectancia difusa a partir de los 31 puntos espectrales recuperados. & Esencial\\ \hline
+			\textbf{RF04} & Graficar una curva de absorbancia aparente a partir de los 31 puntos espectrales recuperados. & Esencial\\ \hline
+			\textbf{RF05} & Calcular y mostrar las coordenadas del sistema \textit{CIE XYZ 1964}. & Esencial\\ \hline
+			\textbf{RF06} & Calcular y mostrar las coordenadas del sistema \textit{CIE L*a*b* 1976}. & Esencial\\ \hline
+			\textbf{RF07} & Calcular y mostrar el coeficiente de absorci\'{o}n de la epidermis. & Esencial\\ \hline
+			\textbf{RF08} & Calcular y mostrar el coeficiente de esparcimiento de la epidermis. & Esencial\\ \hline
+			\textbf{RF09} & Calcular y mostrar el \'{i}ndice de eritema. & Esencial\\ \hline
+			\textbf{RF010} & Guardar los resultados en un archivo port\'{a}til, empleando el uso del formato de historia m\'{e}dica de los dermat\'{o}logos. & Esencial\\ \hline
+			\textbf{RF11} & Abrir y cargar los resultados guardados en el archivo port\'{a}til. & Esencial\\ \hline
 		\end{tabulary}
 	\end{table}
-	\FloatBarrier
 	
 \section{Requerimientos no funcionales}
-	\blindtext
 	
-	\begin{table}[t]
+	De acuerdo a la clasificaci\'{o}n de requerimientos no funcionales que presenta \cite{Sommerville}, en la tabla 4.5 se describen los requerimientos no funcionales para el Spectrasoft.
+	
+	\begin{table}[h]
 		\small
 		\caption[Requerimientos no funcionales del software]{\textit{Requerimientos no funcionales del software} (Fuente: Autor).}
 		\centering
@@ -41,12 +153,14 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 			\thead{\textbf{\small{C\'{o}digo}}} & \thead{\textbf{\small{Requerimiento}}} & \thead{\textbf{\small{Prioridad}}}\\ \hline
 			\textbf{RNF01} & El software debe ser f\'{a}cil de utilizar, por lo que debe cumplir con el atributo de usabilidad de un software de calidad. & Esencial\\ \hline
 			\textbf{RNF02} & El software debe ser capaz de adaptarse a las necesidades de los dermat\'{o}logos, raz\'{o}n por la cual debe cumplir con el atributo de mantenibilidad de un software de calidad. & Esencial\\ \hline
-			\textbf{RNF03} & El software debe ser capaz de ejecutarse en sistemas Windows actuales, con arquitecturas de 32 bits y 64 bits. & Esencial\\ \hline
-			\textbf{RNF04} & El software debe conectarse con el MiniScan XE Plus por medio de un adaptador USB. & Esencial\\ \hline
-			\textbf{RNF05} & El archivo port\'{a}til que maneja el software debe poder ser abierto por un visualizador/editor de hojas de c\'{a}lculo. & Esencial\\ \hline
-			\textbf{RNF06} & El software debe desarrollarse utilizando el lenguaje de programaci\'{o}n orientada a objetos C++. & Esencial\\ \hline
+			\textbf{RNF03} & El software debe desarrollarse empleando \'{u}nicamente tecnolog\'{i}as gratuitas, y, en la medida de lo posible, de c\'{o}digo abierto. & Esencial\\ \hline
+			\textbf{RNF04} & El software debe ser capaz de ejecutarse en sistemas Windows actuales, con arquitecturas de 32 bits y 64 bits. & Esencial\\ \hline
+			\textbf{RNF05} & El software debe conectarse con el MiniScan XE Plus por medio de un puerto serial o de un adaptador USB. & Esencial\\ \hline
+			\textbf{RNF06} & El archivo port\'{a}til que maneja el software debe poder ser abierto por un visualizador/editor de hojas de c\'{a}lculo. & Esencial\\ \hline
+			\textbf{RNF07} & El software debe desarrollarse utilizando el lenguaje de programaci\'{o}n orientada a objetos C++. & Esencial\\ \hline
 		\end{tabulary}
 	\end{table}
-	
-\section{Otra secci\'{o}n}
-	\blindtext
+
+\section{Casos de uso}
+
+\section{Glosario}

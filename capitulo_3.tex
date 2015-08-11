@@ -13,7 +13,7 @@
 
 	\begin{figure}
 		\centering
-		\includegraphics[scale=0.77]{img/investigacion-accion.png}
+		\includegraphics[scale=0.8]{img/investigacion-accion.png}
 			\caption[Car\'{a}cter c\'{i}clico de la Investigaci\'{o}n-Acci\'{o}n]{\textit{Car\'{a}cter c\'{i}clico de la Investigaci\'{o}n-Acci\'{o}n} (Fuente: Baskerville, 1999).}
 	\end{figure}
 
@@ -118,27 +118,25 @@ La estructura de desarrollo de SCRUM se basa en ciclos de trabajo llamados \text
 				
 			\end{itemize}
 			
-En esta metodolog\'{i}a se pueden emplear varias t\'{e}cnicas y procesos. Dicho lo anterior, adicionalmente a la utilizaci\'{o}n de SCRUM, se incluyeron algunos artefactos de la metodolog\'{i}a RUP (Rational Unified Process) descrita por \cite{Kroll&Kruchten}, para as\'{i} generar suficiente documentaci\'{o}n durante el dise\~{n}o y el desarrollo del nuevo software. La configuraci\'{o}n de la metodolog\'{i}a SCRUM utlizada, en conjunto con los artefactos elegidos de la metodolog\'{i}a RUP, es la ilustrada en la tabla 3.3.
+En esta metodolog\'{i}a se pueden emplear varias t\'{e}cnicas y procesos. Dicho lo anterior, adicionalmente a la utilizaci\'{o}n de SCRUM, se incluyeron algunos artefactos de la metodolog\'{i}a RUP (Rational Unified Process) descrita por \cite{Kroll&Kruchten}, para as\'{i} generar suficiente documentaci\'{o}n durante el dise\~{n}o y el desarrollo del nuevo software. 
 
-		\newpage
-		\null
-		\begin{table}[t]
-			\small
+	\subsection{Artefactos de RUP utilizados}
+	
+		\begin{itemize}
+			\item \textbf{Documento de visi\'{o}n: }define la visi\'{o}n de los \textit{stakeholders} con respecto al producto a desarrollarse, especificado en t\'{e}rminos de las caracter\'{i}sticas y las necesidades clave de estos \textit{stakeholders}.
+			
+			\item \textbf{Modelo de casos de uso: }describe los requerimientos funcionales del software en t\'{e}rminos de actores y casos de uso. Un actor representa el tipo de usuario del software, mientras que un caso de uso describe c\'{o}mo va a interactuar cada actor con el software.
+			
+			\item \textbf{Requerimientos no funcionales: } representan los requerimientos que tienen un impacto significativo en la arquitectura y en la satisfacci\'{o}n del usuario.
+			
+			\item \textbf{Glosario: }este define la terminolog\'{i}a empleada en los artefactos utilizados.
+		\end{itemize}
+
+Para finalizar, en la figura 3.2 es ilustrada la configuraci\'{o}n de la metodolog\'{i}a SCRUM utlizada, en conjunto con los artefactos elegidos de la metodolog\'{i}a RUP.
+	
+	\begin{figure}[t]
+		\centering
+		\includegraphics[scale=0.8]{img/SCRUM-RUP.png}
 			\caption[Configuraci\'{o}n de los artefactos a utilizar de SCRUM y RUP]{\textit{Configuraci\'{o}n de los artefactos a utilizar de SCRUM y RUP} (Fuente: Autor).}
-			\centering
-			\setlength{\extrarowheight}{\altocelda}
-			\begin{tabulary}{\anchotabla}{|J|}
-				\hline
-				\thead{\textbf{\small{Artefactos SCRUM}}}\\ \hline
-				\textbf{Pila del producto: }lista din\'{a}mica de las cosas que se deben hacer, sin especificar c\'{o}mo se deben hacer.\\ \hline
-				\textbf{Pila del \textit{sprint}:} recopilaci\'{o}n resumida de los \'{i}tems de la pila del producto, en donde se dividen los \'{i}tems en tareas peque\~{n}as que no demanden una labor superior a una jornada de trabajo.\\ \hline
-				\textbf{Incremento: }el producto final de cada \textit{sprint}. El mismo debe asemejarse a un software funcionando, permitiendo implementarse operativamente sin restricciones en un ambiente productivo.\\ \hline
-				\thead{\textbf{\small{Artefactos RUP}}}\\ \hline
-				\textbf{Documento de visi\'{o}n: }define el alcance en alto nivel y prop\'{o}sito del producto.\\
-\hline
-				\textbf{Glosario: }documento que define la terminolog\'{i}a empleada en los artefactos.\\ \hline
-				\textbf{Documento de requerimientos no funcionales: }describe los requerimientos que tienen un impacto significativo en la arquitectura y en la satisfacci\'{o}n del usuario.\\ \hline
-		\textbf{Diagrama de casos de uso: }muestra los procesos del negocio que son proporcionados para los actores del negocio.\\ \hline
-			\end{tabulary}
-		\end{table}
-		\vfill
+	\end{figure}
+	
