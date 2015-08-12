@@ -8,9 +8,9 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 	
 	El problema que se presenta es que se est\'{a} utilizando el HunterLab Universal Software para el manejo del espectrofot\'{o}metro de reflexi\'{o}n difusa MiniScan XE Plus, que est\'{a} en ingl\'{e}s, es comercial, privativo y fue descontinuado; esto afecta a los dermat\'{o}logos y los investigadores del Centro de Investigaciones M\'{e}dicas y Biotecnol\'{o}gicas de la Universidad de Carabobo (CIMBUC).
 	
-	El impacto causado por esto es que los dermat\'{o}logos e investigadores encuentran el HunterLab Universal Software dif\'{i}cil de utilizar, e imposible de adaptar a sus necesidades, lo que ralentiza la actividad de medici\'{o}n con el MiniScan XE Plus, genera la necesidad de disponer de personal especializado para su debido uso, y disminuye el potencial de dicho instrumento.
+	El impacto causado por esto es que los dermat\'{o}logos y los investigadores encuentran el HunterLab Universal Software dif\'{i}cil de utilizar, e imposible de adaptar a sus necesidades, lo que ralentiza la actividad de consulta con los pacientes, genera la necesidad de disponer de personal especializado para su debido uso, y disminuye el potencial de dicho instrumento.
 	
-	Una soluci\'{o}n satisfactoria ser\'{i}a disponer de un software para el uso del \mbox{MiniScan} XE Plus que est\'{e} en espa\~{n}ol, que sea amigable y mantenible, permitiendo que se adapte a las necesidades de los dermat\'{o}logos e investigadores.
+	Una soluci\'{o}n satisfactoria ser\'{i}a disponer de un software para el uso del \mbox{MiniScan} XE Plus que est\'{e} en espa\~{n}ol, que sea amigable y mantenible, permitiendo que se adapte a las necesidades de los dermat\'{o}logos y los investigadores.
 	
 	\subsection{Descripci\'{o}n de los usuarios}
 	
@@ -68,7 +68,7 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 	
 	\subsection{Resumen del producto}
 	
-	El software Spectrasoft es una aplicaci\'{o}n para el uso del MiniScan XE Plus, la recuperaci\'{o}n de los datos de medici\'{o}n de dicho instrumento, la generaci\'{o}n de resultados relevantes y la gesti\'{o}n de los mismos, el cu\'{a}l est\'{a} orientado a las actividades m\'{e}dicas dermatol\'{o}gicas y de investigaci\'{o}n del Centro de Investigaciones M\'{e}dicas y Biotecnol\'{o}gicas de la Universidad de Carabobo (CIMBUC). La tabla 4.3 resume los beneficios y las caracter\'{i}sticas m\'{a}s importantes que provee el producto.
+	El software desarrollado, denominado a partir de ahora Spectrasoft, es una aplicaci\'{o}n para el uso del MiniScan XE Plus, la recuperaci\'{o}n de los datos de medici\'{o}n de dicho instrumento, la generaci\'{o}n de resultados relevantes y la gesti\'{o}n de los mismos, el cu\'{a}l est\'{a} orientado a las actividades m\'{e}dicas dermatol\'{o}gicas y de investigaci\'{o}n del Centro de Investigaciones M\'{e}dicas y Biotecnol\'{o}gicas de la Universidad de Carabobo (CIMBUC). La tabla 4.3 resume los beneficios y las caracter\'{i}sticas m\'{a}s importantes que provee el producto.
 	
 	\begin{table}[h]
 		\small
@@ -80,7 +80,7 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 			\thead{\textbf{\small{Beneficio al cliente}}} & \thead{\textbf{\small{Caracter\'{i}stica que lo soporta}}}\\ \hline
 			Los dermat\'{o}logos y los investigadores pueden conectarse con el MiniScan XE Plus, calibrarlo y realizar mediciones con este instrumento. & 
 			Comunicaci\'{o}n con el MiniScan XE Plus y acceso a las caracter\'{i}sticas comunmente utilizadas por el mismo.\\ \hline
-			Se dispone de informaci\'{o}n relevante para el diagn\'{o}stico de patolog\'{i}as en la piel de los pacientes. &
+			Se dispone de informaci\'{o}n relevante para el diagn\'{o}stico de patolog\'{i}as dermatol\'{o}gicas en la piel de los pacientes. &
 			Muestra de los datos espectrales obtenidos de las mediciones, representaci\'{o}n gr\'{a}fica de los mismos, y c\'{a}lculo coordenadas, \'{i}ndices y coeficientes asociados a dichos datos.\\ \hline
 			Se pueden gestionar los resultados de las mediciones empleando el uso del formato con el que trabajan los dermat\'{o}logos y los investigadores. &
 			Guardado de los resultados en archivos port\'{a}tiles que poseen el formato que utilizan los dermat\'{o}logos y los investigadores, y cargado de los mismos al Spectrasoft para su visualizaci\'{o}n.\\ \hline
@@ -93,12 +93,10 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 	
 	\subsection{Principales restricciones}
 	
-	El software debe desarrollarse utilizando el lenguaje de programaci\'{o}n C++ para favorecer su rendimiento, empleando \'{u}nicamente tecnolog\'{i}as gratuitas, y, en la medida de lo posible, de c\'{o}digo abierto. Este debe ser capaz de ejecutarse en sistemas operativos Windows actuales.
-	
-	La comunicaci\'{o}n entre el software y el MiniScan XE Plus debe lograrse tanto por medio de un puerto serial, como por medio de un adaptador USB.
+	El software se desarrolla utilizando el lenguaje de programaci\'{o}n C++ para favorecer su rendimiento, empleando \'{u}nicamente tecnolog\'{i}as gratuitas, y, en la medida de lo posible, de c\'{o}digo abierto. Este debe ser capaz de ejecutarse en sistemas operativos Windows actuales. Por \'{u}ltimo, la comunicaci\'{o}n entre el software y el MiniScan XE Plus se logra tanto por medio de un puerto serial, como por medio de un adaptador USB.
 	
 \section{Pila del producto \textit{(product backlog)}}
-	Tal como fue descrito en el cap\'{i}tulo anterior, es una lista de \'{i}tems de trabajo descritos en un nivel funcional, que necesitan ser realizados a lo largo del tiempo del desarrollo del software Spectrasoft. En la tabla 4.4 se muestran dichos \'{i}tems.
+	La lista de requerimientos funcionales que necesitan ser realizados a lo largo del desarrollo del Spectrasoft, son el producto de una reuni\'{o}n que se tuvo con los dermat\'{o}logos y los investigadores del CIMBUC, al igual que de la observaci\'{o}n directa efectuada a las funciones que el HunterLab Universal Software ofrece para el manejo del MiniScan XE Plus. En la tabla 4.4 se muestran dichos requerimientos.
 	
 	\begin{table}[h]
 		\small
@@ -127,7 +125,7 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 	
 \section{Requerimientos no funcionales}
 	
-	De acuerdo a la clasificaci\'{o}n de requerimientos no funcionales que presenta \cite{Sommerville}, en la tabla 4.5 se describen los requerimientos no funcionales para el Spectrasoft.
+	De la misma forma que los requerimientos funcionales, la lista de los requerimientos no funcionales fue definida en la misma reuni\'{o}n con los dermat\'{o}logos y los investigadores, tomando en cuenta las restricciones del entorno en donde se va a ejecutar el Spectrasoft. En la tabla 4.5 se describen estos requerimientos no funcionales.
 	
 	\begin{table}[h]
 		\small
@@ -142,7 +140,7 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 			\textbf{RNF03} & El software debe desarrollarse empleando \'{u}nicamente tecnolog\'{i}as gratuitas, y, en la medida de lo posible, de c\'{o}digo abierto. & Esencial\\ \hline
 			\textbf{RNF04} & El software debe ser capaz de ejecutarse en sistemas Windows actuales, con arquitecturas de 32 bits y 64 bits. & Esencial\\ \hline
 			\textbf{RNF05} & El software debe conectarse con el MiniScan XE Plus por medio de un puerto serial o de un adaptador USB. & Esencial\\ \hline
-			\textbf{RNF06} & El archivo port\'{a}til que maneja el software debe poder ser abierto por un visualizador/editor de hojas de c\'{a}lculo. & Esencial\\ \hline
+			\textbf{RNF06} & El archivo port\'{a}til que maneja el software debe ser abierto por un visualizador/editor de hojas de c\'{a}lculo. & Esencial\\ \hline
 			\textbf{RNF07} & El software debe desarrollarse utilizando el lenguaje de programaci\'{o}n orientada a objetos C++. & Esencial\\ \hline
 		\end{tabulary}
 	\end{table}
