@@ -23,17 +23,21 @@ Este cap\'{i}tulo presenta los trabajos relacionados, la observaci\'{o}n directa
 		La ERD (espectroscop\'{i}a de reflectancia difusa) es una t\'{e}cnica con la cual se puede estudiar tejido biol\'{o}gico. En el campo de las aplicaciones biom\'{e}dicas resulta \'{u}til para prop\'{o}sitos de diagn\'{o}stico, ya que se pueden estudiar tejidos de manera no invasiva, tambi\'{e}n ha demostrado ser una t\'{e}cnica de gran utilidad en aplicaciones de diagn\'{o}stico en varias situaciones modernas (P\'{e}rez, 2012).
 		
 		Para llevar a cabo una medici\'{o}n con ERD se requiere hacer incidir la luz de una fuente, cuyo espectro de emisi\'{o}n sea conocido, sobre el tejido que se quiere estudiar. La luz que logra propagarse en el tejido y que es re-emitida por este hacia la superficie irradiada, ser\'{a} capturada por alg\'{u}n dispositivo fotosensible (en el caso de esta investigaci\'{o}n, el MiniScan XE Plus), para posteriormente ser comparada con la luz incidente o espectro de referencia, y as\'{i} poder determinar qu\'{e} tanto cambi\'{o} dicho espectro despu\'{e}s de haber interactuado con el tejido.
+		
+		Normalmente la reflectancia difusa $R(\lambda)$ es multiplicada por un factor de 100 por los dispositivos fotosensibles, para representarla en forma de curva en una escala del 0\% al 100\%, a lo largo de puntos discretos que representan las longitudes de onda con las que trabaja dicho dispositivo; tal es el caso del MiniScan XE Plus.
 	
 	\subsection{Absorbancia aparente}
 	
 	Seg\'{u}n el \textit{Random House Kernerman Webster's College Dictionary} (2010), el espectro de absorci\'{o}n es la radiaci\'{o}n electromagn\'{e}tica en ciertas longitudes de onda que atraviesa un medio y que es absorbida por el mismo. En cierto modo, es el opuesto del espectro de reflectancia, es decir, es la luz que logra propagarse en el tejido y que no es re-emitida por este hacia la superficie irradiada. Por lo tanto, la absorbancia aparente es la luz que est\'{a} siendo absorbida aparentemente por el tejido en estudio.
+	
+	Como la absorbancia aparente es toda la luz que no est\'{a} siendo reflejada de vuelta al MiniScan XE Plus al emitir luz sobre el tejido en estudio, esta se puede calcular de la siguiente manera: $A(\lambda) = 100 - R(\lambda)$, y se puede representar en forma de curva, de la misma manera que la reflectancia difusa.
 
 	\subsection{Iluminante est\'{a}ndar D65}
 		
 		El tipo de luz bajo el cual se observa un objeto puede afectar su apariencia. Para cuantificar estas fuentes de luz blanca, la \textit{Commission Internationale de l'Eclairage} (CIE) desarroll\'{o} iluminantes est\'{a}ndar para la medici\'{o}n del color.
 		\cite{HunterLab} define el iluminante como una tabla cuantificable de n\'{u}meros que representan la energ\'{i}a relativa en comparaci\'{o}n con la longitud de onda de una fuente de luz. 
 		
-		El iluminante est\'{a}ndar D65, seg\'{u}n es descrito por la \cite{CIE}, tiene el prop\'{o}sito de representar la luz de d\'{i}a promedio, y tiene una temperatura de color correlacionada de aproximadamente 6500K\degree. Los valores num\'{e}ricos que representan este iluminante, en contraste con las longitudes de onda en nan\'{o}metros (nm), se muestran en la tabla 2.1.
+		El iluminante est\'{a}ndar D65, seg\'{u}n es descrito por la \cite{CIE}, tiene el prop\'{o}sito de representar la luz de d\'{i}a promedio, y tiene una temperatura de color correlacionada de aproximadamente 6500 K\degree. Los valores num\'{e}ricos que representan este iluminante, en contraste con las longitudes de onda en nan\'{o}metros (nm), se muestran en la tabla 2.1.
 	
 		\begin{table}[h]
 		\small
@@ -128,9 +132,60 @@ Este cap\'{i}tulo presenta los trabajos relacionados, la observaci\'{o}n directa
 		
 	\end{table}
 	
-	\subsection{Coordenadas de cromaticidad CIE XYZ}
+	\subsection{Coordenadas de cromaticidad CIE xyz}
+	
+		La sensaci\'{o}n de luz es producida por radiaci\'{o}n electromagn\'{e}tica visible, que cae dentro de los l\'{i}mites de longitud de onda de 380 nan\'{o}metros y 780 nan\'{o}metros. La radiaci\'{o}n proveniente de la regi\'{o}n de longitud de onda corta de la misma produce usualmente la sensaci\'{o}n de luz azul, la radiaci\'{o}n con longitudes de onda entre 520 nan\'{o}metros y 550 nan\'{o}metros son vistas como luz verde, y por encima de alrededor de los 650 nan\'{o}metros se percibe usualmente la luz de color rojo. Estos l\'{i}mites no est\'{a}n bien definidos, y la percepci\'{o}n actual depende fuertemente del estado de adaptaci\'{o}n del ojo y del est\'{i}mulo de luz que rodea el objeto o tejido en estudio (Schanda, 2007).
+		
+		La CIE defini\'{o} un est\'{a}ndar para calcular los valores de estos est\'{i}mulos, denominandolos valores triest\'{i}mulo XYZ \'{o} sistema tricrom\'{a}tico CIE XYZ. Tomando en cuenta el rango de longitudes de onda con el que opera el \mbox{MiniScan} XE Plus, estos valores son calculados utilizando las siguientes f\'{o}rmulas.
+		
+		$$X = k \int_{400 \text{ nm}}^{700 \text{ nm}} R(\lambda) S(\lambda) \overline{x}(\lambda)d\lambda$$
+		
+		$$Y = k \int_{400 \text{ nm}}^{700 \text{ nm}} R(\lambda) S(\lambda) \overline{y}(\lambda)d\lambda$$
+		
+		$$Z = k \int_{400 \text{ nm}}^{700 \text{ nm}} R(\lambda) S(\lambda) \overline{z}(\lambda)d\lambda$$
+		
+		En donde $R(\lambda)$ es el factor de reflectancia difusa, $S(\lambda)$ es la distribuci\'{o}n de energ\'{i}a espectral relativa de un iluminante est\'{a}ndar, en este caso del iluminante D65 (v\'{e}ase la tabla 2.1), $\overline{x}(\lambda)$, $\overline{y}(\lambda)$ y $\overline{z}(\lambda)$ son las funciones de correspondencia del color, dado el observador est\'{a}ndar CIE de 10\degree (v\'{e}ase la tabla 2.2), y por \'{u}ltimo, $k$ es una constante que se calcula con la f\'{o}rmula mostrada a continuaci\'{o}n.
+		
+		$$k = \frac{100}{\sum_{\lambda} \overline{y}(\lambda)d\lambda}$$
+		
+		De acuerdo con la recomendaci\'{o}n de CIE, la integraci\'{o}n puede llevarse a cabo por sumatoria num\'{e}rica a intervalos de longitud de onda, $\bigtriangleup\lambda$, equivalentes a 10 nan\'{o}metros, para el caso del MiniScan XE Plus.
+		
+		$$X = k \sum_{\lambda} R(\lambda) S(\lambda) \overline{x}(\lambda)\bigtriangleup\lambda$$
+		
+		$$Y = k \sum_{\lambda} R(\lambda) S(\lambda) \overline{y}(\lambda)\bigtriangleup\lambda$$
+		
+		$$Z = k \sum_{\lambda} R(\lambda) S(\lambda) \overline{z}(\lambda)\bigtriangleup\lambda$$
+		
+		Ahora bien, el est\'{i}mulo de un color se puede describir completamente por los tres valores triest\'{i}mulo, pero esta descripci\'{o}n no es muy f\'{a}cilmente concebible. Es dif\'{i}cil imaginar un est\'{i}mulo si solamente se dan sus valores triest\'{i}mulo, y frecuentemente no se buscan los valores absolutos de los mismos. En tales casos se pueden utilizar las coordenadas de cromaticidad xyz.
+		
+		Finalmente, las coordenadas de cromaticidad xyz se definen con las f\'{o}rmulas mostradas a continuaci\'{o}n.
+		
+		$$x = \frac{X}{X+Y+Z}$$
+		
+		$$y = \frac{Y}{X+Y+Z}$$
+		
+		$$z = \frac{Z}{X+Y+Z}$$
 	
 	\subsection{Espacio del color CIELAB}
+	
+		Seg\'{u}n \cite{Schanda}, los est\'{i}mulos del color son tridimensionales, y la solicitud de extender el espacio del color uniforme a un espacio tridimensional ya hab\'{i}a sido expresada en los a\~{n}os 60. En 1976 se acept\'{o} la recomendaci\'{o}n para el diagrama de espacio del color uniforme CIELAB (L*a*b*), que no es m\'{a}s que un sistema para transformar las coordenadas de cromaticidad CIE xyz. Este espacio del color est\'{a} definido por las ecuaciones descritas a continuaci\'{o}n.
+		
+		$$L^* = 116f(Y/Y_n) - 16$$
+		
+		$$a^* = 500[f(X/X_n) - f(Y/Y_n)]$$
+		
+		$$b^* = 200[f(Y/Y_n) - f(Z/Z_n)]$$
+		
+		$$\text{Donde } f(X/X_n) = (X/X_n)^{1/3} \text{ si } (X/X_n) > (24/116)^3$$
+		$$f(X/X_n) = (841/108)(X/X_n) + 16/116 \text{ si } (X/X_n) \leq (24/116)^3$$
+		
+		$$\text{Y donde } f(Y/Y_n) = (Y/Y_n)^{1/3} \text{ si } (Y/Y_n) > (24/116)^3$$
+		$$f(Y/Y_n) = (841/108)(Y/Y_n) + 16/116 \text{ si } (Y/Y_n) \leq (24/116)^3$$
+		
+		$$\text{Y donde } f(Z/Z_n) = (Z/Z_n)^{1/3} \text{ si } (Z/Z_n) > (24/116)^3$$
+		$$f(Z/Z_n) = (841/108)(Z/Z_n) + 16/116 \text{ si } (Z/Z_n) \leq (24/116)^3$$
+		
+		En donde $X$, $Y$, $Z$ son los valores triest\'{i}mulo del est\'{i}mulo del color considerado del objeto o tejido en estudio y $X_n$, $Y_n$, $Z_n$ son los valores triest\'{i}mulo de la fuente de luz. Para el caso del iluminante est\'{a}ndar D65, y tomando en cuenta el observador est\'{a}ndar de 10\degree, los valores de $X_n$, $Y_n$, $Z_n$ son $X_n = 94.81$ $Y_n = 100.00$ y $Z_n = 107.32$.
 
 	\subsection{Coeficiente de absorci\'{o}n}
 	
