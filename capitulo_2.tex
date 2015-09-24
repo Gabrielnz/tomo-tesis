@@ -24,13 +24,13 @@ Este cap\'{i}tulo presenta los trabajos relacionados, la observaci\'{o}n directa
 		
 		Para llevar a cabo una medici\'{o}n con ERD se requiere hacer incidir la luz de una fuente, cuyo espectro de emisi\'{o}n sea conocido, sobre el tejido que se quiere estudiar. La luz que logra propagarse en el tejido y que es re-emitida por este hacia la superficie irradiada, ser\'{a} capturada por alg\'{u}n dispositivo fotosensible (en el caso de esta investigaci\'{o}n, el MiniScan XE Plus), para ser comparada posteriormente con la luz incidente o espectro de referencia, y as\'{i} poder determinar qu\'{e} tanto cambi\'{o} dicho espectro despu\'{e}s de haber interactuado con el tejido.
 		
-		Normalmente la reflectancia difusa $R(\lambda)$ es multiplicada por un factor de 100 por los dispositivos fotosensibles, para representarla en forma de curva en una escala del 0\% al 100\%, a lo largo de puntos discretos que representan las longitudes de onda con las que opera dicho dispositivo; tal es el caso del MiniScan XE Plus.
+		Normalmente los datos espectrales de la reflectancia difusa $R(\lambda)$ son multiplicados por un factor de 100 por los dispositivos fotosensibles, para representarlos en forma de curva en una escala del 0\% al 100\%, a lo largo de puntos discretos que representan las longitudes de onda con las que opera dicho dispositivo; tal es el caso del MiniScan XE Plus.
 	
 	\subsection{Absorbancia aparente}
 	
-	Seg\'{u}n el \textit{Random House Kernerman Webster's College Dictionary} (2010), el espectro de absorci\'{o}n es la radiaci\'{o}n electromagn\'{e}tica en ciertas longitudes de onda que atraviesa un medio y que es absorbida por el mismo. En cierto modo, es el opuesto del espectro de reflectancia, es decir, es la luz que logra propagarse en el tejido y que no es re-emitida por este hacia la superficie irradiada. Por lo tanto, la absorbancia aparente es la luz que est\'{a} siendo absorbida aparentemente por el tejido en estudio.
+	Seg\'{u}n el \textit{Random House Kernerman Webster's College Dictionary} (2010), el espectro de absorci\'{o}n es la radiaci\'{o}n electromagn\'{e}tica en ciertas longitudes de onda que atraviesa un medio y que es absorbida por el mismo. En cierto modo, es el opuesto del espectro de reflectancia, es decir, es la luz que logra propagarse en el tejido y que no es re-emitida por este hacia la superficie irradiada. 
 	
-	Como la absorbancia aparente es toda la luz que no est\'{a} siendo reflejada de vuelta al MiniScan XE Plus luego de que este la emite sobre el tejido en estudio, la misma se puede calcular de la siguiente manera: $A(\lambda) = 100 - R(\lambda)$, y se puede representar en forma de curva, de la misma manera que la reflectancia difusa.
+	Por lo tanto, la absorbancia aparente es la luz que est\'{a} siendo absorbida aparentemente por el tejido en estudio, y que no est\'{a} siendo reflejada de vuelta al MiniScan XE Plus. La misma se puede calcular de la siguiente manera: $A(\lambda) = 100 - R(\lambda)$ (recordando que la reflectancia es multiplicada por un factor de 100 por el MiniScan XE Plus) y se puede representar en forma de curva, de la misma manera que la reflectancia difusa.
 
 	\subsection{Iluminante est\'{a}ndar D65}
 		
@@ -191,6 +191,26 @@ Este cap\'{i}tulo presenta los trabajos relacionados, la observaci\'{o}n directa
 
 	\subsection{Coeficiente de absorci\'{o}n}
 	
+		La piel es un medio biol\'{o}gico que se comporta perfectamente como un medio turbio multicapa, donde el principal agente de absorci\'{o}n es la melanina, la cual es producida en la epidermis, y es uno de los par\'{a}metros que determinan la coloraci\'{o}n de la piel. Cuando la luz incide sobre la piel, esta puede ser absorbida, reflejada o esparcida (Narea et al., 2015).
+		
+		En la actualidad, existe el problema de calcular confiablemente los par\'{a}metros \'{o}pticos (entre ellos, el coeficiente de absorci\'{o}n) de los medios turbios a partir del conocimiento de su reflectancia. La determinaci\'{o}n de los par\'{a}metros \'{o}pticos es de vital importancia para el desarrollo de las investigaciones relativas a la caracterizaci\'{o}n de tejidos biol\'{o}gicos, en especial de la piel, empleando m\'{e}todos \'{o}pticos.
+		
+		\cite{Narea} plantea recuperar el coeficiente de absorci\'{o}n de la epidermis a trav\'{e}s del ajuste trigonom\'{e}trico de los espectros de reflectancia difusa, brindando de esta forma una herramienta matem\'{a}tica que permita relacionar los par\'{a}metros del ajuste de las curvas espectrales con las propiedades \'{o}pticas de la piel.
+	
 	\subsection{Coeficiente de esparcimiento}
 	
 	\subsection{\'{I}ndice de eritema}
+	
+		Una propiedad fundamental de la piel es su capacidad para responder a la radiaci\'{o}n ultravioleta. En muchas personas y poblaciones estas respuestas son claramente adaptativas, en donde la primera respuesta, el eritema (enrojecimiento), es tanto una se\~{n}al para la persona quemada por el sol de quedarse dentro, como una se\~{n}al de que el sistema inmunol\'{o}gico est\'{a} activo y el proceso de curaci\'{o}n ha comenzado (Wagner et al., 2002). 
+		
+		La respuesta de la piel result\'{o} ser importante cl\'{i}nicamente cuando los protocolos de tratamiento se establecieron en la d\'{e}cada de 1970 para reg\'{i}menes de fototerapia para la psoriasis y otras enfermedades de la piel. Para calcular el \'{i}ndice de eritema, primero hay que determinar el promedio ponderado de la reflectancia de la luz en el rango de longitud de onda verde, y en el rango de longitud de onda roja, utilizando las f\'{o}rmulas mostradas a continuaci\'{o}n.
+
+		$$R_{verde} = \left.\left.\left[\left(\frac{1}{2}R_{560 \text{ nm}} + R_{570 \text{ nm}} + \frac{1}{2}R_{580 \text{ nm}}\right)\right/2\right]\right/100$$
+		
+		$$R_{roja} = \left.\left.\left[\left(\frac{1}{2}R_{640 \text{ nm}} + R_{650 \text{ nm}} + R_{660 \text{ nm}} + \frac{1}{2}R_{670 \text{ nm}}\right)\right/3\right]\right/100$$
+		
+		Teniendo ya el promedio ponderado de dichas reflectancias, la f\'{o}rmula para calcular el \'{i}ndice de eritema es la siguiente.
+		
+		$$E = 100 \cdot [\log(1/R_{verde}) - \log(1/R_{roja})]$$
+		
+		
