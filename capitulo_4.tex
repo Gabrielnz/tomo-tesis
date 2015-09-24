@@ -2,9 +2,11 @@
 
 En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desarrollo del presente trabajo de investigaci\'{o}n, siguiendo la metodolog\'{i}a Investigaci\'{o}n-Acci\'{o}n, y la configuraci\'{o}n de la metodolog\'{i}a SCRUM junto con los artefactos inclu\'{i}dos de la metodolog\'{i}a RUP.
 
-\section{Visi\'{o}n}
+\section{Fases metodol\'{o}gicas}
+
+\subsection{Visi\'{o}n}
 	
-	\subsection{Enunciado del problema}
+	\subsubsection{Enunciado del problema}
 	
 	El problema que se presenta es que se est\'{a} utilizando el HunterLab Universal Software para el manejo del espectrofot\'{o}metro de reflexi\'{o}n difusa MiniScan XE Plus. Dicho software est\'{a} en ingl\'{e}s, es comercial, privativo y fue descontinuado; esto afecta a los dermat\'{o}logos del Centro de Investigaciones M\'{e}dicas y Biotecnol\'{o}gicas de la Universidad de Carabobo (CIMBUC).
 	
@@ -12,7 +14,7 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 	
 	Una soluci\'{o}n satisfactoria ser\'{i}a disponer de un software para el uso del \mbox{MiniScan} XE Plus que est\'{e} en espa\~{n}ol, que sea amigable y mantenible, permitiendo que se adapte a las necesidades de los dermat\'{o}logos.
 	
-	\subsection{Descripci\'{o}n de los usuarios}
+	\subsubsection{Descripci\'{o}n de los usuarios}
 	
 		\begin{table}[h]
 		\small
@@ -66,7 +68,7 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 		\end{tabulary}
 	\end{table}
 	
-	\subsection{Resumen del producto}
+	\subsubsection{Resumen del producto}
 	
 	El software desarrollado, denominado a partir de ahora Spectrasoft, es una aplicaci\'{o}n para el uso del MiniScan XE Plus, la recuperaci\'{o}n de los datos de medici\'{o}n de dicho instrumento, la generaci\'{o}n de resultados relevantes y la gesti\'{o}n de los mismos, el cu\'{a}l est\'{a} orientado a las actividades m\'{e}dicas dermatol\'{o}gicas del Centro de Investigaciones M\'{e}dicas y Biotecnol\'{o}gicas de la Universidad de Carabobo (CIMBUC). La tabla 4.3 resume los beneficios y las caracter\'{i}sticas m\'{a}s importantes que provee el producto.
 	
@@ -91,11 +93,11 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 		\end{tabulary}
 	\end{table}
 	
-	\subsection{Principales restricciones}
+	\subsubsection{Principales restricciones}
 	
 	El software se desarrolla utilizando el lenguaje de programaci\'{o}n C++ para favorecer su rendimiento, empleando \'{u}nicamente tecnolog\'{i}as gratuitas, y, en la medida de lo posible, de c\'{o}digo abierto. Este se ejecuta en sistemas operativos Windows actuales. Por \'{u}ltimo, la comunicaci\'{o}n entre el software y el MiniScan XE Plus se logra tanto por medio de un puerto serial, como por medio de un adaptador USB.
 	
-\section{Pila del producto \textit{(product backlog)}}
+\subsection{Pila del producto \textit{(product backlog)}}
 	La lista de requerimientos funcionales que necesitan ser realizados a lo largo del desarrollo del Spectrasoft, son el producto de una reuni\'{o}n que se tuvo con los dermat\'{o}logos y los investigadores del CIMBUC, al igual que de la observaci\'{o}n directa efectuada a las funciones que el HunterLab Universal Software ofrece para el manejo del MiniScan XE Plus. En la tabla 4.4 se muestran dichos requerimientos.
 	
 	\begin{table}[h]
@@ -107,23 +109,37 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 			\hline
 			\thead{\textbf{\small{C\'{o}digo}}} & \thead{\textbf{\small{Requerimiento}}} & \thead{\textbf{\small{Prioridad}}}\\ \hline
 			
-			\textbf{RF01} & Estandarizar el MiniScan XE Plus. & Esencial\\ \hline
+			\textbf{RF01} & Conectar y desconectar el MiniScan XE Plus. & Esencial\\ \hline
 			
-			\textbf{RF02} & Recuperar los 31 puntos espectrales de una medici\'{o}n con el MiniScan XE Plus y mostrarlos en su forma num\'{e}rica. & Esencial\\ \hline
+			\textbf{RF02} & Estandarizar el MiniScan XE Plus. & Esencial\\ \hline
+			
+			\textbf{RF03} & Recuperar los 31 puntos espectrales de una medici\'{o}n con el MiniScan XE Plus y mostrarlos en su forma num\'{e}rica. & Esencial\\ \hline
 
-			\textbf{RF03} & Graficar una curva de reflectancia difusa a partir de los 31 puntos espectrales recuperados. & Esencial\\ \hline
-			\textbf{RF04} & Graficar una curva de absorbancia aparente a partir de los 31 puntos espectrales recuperados. & Esencial\\ \hline
-			\textbf{RF05} & Calcular y mostrar las coordenadas de cromaticidad CIE xyz. & Esencial\\ \hline
-			\textbf{RF06} & Calcular y mostrar las coordenadas del espacio CIELAB. & Esencial\\ \hline
-			\textbf{RF07} & Calcular y mostrar el coeficiente de absorci\'{o}n de la epidermis. & Esencial\\ \hline
-			\textbf{RF08} & Calcular y mostrar el coeficiente de esparcimiento de la epidermis. & Esencial\\ \hline
-			\textbf{RF09} & Calcular y mostrar el \'{i}ndice de eritema. & Esencial\\ \hline
-			\textbf{RF010} & Almacenar los resultados en una base de datos, empleando el uso del formato de historia m\'{e}dica de los dermat\'{o}logos. & Esencial\\ \hline
-			\textbf{RF11} & Exportar los datos de una muestra a un archivo port\'{a}til. & Esencial\\ \hline
+			\textbf{RF04} & Graficar una curva de reflectancia difusa a partir de los 31 puntos espectrales recuperados. & Esencial\\ \hline
+			\textbf{RF05} & Graficar una curva de absorbancia aparente a partir de los 31 puntos espectrales recuperados. & Esencial\\ \hline
+			\textbf{RF06} & Calcular y mostrar las coordenadas de cromaticidad CIE xyz. & Esencial\\ \hline
+			
+			\textbf{RF07} & Calcular y mostrar las coordenadas del espacio CIELAB. & Esencial\\ \hline
+
+			\textbf{RF08} & Calcular y mostrar el coeficiente de absorci\'{o}n de la epidermis. & Esencial\\ \hline
+
+			\textbf{RF09} & Calcular y mostrar el coeficiente de esparcimiento de la epidermis. & Esencial\\ \hline
+
+			\textbf{RF010} & Calcular y mostrar el \'{i}ndice de eritema. & Esencial\\ \hline
+
+			\textbf{RF11} & Almacenar la informaci\'{o}n de los usuarios, las historias m\'{e}dicas y las muestras en una base de datos. & Esencial\\ \hline			
+
+			\textbf{RF12} & Gestionar la creaci\'{o}n, consulta, modificaci\'{o}n y eliminaci\'{o}n de los usuarios. & Esencial\\ \hline
+			
+			\textbf{RF13} & Gestionar la creaci\'{o}n, consulta, modificaci\'{o}n y eliminaci\'{o}n de las historias m\'{e}dicas de pacientes. & Esencial\\ \hline
+			
+			\textbf{RF14} & Gestionar la creaci\'{o}n, consulta, modificaci\'{o}n y eliminaci\'{o}n de las muestras pertenecientes a las historias m\'{e}dicas. & Esencial\\ \hline	
+			
+			\textbf{RF15} & Exportar los datos de una muestra a un archivo port\'{a}til. & Esencial\\ \hline
 		\end{tabulary}
 	\end{table}
 	
-\section{Requerimientos no funcionales}
+\subsection{Requerimientos no funcionales}
 	
 	De la misma forma que los requerimientos funcionales, la lista de los requerimientos no funcionales fue definida en la misma reuni\'{o}n con los dermat\'{o}logos y los investigadores, tomando en cuenta las restricciones del entorno en donde se va a ejecutar el Spectrasoft. En la tabla 4.5 se describen estos requerimientos no funcionales.
 	
@@ -145,6 +161,40 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 		\end{tabulary}
 	\end{table}
 
-\section{Casos de uso}
+\subsection{Casos de uso}
 
-\section{Glosario}
+\subsection{Glosario}
+
+\newpage
+
+\section{Base de datos}
+
+	\subsection{Diagrama ER de la base de datos}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.55]{img/diagramaER.png}
+			\caption[Diagrama ER de la base de datos]{\textit{Diagrama ER de la base de datos} (Fuente: Autor).}
+	\end{figure}
+	
+	\subsection{Descripci\'{o}n de las tablas de la base de datos}
+	
+		\begin{itemize}
+				
+				\item \textbf{historia:} almacena los datos referentes a la historia m\'{e}dica de cada uno de los pacientes registrados.
+				
+				\item \textbf{usuario:} guarda la informaci\'{o}n de cada uno de los usuarios que pueden acceder al software, que pueden ser administradores, dermat\'{o}logos o investigadores.
+				
+				\item \textbf{muestra:} contiene los datos relevantes de las muestras que son tomadas a los pacientes. Dichas muestras siempre est\'{a}n interrelacionadas con la historia m\'{e}dica del paciente al que pertenece, y la c\'{e}dula del usuario que la tom\'{o}.
+
+				\item \textbf{datos\_espectrales:} contiene los 31 puntos espectrales resultantes de la medici\'{o}n de cada muestra, empleando el uso del MiniScan XE Plus.
+				
+				\item \textbf{datos\_adicionales:} almacena los datos que son calculados a partir de los 31 puntos espectrales de cada muestra, estos son las coordenadas de cromaticiad CIE xyz, las coordenadas del espacio del color CIELAB, y el coeficiente de esparcimiento, el coeficiente de absorci\'{o}n, y, por \'{u}ltimo, el \'{i}ndice de eritema.
+				
+		\end{itemize}
+		
+\section{Recursos y tecnolog\'{i}as}
+
+	\subsection{Recursos}
+	
+	\subsection{Tecnolog\'{i}as}
