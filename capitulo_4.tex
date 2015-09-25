@@ -1,6 +1,6 @@
 \chapter{Resultados}
 
-En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desarrollo del presente trabajo de investigaci\'{o}n, siguiendo la metodolog\'{i}a Investigaci\'{o}n-Acci\'{o}n, y la configuraci\'{o}n de la metodolog\'{i}a SCRUM junto con los artefactos inclu\'{i}dos de la metodolog\'{i}a RUP.
+En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desarrollo del presente trabajo de investigaci\'{o}n, incluyendo las fases metodol\'{o}gicas, la base de datos, las tecnolog\'{i}as y los recursos utilizados.
 
 \section{Fases metodol\'{o}gicas}
 
@@ -24,19 +24,30 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 		\begin{tabulary}{\anchotabla}{|c|J|}
 			\hline
 			\thead{\textbf{\small{Actor}}} & \thead{\textbf{\small{Descripci\'{o}n}}}\\ \hline
+			\textbf{Administrador} & 
+			
+			Consulta las historias m\'{e}dicas de los pacientes.
+			
+			Consulta las muestras pertenecientes a las historias m\'{e}dicas.
+			
+			Gestiona los usuarios.
+		\\ \hline
 			\textbf{Dermat\'{o}logo} & 
-			Realiza mediciones a los pacientes.
+			Realiza mediciones.
 			
-			Determina diagn\'{o}sticos a los pacientes.
+			Gestiona las historias m\'{e}dicas de los pacientes.
 			
-			Gestiona los resultados de las mediciones.
+			Gestiona las muestras pertenecientes a las historias m\'{e}dicas.
+			
+			Realiza diagn\'{o}sticos a partir de los resultados de las muestras.
 		\\ \hline
 			\textbf{Investigador} &
-			Realiza mediciones a los pacientes.
 			
-			Realiza an\'{a}lisis sobre los resultados de las mediciones.
+			Consulta las historias m\'{e}dicas de los pacientes.
 			
-			Gestiona los resultados de las mediciones.\\ \hline
+			Consulta las muestras pertenecientes a las historias m\'{e}dicas.
+			
+			Realiza an\'{a}lisis sobre los resultados de las mediciones.\\ \hline
 		\end{tabulary}
 	\end{table}
 	
@@ -45,24 +56,35 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 		\caption[Actores del software]{\textit{Actores del software} (Fuente: Autor).}
 		\centering
 		\setlength{\extrarowheight}{\altocelda}
-		\begin{tabulary}{\anchotabla}{|c|L|c|c|}
+		\begin{tabulary}{\anchotabla}{|c|J|c|c|}
 			\hline
 			\thead{\textbf{\small{Actor}}} & \thead{\textbf{\small{Responsabilidad}}} & \thead{\textbf{\small{Experiencia}}} & \thead{\textbf{\small{Uso}}}\\ \hline
+			
+			\textbf{Administrador} &
+			
+			Crear, consultar, modificar y eliminar usuarios.
+			
+			Consultar historias m\'{e}dicas de pacientes.
+			
+			Consultar muestras de pacientes. &
+			Alta &
+			Alto\\ \hline
+			
 			\textbf{Dermat\'{o}logo} &
-			Calibrar el instrumento.
+			
+			Crear, consultar, modificar y eliminar historias m\'{e}dicas de pacientes.
 			
 			Realizar mediciones.
 			
-			Gestionar los resultados. &
+			Crear, consultar, modificar y eliminar muestras de pacientes. &
 			Baja &
 			Alto\\ \hline
 			
 			\textbf{Investigador} &
-			Calibrar el instrumento.
 			
-			Realizar mediciones.
+			Consultar historias m\'{e}dicas de pacientes.
 			
-			Gestionar los resultados. &
+			Consultar muestras de pacientes. &
 			Media &
 			Alto\\ \hline
 		\end{tabulary}
@@ -80,22 +102,22 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 		\begin{tabulary}{\anchotabla}{|J|J|}
 			\hline
 			\thead{\textbf{\small{Beneficio al cliente}}} & \thead{\textbf{\small{Caracter\'{i}stica que lo soporta}}}\\ \hline
-			Los dermat\'{o}logos y los investigadores pueden conectarse con el MiniScan XE Plus, calibrarlo y realizar mediciones con este instrumento. & 
+			Se puede conectar, calibrar y realizar mediciones con el MiniScan XE Plus. & 
 			Comunicaci\'{o}n con el MiniScan XE Plus y acceso a las caracter\'{i}sticas comunmente utilizadas por el mismo.\\ \hline
 			Se dispone de informaci\'{o}n relevante para el diagn\'{o}stico de patolog\'{i}as dermatol\'{o}gicas en la piel de los pacientes. &
 			Muestra de los datos espectrales obtenidos de las mediciones, representaci\'{o}n gr\'{a}fica de los mismos, y c\'{a}lculo de valores adicionales asociados a dichos datos.\\ \hline
-			Se pueden gestionar los resultados de las mediciones empleando el uso del formato con el que trabajan los dermat\'{o}logos. &
-			Guardado de los resultados en archivos port\'{a}tiles que poseen el formato que utilizan los dermat\'{o}logos y los investigadores, y cargado de los mismos al Spectrasoft para su visualizaci\'{o}n.\\ \hline
-			Los dermat\'{o}logos y los investigadores pueden utilizar el Spectrasoft con facilidad. &
-			Interfaz gr\'{a}fica de usuario en espa\~{n}ol, la cual ofrece \'{u}nicamente las funciones que necesitan los dermat\'{o}logos y los investigadores.\\ \hline
-			El Spectrasoft se puede adaptar a futuras necesidades de los dermat\'{o}logos y los investigadores. &
-			C\'{o}digo abierto disponible para realizar cualquier modificaci\'{o}n y/o extensi\'{o}n.\\ \hline
+			Se pueden gestionar los usuarios, las historias m\'{e}dicas y las muestras generadas de las mediciones. &
+			Manejo de una base de datos que almacena toda la informaci\'{o}n referente a los usuarios, las historias m\'{e}dicas y las muestras, permitiendo su gesti\'{o}n por medio del Spectrasoft.\\ \hline
+			El Spectrasoft se puede utilizar con facilidad. &
+			Interfaz gr\'{a}fica de usuario en espa\~{n}ol, que ofrece \'{u}nicamente las funciones necesarias para gestionar la informaci\'{o}n que necesitan los usuarios. \\ \hline
+			El Spectrasoft se puede adaptar a las futuras necesidades de sus usuarios. &
+			C\'{o}digo abierto del proyecto disponible en su totalidad para realizar cualquier modificaci\'{o}n y/o extensi\'{o}n.\\ \hline
 		\end{tabulary}
 	\end{table}
 	
 	\subsubsection{Principales restricciones}
 	
-	El software se desarrolla utilizando el lenguaje de programaci\'{o}n C++ para favorecer su rendimiento, empleando \'{u}nicamente tecnolog\'{i}as gratuitas, y, en la medida de lo posible, de c\'{o}digo abierto. Este se ejecuta en sistemas operativos Windows actuales. Por \'{u}ltimo, la comunicaci\'{o}n entre el software y el MiniScan XE Plus se logra tanto por medio de un puerto serial, como por medio de un adaptador USB.
+	El software se desarrolla utilizando el lenguaje de programaci\'{o}n C++, empleando \'{u}nicamente tecnolog\'{i}as gratuitas, y, en la medida de lo posible, de c\'{o}digo abierto. Este se ejecuta en sistemas operativos Windows actuales. Por \'{u}ltimo, la comunicaci\'{o}n entre el software y el MiniScan XE Plus se logra tanto por medio de un puerto serial, como por medio de un adaptador USB.
 	
 \subsection{Pila del producto \textit{(product backlog)}}
 	La lista de requerimientos funcionales que necesitan ser realizados a lo largo del desarrollo del Spectrasoft, son el producto de una reuni\'{o}n que se tuvo con los dermat\'{o}logos y los investigadores del CIMBUC, al igual que de la observaci\'{o}n directa efectuada a las funciones que el HunterLab Universal Software ofrece para el manejo del MiniScan XE Plus. En la tabla 4.4 se muestran dichos requerimientos.
@@ -193,8 +215,31 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 				
 		\end{itemize}
 		
-\section{Recursos y tecnolog\'{i}as}
+\section{Tecnolog\'{i}as y recursos utilizados}
 
+	\subsection{Tecnolog\'{i}as}
+	
+		\begin{itemize}
+			
+			\item \textbf{Qt:} es un \textit{framework} de desarrollo de aplicaciones multiplataforma para sistemas operativos de escritorio, sistemas integrados, y sistemas m\'{o}viles. Se utiliz\'{o} la versi\'{o}n \textit{open source} 5.4.1 de este \textit{framework} para el desarrollo del Spectrasoft.
+			
+			\item \textbf{Visual Studio:} es un entorno integrado de desarrollo o \textit{IDE} para crear aplicaciones en varias plataformas, como Windows, Android y iOS. La versi\'{o}n 2013 de este \textit{IDE} fue utilizada para desarrollar una librer\'{i}a escrita en Visual Basic.NET, la cual act\'{u}a como intermediaria entre el archivo MSXE.ocx y el \textit{framework} Qt, para as\'{i} utilizar las caracter\'{i}sticas del MiniScan XE Plus junto con el Spectrasoft.
+			
+			\item \textbf{QCustomPlot:} es un \textit{widget open source} para Qt que permite realizar el trazado y la visualizaci\'{o}n de datos. Este \textit{widget} fue empleado por el Spectrasoft para visualizar la curva de reflectancia difusa y la curva de absorbancia aparente asociadas a los 31 puntos espectrales resultantes de las mediciones.
+			
+			\item \textbf{QtXlsx:} es una librer\'{i}a \textit{open source} para Qt que permite leer y escribir archivos con extensi\'{o}n xlsx. Esta librer\'{i}a fue utilizada para implementar en el Spectrasoft la opci\'{o}n de exportar los resultados de una muestra en un archivo port\'{a}til y manejable por aplicaciones de hojas de c\'{a}lculo.
+		\end{itemize}
+	
 	\subsection{Recursos}
 	
-	\subsection{Tecnolog\'{i}as}
+		\begin{itemize}
+		
+			\item \textbf{MiniScan XE Plus:} es un instrumento de medici\'{o}n del color creado por la empresa HunterLab, de dise\~{n}o compacto y port\'{a}til, que emplea la t\'{e}cnica de espectroscop\'{i}a de reflectancia difusa, el cual se puede apreciar en la figura 4.2. Este instrumento mide la cantidad de luz que refleja una muestra dentro de un rango de longitudes de onda que va desde los 400 hasta los 700 nan\'{o}metros, generando como resultado 31 puntos espectrales dentro de ese rango, que son el insumo principal del Spectrasoft.
+			
+		\end{itemize}
+		
+			\begin{figure}[H]
+		\centering
+		\includegraphics[scale=1]{img/MiniScanXEPlus.png}
+			\caption[MiniScan XE Plus]{\textit{MiniScan XE Plus} (Fuente: HunterLab, 2006).}
+	\end{figure}
