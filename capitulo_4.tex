@@ -33,7 +33,6 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 			Gestiona los usuarios.
 		\\ \hline
 			\textbf{Dermat\'{o}logo} & 
-			Realiza mediciones.
 			
 			Gestiona las historias m\'{e}dicas de los pacientes.
 			
@@ -74,8 +73,6 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 			
 			Crear, consultar, modificar y eliminar historias m\'{e}dicas de pacientes.
 			
-			Realizar mediciones.
-			
 			Crear, consultar, modificar y eliminar muestras de pacientes. &
 			Baja &
 			Alto\\ \hline
@@ -104,8 +101,8 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 			\thead{\textbf{\small{Beneficio al cliente}}} & \thead{\textbf{\small{Caracter\'{i}stica que lo soporta}}}\\ \hline
 			Se puede conectar, calibrar y realizar mediciones con el MiniScan XE Plus. & 
 			Comunicaci\'{o}n con el MiniScan XE Plus y acceso a las caracter\'{i}sticas comunmente utilizadas por el mismo.\\ \hline
-			Se dispone de informaci\'{o}n relevante para el diagn\'{o}stico de patolog\'{i}as dermatol\'{o}gicas en la piel de los pacientes. &
-			Muestra de los datos espectrales obtenidos de las mediciones, representaci\'{o}n gr\'{a}fica de los mismos, y c\'{a}lculo de valores adicionales asociados a dichos datos.\\ \hline
+			Se dispone de informaci\'{o}n relevante para el an\'{a}lisis y diagn\'{o}stico de patolog\'{i}as dermatol\'{o}gicas en la piel de los pacientes. &
+			Muestra de los datos espectrales obtenidos de las mediciones, representaci\'{o}n gr\'{a}fica de dichos datos, y c\'{a}lculo de valores adicionales asociados a los mismos.\\ \hline
 			Se pueden gestionar los usuarios, las historias m\'{e}dicas y las muestras generadas de las mediciones. &
 			Manejo de una base de datos que almacena toda la informaci\'{o}n referente a los usuarios, las historias m\'{e}dicas y las muestras, permitiendo su gesti\'{o}n por medio del Spectrasoft.\\ \hline
 			El Spectrasoft se puede utilizar con facilidad. &
@@ -209,9 +206,9 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 				
 				\item \textbf{muestra:} contiene los datos relevantes de las muestras que son tomadas a los pacientes. Dichas muestras siempre est\'{a}n interrelacionadas con la historia m\'{e}dica del paciente al que pertenece, y la c\'{e}dula del usuario que la tom\'{o}.
 
-				\item \textbf{datos\_espectrales:} contiene los 31 puntos espectrales resultantes de la medici\'{o}n de cada muestra, empleando el uso del MiniScan XE Plus.
+				\item \textbf{datos\_espectrales:} contiene los 31 puntos espectrales resultantes de la medici\'{o}n realizada de cada muestra por medio del MiniScan XE Plus.
 				
-				\item \textbf{datos\_adicionales:} almacena los datos que son calculados a partir de los 31 puntos espectrales de cada muestra, estos son las coordenadas de cromaticiad CIE xyz, las coordenadas del espacio del color CIELAB, y el coeficiente de esparcimiento, el coeficiente de absorci\'{o}n, y, por \'{u}ltimo, el \'{i}ndice de eritema.
+				\item \textbf{datos\_adicionales:} almacena los datos que son calculados a partir de los 31 puntos espectrales de cada muestra, estos son las coordenadas de cromaticiad CIE xyz, las coordenadas del espacio del color CIELAB, el coeficiente de esparcimiento, el coeficiente de absorci\'{o}n, y, por \'{u}ltimo, el \'{i}ndice de eritema.
 				
 		\end{itemize}
 		
@@ -223,11 +220,13 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 			
 			\item \textbf{Qt:} es un \textit{framework} de desarrollo de aplicaciones multiplataforma para sistemas operativos de escritorio, sistemas integrados, y sistemas m\'{o}viles. Se utiliz\'{o} la versi\'{o}n \textit{open source} 5.4.1 de este \textit{framework} para el desarrollo del Spectrasoft.
 			
-			\item \textbf{Visual Studio:} es un entorno integrado de desarrollo o \textit{IDE} para crear aplicaciones en varias plataformas, como Windows, Android y iOS. La versi\'{o}n 2013 de este \textit{IDE} fue utilizada para desarrollar una librer\'{i}a escrita en Visual Basic.NET, la cual act\'{u}a como intermediaria entre el archivo MSXE.ocx y el \textit{framework} Qt, para as\'{i} utilizar las caracter\'{i}sticas del MiniScan XE Plus junto con el Spectrasoft.
+			\item \textbf{Visual Studio:} es un entorno integrado de desarrollo o \textit{IDE} para crear aplicaciones en varias plataformas, como Windows, Android y iOS. La versi\'{o}n 2013 de este \textit{IDE} fue utilizada para desarrollar una librer\'{i}a escrita en Visual Basic.NET, la cual act\'{u}a como intermediaria entre el kit \textit{MSXE.ocx} y el \textit{framework} Qt, para as\'{i} utilizar las caracter\'{i}sticas del MiniScan XE Plus en el Spectrasoft.
+			
+			\item \textbf{PostgreSQL:} es un sistema \textit{open source} multiplataforma de bases de datos relacionales. Posee m\'{a}s de 15 a\~{n}os de desarrollo activo y una arquitectura comprobada que se ha ganado una fuerte reputaci\'{o}n por confiabilidad, integridad de datos, y correctitud. Este sistema se utiliz\'{o} para desarrollar y administrar la base de datos con la que opera el Spectrasoft.
 			
 			\item \textbf{QCustomPlot:} es un \textit{widget open source} para Qt que permite realizar el trazado y la visualizaci\'{o}n de datos. Este \textit{widget} fue empleado por el Spectrasoft para visualizar la curva de reflectancia difusa y la curva de absorbancia aparente asociadas a los 31 puntos espectrales resultantes de las mediciones.
 			
-			\item \textbf{QtXlsx:} es una librer\'{i}a \textit{open source} para Qt que permite leer y escribir archivos con extensi\'{o}n xlsx. Esta librer\'{i}a fue utilizada para implementar en el Spectrasoft la opci\'{o}n de exportar los resultados de una muestra en un archivo port\'{a}til y manejable por aplicaciones de hojas de c\'{a}lculo.
+			\item \textbf{QtXlsx:} es una librer\'{i}a \textit{open source} para Qt que permite leer y escribir archivos con extensi\'{o}n xlsx. Esta librer\'{i}a fue utilizada para implementar en el Spectrasoft la opci\'{o}n de exportar los resultados de una muestra a un archivo port\'{a}til, manejable por medio de aplicaciones de hojas de c\'{a}lculo.
 		\end{itemize}
 	
 	\subsection{Recursos}
@@ -235,6 +234,8 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 		\begin{itemize}
 		
 			\item \textbf{MiniScan XE Plus:} es un instrumento de medici\'{o}n del color creado por la empresa HunterLab, de dise\~{n}o compacto y port\'{a}til, que emplea la t\'{e}cnica de espectroscop\'{i}a de reflectancia difusa, el cual se puede apreciar en la figura 4.2. Este instrumento mide la cantidad de luz que refleja una muestra dentro de un rango de longitudes de onda que va desde los 400 hasta los 700 nan\'{o}metros, generando como resultado 31 puntos espectrales dentro de ese rango, que son el insumo principal del Spectrasoft.
+			
+			\item \textbf{Adaptador RS232-USB:} es un cable adaptador que habilita la comunicaci\'{o}n de dispositivos que utilizan puerto serial con computadoras que disponen de puertos USB, creando puertos COM virtuales con las mismas mientras se realiza dicha comunicaci\'{o}n. Este cable es utilizado como adaptador para el cable de comunicaci\'{o}n RS232 DB-9 hembra a RJ-45 del MiniScan XE Plus, y as\'{i} habilitar la utilizaci\'{o}n de este instrumento en computadoras que no poseen puerto serial.
 			
 		\end{itemize}
 		
