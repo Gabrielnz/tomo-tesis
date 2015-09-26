@@ -24,27 +24,27 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 		\begin{tabulary}{\anchotabla}{|c|J|}
 			\hline
 			\thead{\textbf{\small{Actor}}} & \thead{\textbf{\small{Descripci\'{o}n}}}\\ \hline
-			\textbf{Administrador} & 
+			\textbf{Administrador} &
 			
-			Consulta las historias m\'{e}dicas de los pacientes.
+			Realiza mediciones.
 			
-			Consulta las muestras pertenecientes a las historias m\'{e}dicas.
+			Consulta las historias m\'{e}dicas de los pacientes y las muestras.
 			
 			Gestiona los usuarios.
 		\\ \hline
-			\textbf{Dermat\'{o}logo} & 
+			\textbf{Dermat\'{o}logo} &
 			
-			Gestiona las historias m\'{e}dicas de los pacientes.
+			Realiza mediciones.
 			
-			Gestiona las muestras pertenecientes a las historias m\'{e}dicas.
+			Gestiona las historias m\'{e}dicas de los pacientes y las muestras.
 			
 			Realiza diagn\'{o}sticos a partir de los resultados de las muestras.
 		\\ \hline
 			\textbf{Investigador} &
 			
-			Consulta las historias m\'{e}dicas de los pacientes.
+			Realiza mediciones.
 			
-			Consulta las muestras pertenecientes a las historias m\'{e}dicas.
+			Consulta las historias m\'{e}dicas de los pacientes y las muestras.
 			
 			Realiza an\'{a}lisis sobre los resultados de las mediciones.\\ \hline
 		\end{tabulary}
@@ -61,6 +61,8 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 			
 			\textbf{Administrador} &
 			
+			Manejar el MiniScan XE Plus.
+			
 			Crear, consultar, modificar y eliminar usuarios.
 			
 			Consultar historias m\'{e}dicas de pacientes.
@@ -71,6 +73,8 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 			
 			\textbf{Dermat\'{o}logo} &
 			
+			Manejar el MiniScan XE Plus.
+			
 			Crear, consultar, modificar y eliminar historias m\'{e}dicas de pacientes.
 			
 			Crear, consultar, modificar y eliminar muestras de pacientes. &
@@ -78,6 +82,8 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 			Alto\\ \hline
 			
 			\textbf{Investigador} &
+			
+			Manejar el MiniScan XE Plus.
 			
 			Consultar historias m\'{e}dicas de pacientes.
 			
@@ -130,7 +136,7 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 			
 			\textbf{RF01} & Conectar y desconectar el MiniScan XE Plus. & Esencial\\ \hline
 			
-			\textbf{RF02} & Estandarizar el MiniScan XE Plus. & Esencial\\ \hline
+			\textbf{RF02} & Calibrar el MiniScan XE Plus. & Esencial\\ \hline
 			
 			\textbf{RF03} & Recuperar los 31 puntos espectrales de una medici\'{o}n con el MiniScan XE Plus y mostrarlos en su forma num\'{e}rica. & Esencial\\ \hline
 
@@ -182,6 +188,19 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 
 \subsection{Casos de uso}
 
+ \begin{itemize}
+ 	
+ 	\item \textbf{Manejar MiniScan XE Plus:}
+ 	
+ 		\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.4]{img/cu-manejar-miniscan.png}
+			\caption[Caso de uso: Manejar MiniScan XE Plus]{\textit{ Caso de uso: Manejar MiniScan XE Plus} (Fuente: Autor).}
+	\end{figure}
+	
+	
+ \end{itemize}
+
 \subsection{Glosario}
 
 \newpage
@@ -224,6 +243,8 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 			
 			\item \textbf{PostgreSQL:} es un sistema \textit{open source} multiplataforma de bases de datos relacionales. Posee m\'{a}s de 15 a\~{n}os de desarrollo activo y una arquitectura comprobada que se ha ganado una fuerte reputaci\'{o}n por confiabilidad, integridad de datos, y correctitud. Este sistema se utiliz\'{o} para desarrollar y administrar la base de datos con la que opera el Spectrasoft.
 			
+			\item \textbf{Gitlab:} es un servicio de control de versiones, que ofrece alojamiento gratuito, tanto p\'{u}blico como privado, de respositorios para proyectos. Se utiliz\'{o} la versi\'{o}n en l\'{i}nea de este servicio para utilizar control de versiones durante el desarrollo del proyecto.
+			
 			\item \textbf{QCustomPlot:} es un \textit{widget open source} para Qt que permite realizar el trazado y la visualizaci\'{o}n de datos. Este \textit{widget} fue empleado por el Spectrasoft para visualizar la curva de reflectancia difusa y la curva de absorbancia aparente asociadas a los 31 puntos espectrales resultantes de las mediciones.
 			
 			\item \textbf{QtXlsx:} es una librer\'{i}a \textit{open source} para Qt que permite leer y escribir archivos con extensi\'{o}n xlsx. Esta librer\'{i}a fue utilizada para implementar en el Spectrasoft la opci\'{o}n de exportar los resultados de una muestra a un archivo port\'{a}til, manejable por medio de aplicaciones de hojas de c\'{a}lculo.
@@ -239,7 +260,7 @@ En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desa
 			
 		\end{itemize}
 		
-			\begin{figure}[H]
+	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=1]{img/MiniScanXEPlus.png}
 			\caption[MiniScan XE Plus]{\textit{MiniScan XE Plus} (Fuente: HunterLab, 2006).}
