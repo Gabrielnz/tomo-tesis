@@ -95,7 +95,7 @@
 	
 	\subsubsection{Resumen del producto}
 	
-	El software desarrollado, denominado a partir de ahora Spectrasoft, es una aplicaci\'{o}n para el uso del MiniScan XE Plus, la recuperaci\'{o}n de los datos de medici\'{o}n de dicho instrumento, la generaci\'{o}n de resultados relevantes y la gesti\'{o}n de los mismos, el cu\'{a}l est\'{a} orientado a las actividades m\'{e}dicas dermatol\'{o}gicas del Centro de Investigaciones M\'{e}dicas y Biotecnol\'{o}gicas de la Universidad de Carabobo (CIMBUC). La tabla 4.3 resume los beneficios y las caracter\'{i}sticas m\'{a}s importantes que provee el producto.
+	El software desarrollado, denominado a partir de ahora Spectrasoft, es una aplicaci\'{o}n para el uso del MiniScan XE Plus, la recuperaci\'{o}n de los datos de medici\'{o}n de dicho instrumento, la generaci\'{o}n de resultados relevantes y la gesti\'{o}n de los mismos, el cual est\'{a} orientado a las actividades m\'{e}dicas dermatol\'{o}gicas del Centro de Investigaciones M\'{e}dicas y Biotecnol\'{o}gicas de la Universidad de Carabobo (CIMBUC). La tabla 4.3 resume los beneficios y las caracter\'{i}sticas m\'{a}s importantes que provee el producto.
 	
 	\begin{table}[h]
 		\small
@@ -120,7 +120,7 @@
 	
 	\subsubsection{Principales restricciones}
 	
-	El software se desarrolla utilizando el lenguaje de programaci\'{o}n C++, empleando \'{u}nicamente tecnolog\'{i}as gratuitas, y, en la medida de lo posible, de c\'{o}digo abierto. Este se ejecuta en sistemas operativos Windows actuales. Por \'{u}ltimo, la comunicaci\'{o}n entre el software y el MiniScan XE Plus se logra tanto por medio de un puerto serial, como por medio de un adaptador USB.
+	El software se desarrolla utilizando el lenguaje de programaci\'{o}n C++, empleando \'{u}nicamente tecnolog\'{i}as gratuitas, y en la medida de lo posible, de c\'{o}digo abierto. Este se ejecuta en sistemas operativos Windows actuales. Por \'{u}ltimo, la comunicaci\'{o}n entre el software y el MiniScan XE Plus se logra tanto por medio de un puerto serial, como por medio de un adaptador USB.
 	
 \subsection{Pila del producto \textit{(product backlog)}}
 	La lista de requerimientos funcionales que necesitan ser realizados a lo largo del desarrollo del Spectrasoft, son el producto de una reuni\'{o}n que se tuvo con los dermat\'{o}logos y los investigadores del CIMBUC, al igual que de la observaci\'{o}n directa efectuada a las funciones que el HunterLab Universal Software ofrece para el manejo del MiniScan XE Plus. En la tabla 4.4 se muestran dichos requerimientos.
@@ -178,7 +178,7 @@
 			\thead{\textbf{\small{C\'{o}digo}}} & \thead{\textbf{\small{Requerimiento}}} & \thead{\textbf{\small{Prioridad}}}\\ \hline
 			\textbf{RNF01} & El software debe ser f\'{a}cil de utilizar, por lo que debe cumplir con el atributo de usabilidad de un software de calidad. & Esencial\\ \hline
 			\textbf{RNF02} & El software debe ser capaz de adaptarse a las necesidades de los dermat\'{o}logos, raz\'{o}n por la cual debe cumplir con el atributo de mantenibilidad de un software de calidad. & Esencial\\ \hline
-			\textbf{RNF03} & El software debe desarrollarse empleando \'{u}nicamente herramientas y tecnolog\'{i}as gratuitas, que adem\'{a}s sean, en la medida de lo posible, de c\'{o}digo abierto. & Esencial\\ \hline
+			\textbf{RNF03} & El software debe desarrollarse empleando \'{u}nicamente herramientas y tecnolog\'{i}as gratuitas, y en la medida de lo posible, de c\'{o}digo abierto. & Esencial\\ \hline
 			\textbf{RNF04} & El software debe ser capaz de ejecutarse en sistemas Windows actuales, con arquitecturas de 32 bits y 64 bits. & Esencial\\ \hline
 			\textbf{RNF05} & El software debe conectarse con el MiniScan XE Plus por medio de un puerto serial o de un adaptador USB. & Esencial\\ \hline
 			\textbf{RNF06} & El archivo port\'{a}til al que se exportan los resultados de una medici\'{o}n debe ser abierto por un visualizador/editor de hojas de c\'{a}lculo. & Esencial\\ \hline
@@ -271,7 +271,11 @@
 
 				\item \textbf{datos\_espectrales:} contiene los 31 puntos espectrales resultantes de la medici\'{o}n realizada de cada muestra por medio del MiniScan XE Plus.
 				
-				\item \textbf{datos\_adicionales:} almacena los datos que son calculados a partir de los 31 puntos espectrales de cada muestra, estos son las coordenadas de cromaticiad CIE xyz, las coordenadas del espacio del color CIELAB, el coeficiente de esparcimiento, el coeficiente de absorci\'{o}n, y, por \'{u}ltimo, el \'{i}ndice de eritema.
+				\item \textbf{datos\_absorci\'{o}n:} contiene los 31 puntos espectrales resultantes del c\'{a}lculo del coeficiente de absorci\'{o}n asociado con los datos espectrales.
+				
+				\item \textbf{datos\_esparcimiento:} contiene los 31 puntos espectrales resultantes del c\'{a}lculo del coeficiente de esparcimiento asociado con los datos espectrales.
+				
+				\item \textbf{datos\_adicionales:} almacena los datos que son calculados a partir de los 31 puntos espectrales de cada muestra, estos son las coordenadas de cromaticiad CIE xyz, las coordenadas del espacio del color CIELAB y el \'{i}ndice de eritema.
 				
 		\end{itemize}
 		
@@ -281,13 +285,13 @@
 	
 		\begin{itemize}
 			
-			\item \textbf{Qt:} es un \textit{framework} de desarrollo de aplicaciones multiplataforma para sistemas operativos de escritorio, sistemas integrados, y sistemas m\'{o}viles. Se utiliz\'{o} la versi\'{o}n \textit{open source} 5.4.1 de este \textit{framework} para el desarrollo del Spectrasoft.
+			\item \textbf{Qt:} es un \textit{framework} de desarrollo de aplicaciones multiplataforma para sistemas operativos de escritorio, sistemas integrados y sistemas m\'{o}viles. Se utiliz\'{o} la versi\'{o}n \textit{open source} 5.4.1 de este \textit{framework} para el desarrollo del Spectrasoft.
 			
 			\item \textbf{Visual Studio:} es un entorno integrado de desarrollo o \textit{IDE} para crear aplicaciones en varias plataformas, como Windows, Android y iOS. La versi\'{o}n 2013 de este \textit{IDE} fue utilizada para desarrollar una librer\'{i}a escrita en Visual Basic.NET, la cual act\'{u}a como intermediaria entre el kit \textit{MSXE.ocx} y el \textit{framework} Qt, para as\'{i} utilizar las caracter\'{i}sticas del MiniScan XE Plus en el Spectrasoft.
 			
-			\item \textbf{PostgreSQL:} es un sistema \textit{open source} multiplataforma de bases de datos relacionales. Posee m\'{a}s de 15 a\~{n}os de desarrollo activo y una arquitectura comprobada que se ha ganado una fuerte reputaci\'{o}n por confiabilidad, integridad de datos, y correctitud. Este sistema se utiliz\'{o} para desarrollar y administrar la base de datos con la que opera el Spectrasoft.
+			\item \textbf{PostgreSQL:} es un sistema \textit{open source} multiplataforma de bases de datos relacionales. Posee m\'{a}s de 15 a\~{n}os de desarrollo activo y una arquitectura comprobada que se ha ganado una fuerte reputaci\'{o}n por confiabilidad, integridad de datos y correctitud. Este sistema se utiliz\'{o} para desarrollar y administrar la base de datos con la que opera el Spectrasoft.
 			
-			\item \textbf{Gitlab:} es un servicio de control de versiones, que ofrece alojamiento gratuito, tanto p\'{u}blico como privado, de respositorios para proyectos. Se utiliz\'{o} la versi\'{o}n en l\'{i}nea de este servicio para utilizar control de versiones durante el desarrollo del proyecto.
+			\item \textbf{Gitlab:} es un servicio de control de versiones que ofrece alojamiento gratuito, tanto p\'{u}blico como privado, de respositorios para proyectos. Se utiliz\'{o} la versi\'{o}n en l\'{i}nea de este servicio para llevar un control de versiones durante el desarrollo del proyecto.
 			
 			\item \textbf{QCustomPlot:} es un \textit{widget open source} para Qt que permite realizar el trazado y la visualizaci\'{o}n de datos. Este \textit{widget} fue empleado por el Spectrasoft para visualizar la curva de reflectancia difusa y la curva de absorbancia aparente asociadas a los 31 puntos espectrales resultantes de las mediciones.
 			
@@ -298,7 +302,7 @@
 	
 		\begin{itemize}
 		
-			\item \textbf{MiniScan XE Plus:} es un instrumento de medici\'{o}n del color creado por la empresa HunterLab, de dise\~{n}o compacto y port\'{a}til, que emplea la t\'{e}cnica de espectroscop\'{i}a de reflectancia difusa, el cual se puede apreciar en la figura 4.7. Este instrumento mide la cantidad de luz que refleja una muestra dentro de un rango de longitudes de onda que va desde los 400 hasta los 700 nan\'{o}metros, generando como resultado 31 puntos espectrales dentro de ese rango, que son el insumo principal del Spectrasoft.
+			\item \textbf{MiniScan XE Plus:} es un instrumento de medici\'{o}n del color creado por la empresa HunterLab, de dise\~{n}o compacto y port\'{a}til, que emplea la t\'{e}cnica de espectroscop\'{i}a de reflectancia difusa, el cual se puede apreciar en la figura 4.8. Este instrumento mide la cantidad de luz que refleja una muestra dentro de un rango de longitudes de onda que va desde los 400 hasta los 700 nan\'{o}metros, generando como resultado 31 puntos espectrales dentro de ese rango, que son el insumo principal del Spectrasoft.
 			
 			\item \textbf{Adaptador RS232-USB:} es un cable adaptador que habilita la comunicaci\'{o}n de dispositivos que utilizan puerto serial con computadoras que disponen de puertos USB, creando puertos COM virtuales con las mismas mientras se realiza dicha comunicaci\'{o}n. Este cable es utilizado como adaptador para el cable de comunicaci\'{o}n RS232 DB-9 hembra a RJ-45 del MiniScan XE Plus, y as\'{i} habilitar la utilizaci\'{o}n de este instrumento en computadoras que no poseen puerto serial.
 			
