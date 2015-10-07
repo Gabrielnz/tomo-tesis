@@ -27,6 +27,51 @@
 \usepackage{amssymb}
 \usepackage{blindtext}
 \usepackage{amsmath}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{textcomp}
+\definecolor{listinggray}{gray}{0.9}
+\lstset{
+    tabsize=4,    
+%   rulecolor=,
+    language=[GNU]C++,
+        basicstyle=\scriptsize,
+        upquote=true,
+        aboveskip={1.5\baselineskip},
+        columns=fixed,
+        showstringspaces=false,
+        extendedchars=false,
+        breaklines=true,
+        prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+        frame=single,
+        numbers=left,
+        showtabs=false,
+        showspaces=false,
+        showstringspaces=false,
+        identifierstyle=\ttfamily,
+        keywordstyle=\color[rgb]{0,0,1},
+        commentstyle=\color[rgb]{0.026,0.112,0.095},
+        stringstyle=\color[rgb]{0.627,0.126,0.941},
+        numberstyle=\color[rgb]{0.205, 0.142, 0.73},
+%        \lstdefinestyle{C++}{language=C++,style=numbers}’.
+}
+\lstset{
+    tabsize=4,
+  language=C++,
+  captionpos=b,
+  tabsize=3,
+  frame=lines,
+  numbers=left,
+  numberstyle=\tiny,
+  numbersep=5pt,
+  breaklines=true,
+  showstringspaces=false,
+  basicstyle=\footnotesize,
+%  identifierstyle=\color{magenta},
+  keywordstyle=\color[rgb]{0,0,1},
+  commentstyle=\color[rgb]{0.3,0.7,0.5},
+  stringstyle=\color{red}
+}
 
 \newcommand{\membrete}{
 	\includegraphics[width=0.15\textwidth]{./img/escudo-uc.png}~\\[1cm]
@@ -77,7 +122,7 @@
 }
 
 \newcommand{\capIV}{
-	En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desarrollo del presente trabajo de investigaci\'{o}n, incluyendo las fases metodol\'{o}gicas, la base de datos, las tecnolog\'{i}as y los recursos utilizados.
+	En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desarrollo del presente trabajo de investigaci\'{o}n, incluyendo las fases metodol\'{o}gicas, las tecnolog\'{i}as y los recursos utilizados, la interfaz gr\'{a}fica de usuario del software resultante y las pruebas realizadas.
 }
 
 \begin{document}

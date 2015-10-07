@@ -192,58 +192,75 @@
 
  \begin{itemize}
  	
- 	\item \textbf{Manejo del MiniScan XE Plus:}
+ 	\item \textbf{Manejar el MiniScan XE Plus:}
  	
  		\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.4]{img/cu-manejar-miniscan.png}
-			\caption[Caso de uso: manejo del MiniScan XE Plus]{\textit{ Caso de uso: Manejo del MiniScan XE Plus} (Fuente: Autor).}
+			\caption[Caso de uso: manejar el MiniScan XE Plus]{\textit{ Caso de uso: manejar el MiniScan XE Plus} (Fuente: Autor).}
 	\end{figure}
 	
-	 	\item \textbf{Gesti\'{o}n de medici\'{o}n:}
+	 	\item \textbf{Gestionar medici\'{o}n:}
  	
  		\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.4]{img/cu-gestion-medicion.png}
-			\caption[Caso de uso: gesti\'{o}n de medici\'{o}n]{\textit{ Caso de uso: gesti\'{o}n de medici\'{o}n} (Fuente: Autor).}
+			\caption[Caso de uso: gestionar medici\'{o}n]{\textit{ Caso de uso: gestionar medici\'{o}n} (Fuente: Autor).}
 	\end{figure}
 
 \newpage
-	 	\item \textbf{Gesti\'{o}n de sesi\'{o}n:}
+	 	\item \textbf{Gestionar sesi\'{o}n:}
  	
  		\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.5]{img/cu-gestion-sesion.png}
-			\caption[Caso de uso: gesti\'{o}n de sesi\'{o}n]{\textit{ Caso de uso: Gesti\'{o}n de sesi\'{o}n} (Fuente: Autor).}
+			\caption[Caso de uso: gestionar sesi\'{o}n]{\textit{ Caso de uso: gestionar sesi\'{o}n} (Fuente: Autor).}
 	\end{figure}
 	
-		 	\item \textbf{Gesti\'{o}n de historia:}
+		 	\item \textbf{Gestionar historia:}
  	
  		\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.5]{img/cu-gestion-historia.png}
-			\caption[Caso de uso: gesti\'{o}n de historia]{\textit{ Caso de uso: Gesti\'{o}n de historia} (Fuente: Autor).}
+			\caption[Caso de uso: gestionar historia]{\textit{ Caso de uso: gestionar historia} (Fuente: Autor).}
 	\end{figure}
 
 \newpage
-		\item \textbf{Gesti\'{o}n de muestra:}
+		\item \textbf{Gestionar muestra:}
  	
  		\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.5]{img/cu-gestion-muestra.png}
-			\caption[Caso de uso: gesti\'{o}n de muestra]{\textit{ Caso de uso: Gesti\'{o}n de muestra} (Fuente: Autor).}
+			\caption[Caso de uso: gestionar muestra]{\textit{ Caso de uso: gestionar muestra} (Fuente: Autor).}
 	\end{figure}
 	
-			\item \textbf{gesti\'{o}n de usuario:}
+			\item \textbf{Gestionar usuario:}
  	
  		\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.5]{img/cu-gestion-usuario.png}
-			\caption[Caso de uso: gesti\'{o}n de usuario]{\textit{ Caso de uso: Gesti\'{o}n de usuario} (Fuente: Autor).}
+			\caption[Caso de uso: gestionar usuario]{\textit{ Caso de uso: gestionar usuario} (Fuente: Autor).}
 	\end{figure}
 	
-	
  \end{itemize}
+ 
+	\subsubsection{Descripci\'{o}n de los casos de uso}
+	
+		\begin{itemize}
+			\item \textbf{Manejar instrumento:} Permite a todos los usuarios conectar, desconectar y calibrar el MiniScan XE Plus, esto \'{u}ltimo haciendo uso de una trampa de luz y una cer\'{a}mica blanca.
+			
+			\item \textbf{Gestionar medici\'{o}n:} Permite a todos los usuarios efectuar una medici\'{o}n con el MiniScan XE Plus conectado, visualizar los resultados obtenidos de la misma, y borrarlos.
+			
+			\item \textbf{Consultar medici\'{o}n:} Permite a todos los usuarios visualizar tanto la informaci\'{o}n obtenida directamente del MiniScan XE Plus, como la informaci\'{o}n calculada a partir de la misma, como la curva de reflectancia difusa, la curva de absorbancia aparente, las coordenadas de cromaticidad CIE xyz, las coordenadas CIELAB y el \'{i}ndice de eritema de una medici\'{o}n realizada.
+			
+			\item \textbf{Gestionar sesi\'{o}n:} Permite a cualquier usuario iniciar sesi\'{o}n para acceder a las funciones pertinentes para su rol, consultar y modificar su informaci\'{o}n, cambiar su contrase\~{n}a, y cerrar sesi\'{o}n.
+			
+			\item \textbf{Gestionar historia:} Permite a todos los usuarios consultar la informaci\'{o}n perteneciente a las historias m\'{e}dicas, y s\'{o}lo permite a los usuarios con el rol de dermat\'{o}logo registrar, modificar y eliminar dichas historias. 
+			
+			\item \textbf{Gestionar muestra:} Permite a todos los usuarios consultar la informaci\'{o}n referente a las muestras pertenecientes a una historia m\'{e}dica de un paciente determinado, as\'{i} como exportar dicha informaci\'{o}n, y s\'{o}lo permite a los usuarios con el rol de dermat\'{o}logo registrar, modificar y eliminar tales muestras.
+			
+			\item \textbf{Gestionar usuario:} Permite registrar usuarios, consultar su informaci\'{o}n, cambiar los roles de dichos usuarios, cambiar sus contrase\~{n}as y eliminarlos. Esto solamente puede ser efectuado por usuarios con el rol de administrador.
+		\end{itemize}
 
 \subsection{Glosario}
 
@@ -271,14 +288,14 @@
 
 				\item \textbf{datos\_espectrales:} contiene los 31 puntos espectrales resultantes de la medici\'{o}n realizada de cada muestra por medio del MiniScan XE Plus.
 				
-				\item \textbf{datos\_absorci\'{o}n:} contiene los 31 puntos espectrales resultantes del c\'{a}lculo del coeficiente de absorci\'{o}n asociado con los datos espectrales.
+				\item \textbf{datos\_absorcion:} contiene los 31 puntos espectrales resultantes del c\'{a}lculo del coeficiente de absorci\'{o}n asociado con los datos espectrales.
 				
 				\item \textbf{datos\_esparcimiento:} contiene los 31 puntos espectrales resultantes del c\'{a}lculo del coeficiente de esparcimiento asociado con los datos espectrales.
 				
 				\item \textbf{datos\_adicionales:} almacena los datos que son calculados a partir de los 31 puntos espectrales de cada muestra, estos son las coordenadas de cromaticiad CIE xyz, las coordenadas del espacio del color CIELAB y el \'{i}ndice de eritema.
 				
 		\end{itemize}
-		
+
 \section{Tecnolog\'{i}as y recursos utilizados}
 
 	\subsection{Tecnolog\'{i}as}
@@ -313,3 +330,190 @@
 		\includegraphics[scale=1]{img/MiniScanXEPlus.png}
 			\caption[MiniScan XE Plus]{\textit{MiniScan XE Plus} (Fuente: HunterLab, 2006).}
 	\end{figure}
+	
+\section{F\'{o}rmulas implementadas}
+	A continuaci\'{o}n se muestra el c\'{o}digo fuente de las f\'{o}rmulas de \'{o}ptica y colorimetr\'{i}a que fueron definidas en las bases te\'{o}ricas, e implementadas en el Spectrasoft.
+	
+	\begin{itemize}
+	
+	\item \textbf{Funci\'{o}n de \'{i}ndice de eritema:}	
+		\begin{lstlisting}
+//Calcula el indice de eritema
+float eritema(QVector<float> medicion){
+    //promRojo: promedio ponderado del color rojo
+    float promRojo = (medicion[24]/2.0 + medicion[25]
+    + medicion[26] + medicion[27]/2.0)/3.0;
+
+    //promVerde: promedio ponderado del color verde
+    float promVerde = (medicion[16]/2.0 + medicion[17]
+     + medicion[18]/2.0)/2.0;
+
+    float resultado = 100.0*(log(1.0/promVerde)
+     - log(1.0/promRojo));
+
+    return resultado;
+}
+	\end{lstlisting}
+	
+\newpage	
+	
+		\item \textbf{Funci\'{o}n de absorbancia aparente:}
+			\begin{lstlisting}
+//Calcula los datos de absorbancia aparente
+QVector<float> absorbancia(QVector<float> medicion){
+
+	QVector<float> resultado;
+	
+   	for(int i = 0; i < 31; ++i)
+		resultado.push_back(100.0 - medicion[i]);
+
+    return resultado;
+}
+			\end{lstlisting}
+			
+		\item \textbf{Funci\'{o}n de coordenadas de cromaticidad CIE xyz:}		
+			\begin{lstlisting}
+//Calcula las coordenadas de cromaticidad CIE xyz
+QVector<float> CIExyz(QVector<float> medicion){
+    
+    QVector<float> resultado;
+    QVector<float> XYZ = CIEXYZ(medicion);
+    float x, y, z;
+
+    x = XYZ[0]/(XYZ[0] + XYZ[1] + XYZ[2]);
+    y = XYZ[1]/(XYZ[0] + XYZ[1] + XYZ[2]);
+    z = XYZ[2]/(XYZ[0] + XYZ[1] + XYZ[2]);
+
+    resultado.push_back(x);
+    resultado.push_back(y);
+    resultado.push_back(z);
+
+    return resultado;
+}
+			\end{lstlisting}
+			
+\newpage
+		
+		\item \textbf{Funci\'{o}n de valores triest\'{i}mulo CIE XYZ:}
+			\begin{lstlisting}
+//Calcula los valores triestimulo CIE XYZ
+QVector<float> CIEXYZ(QVector<float> medicion){
+    
+    QVector<float> resultado;
+    float auxK, auxX, auxY, auxZ, k, X, Y, Z;
+
+    auxK = auxX = auxY = auxZ = 0.0;
+
+    //realiza las sumatorias indicadas de las formulas
+    for(int i = 0; i < 31; ++i){
+
+		auxK+= iluCIED65[i]*yCIE10[i];
+        auxX+= medicion[i]*iluCIED65[i]*xCIE10[i];
+        auxY+= medicion[i]*iluCIED65[i]*yCIE10[i];
+        auxY+= medicion[i]*iluCIED65[i]*zCIE10[i];
+    }
+
+    //calcula la constante k
+    k = 100.0/auxK;
+
+    //calcula los valores triestimulo XYZ
+    X = k*auxX;
+    Y = k*auxY;
+    Z = k*auxZ;
+
+    resultado.push_back(X);
+    resultado.push_back(Y);
+    resultado.push_back(Z);
+
+    return resultado;
+}
+			\end{lstlisting}
+
+\newpage
+		
+		\item \textbf{Funci\'{o}n de coordenadas CIELAB:}
+			\begin{lstlisting}
+//Calcula las coordenadas de del espacio CIELAB
+QVector<float> CIELAB(QVector<float> medicion){
+    
+    QVector<float> resultado;
+    QVector<float> XYZ = CIEXYZ(medicion);
+    float constante, aux, fXfYfZ[3], L, a, b;
+
+    //calcula la constante utilizada en la formula
+    constante = 24.0/116.0;
+    constante = pow(constante, 3);
+
+    //calcula las funciones X/Xn, Y/Yn, Z/Zn
+    for(int i = 0; i < 3; ++i){
+
+        aux = XYZ[i]/XnYnZn[i];
+
+        if(aux > constante){
+            fXfYfZ[i] = pow(aux, 1.0/3.0);
+        }else{
+            fXfYfZ[i] = (841.0/108.0)*aux + (16.0/116.0);
+        }
+    }
+
+    //calcula las coordenadas L*a*b*
+    L = 116.0*fXfYfZ[1] - 16.0;
+    a = 500.0*(fXfYfZ[0] - fXfYfZ[1]);
+    b = 200.0*(fXfYfZ[1] - fXfYfZ[2]);
+
+    resultado.push_back(L);
+    resultado.push_back(a);
+    resultado.push_back(b);
+
+    return resultado;
+}
+		\end{lstlisting}
+
+	\end{itemize}
+
+\newpage
+
+\section{Interfaz del Spectrasoft}
+
+	A continuaci\'{o}n se muestran solamente algunas de las vistas de la interfaz gr\'{a}fica de usuario del Spectrasoft, que comprenden la vista principal, la ventana de inicio de sesi\'{o}n de un usuario, la visualizaci\'{o}n de algunos de los resultados de una medici\'{o}n realizada, y los detalles de la historia m\'{e}dica de un paciente.
+
+ \begin{itemize}
+ 	
+ 	\item \textbf{Vista principal:}
+ 	
+ 		\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.6]{img/vista-principal.jpg}
+			\caption[Vista principal del Spectrasoft]{\textit{Vista principal del Spectrasoft} (Fuente: Autor).}
+	\end{figure}
+	
+	 	\item \textbf{Inicio de sesi\'{o}n:}
+ 	
+ 		\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.6]{img/vista-inicio-sesion.jpg}
+			\caption[Inicio de sesi\'{o}n del Spectrasoft]{\textit{Inicio de sesi\'{o}n del Spectrasoft} (Fuente: Autor).}
+	\end{figure}
+
+\newpage
+	 	\item \textbf{Curva de reflectancia y datos adicionales:}
+ 	
+ 		\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.4]{img/vista-resultados.jpg}
+			\caption[Curva de reflectancia y datos adicionales]{\textit{Curva de reflectancia y datos adicionales} (Fuente: Autor).}
+	\end{figure}
+	
+		 	\item \textbf{Historia m\'{e}dica de un paciente:}
+ 	
+ 		\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.6]{img/vista-historia.jpg}
+			\caption[Historia m\'{e}dica de un paciente]{\textit{Historia m\'{e}dica de un paciente} (Fuente: Autor).}
+	\end{figure}
+
+\end{itemize}
+
+\newpage
+
+\section{Pruebas realizadas}
