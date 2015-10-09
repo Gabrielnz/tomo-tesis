@@ -264,6 +264,65 @@
 
 \subsection{Glosario}
 
+\begin{itemize}
+	\item \textbf{Espectrofot\'{o}metro de reflexi\'{o}n difusa: }
+	
+	\item \textbf{Software: }	
+	
+	\item \textbf{Software privativo: }
+	
+	\item \textbf{Medici\'{o}n: }
+	
+	\item \textbf{Calibraci\'{o}n: }
+	
+	\item \textbf{Usuario: }
+	
+	\item \textbf{Rol de usuario: }
+	
+	\item \textbf{Sesi\'{o}n: }
+	
+	\item \textbf{Historia m\'{e}dica: }
+	
+	\item \textbf{Muestra: }
+	
+	\item \textbf{Patolog\'{i}a dermatol\'{o}gica: }
+	
+	\item \textbf{Datos espectrales: }
+	
+	\item \textbf{Base de datos: }
+	
+	\item \textbf{Interfaz gr\'{a}fica de usuario: }
+	
+	\item \textbf{C\'{o}digo abierto: }
+	
+	\item \textbf{Lenguaje de programaci\'{o}n: }
+	
+	\item \textbf{Sistema operativo: }
+	
+	\item \textbf{Puerto serial: }
+	
+	\item \textbf{Adaptador USB: }
+	
+	\item \textbf{Reflectancia difusa: }
+	
+	\item \textbf{Absorbancia aparente: }
+	
+	\item \textbf{Coordenadas de cromaticidad CIE xyz: }
+	
+	\item \textbf{Coordenadas del espacio CIELAB: }
+	
+	\item \textbf{Epidermis: }	
+	
+	\item \textbf{Coeficiente de absorci\'{o}n: }
+	
+	\item \textbf{Coeficiente de esparcimiento: }
+	
+	\item \textbf{\'{I}ndice de eritema: }
+	
+	\item \textbf{Hoja de c\'{a}lculo: }
+	
+\end{itemize}
+
 \newpage
 
 \section{Base de datos}
@@ -331,6 +390,16 @@
 			\caption[MiniScan XE Plus]{\textit{MiniScan XE Plus} (Fuente: HunterLab, 2006).}
 	\end{figure}
 	
+\section{Comunicaci\'{o}n con el MiniScan XE Plus}
+
+	Para establecer la comunicaci\'{o}n entre el MiniScan XE Plus y el Spectrasoft, se recurri\'{o} a la documentaci\'{o}n del instrumento, en la cual se describe el MSXE.ocx, que es un archivo que implementa las funciones comunmente utilizadas por dicho instrumento. Se contact\'{o} al personal de soporte t\'{e}cnico de HunterLab por correo electr\'{o}nico, para solicitarle el c\'{o}digo fuente de dicho archivo y la documentaci\'{o}n relativa a su utilizaci\'{o}n que se pudiera proporcionar para la investigaci\'{o}n.
+	
+	Si bien el personal no comparti\'{o} el c\'{o}digo fuente del archivo, s\'{i} envi\'{o} la documentaci\'{o}n solicitada y un ejemplo de su uso escrito en Visual Basic for Applications (VBA). Primero se intent\'{o} cargar el archivo y utilizarlo directamente en Qt; sin embargo, ocurr\'{i}a un error de compatibilidad de datos al invocar algunas de sus funciones. La soluci\'{o}n a este problema fue desarrollar una librer\'{i}a escrita en Visual Basic .NET, con la cual se pueden invocar todas las funciones de este archivo sin problema alguno.
+
+	As\'{i} pues, por medio del cable adaptador RS232-USB, y empleando la librer\'{i}a escrita en Visual Basic .NET, se logr\'{o} establecer la comunicaci\'{o}n entre el software que est\'{a} siendo desarrollado en Qt y el MiniScan XE Plus, por medio del archivo MSXE.ocx.
+
+\newpage
+
 \section{F\'{o}rmulas implementadas}
 	A continuaci\'{o}n se muestra el c\'{o}digo fuente de las f\'{o}rmulas de \'{o}ptica y colorimetr\'{i}a que fueron definidas en las bases te\'{o}ricas, e implementadas en el Spectrasoft.
 	
