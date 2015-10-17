@@ -43,98 +43,13 @@
 		El tipo de luz bajo el cual se observa un objeto puede afectar su apariencia. Para cuantificar estas fuentes de luz blanca, la \textit{Commission Internationale de l'Eclairage} (CIE) desarroll\'{o} iluminantes est\'{a}ndares para la medici\'{o}n del color.
 		\cite{HunterLab} define el iluminante como una tabla cuantificable de n\'{u}meros que representan la energ\'{i}a relativa en comparaci\'{o}n con la longitud de onda de una fuente de luz. 
 		
-		El iluminante est\'{a}ndar D65, seg\'{u}n es descrito por la \cite{CIE}, tiene el prop\'{o}sito de representar la luz de d\'{i}a promedio, y tiene una temperatura de color correlacionada de aproximadamente 6500 K\degree. Los valores num\'{e}ricos que representan este iluminante se muestran en la tabla 2.1.
-	
-		\begin{table}[h]
-		\small
-		\caption[Valores del iluminante D65]{\textit{Valores del iluminante D65} (Fuente: CIE, 2004).}
-		\centering
-		\setlength{\extrarowheight}{\altocelda}
-		\begin{tabulary}{\anchotabla}{|c|c|}
-			\hline
-			Longitud de onda $\lambda$ & Funci\'{o}n $S(\lambda)$\\ \hline
-			400 nm & 82.7549\\ \hline
-			410 nm & 91.4860\\ \hline
-			420 nm & 93.4318\\ \hline
-			430 nm & 86.6823\\ \hline
-			440 nm & 104.865\\ \hline
-			450 nm & 117.008\\ \hline
-			460 nm & 117.812\\ \hline
-			470 nm & 114.861\\ \hline
-			480 nm & 115.923\\ \hline
-			490 nm & 108.811\\ \hline
-			500 nm & 109.354\\ \hline
-			510 nm & 107.802\\ \hline
-			520 nm & 104.790\\ \hline
-			530 nm & 107.689\\ \hline
-			540 nm & 104.405\\ \hline
-			550 nm & 104.046\\ \hline
-			560 nm & 100.000\\ \hline
-			570 nm & 96.3342\\ \hline
-			580 nm & 95.7880\\ \hline
-			590 nm & 88.6856\\ \hline
-			600 nm & 90.0062\\ \hline
-			610 nm & 89.5991\\ \hline
-			620 nm & 87.6987\\ \hline
-			630 nm & 83.2886\\ \hline
-			640 nm & 83.6992\\ \hline
-			650 nm & 80.0268\\ \hline
-			660 nm & 80.2146\\ \hline
-			670 nm & 82.2778\\ \hline
-			680 nm & 78.2842\\ \hline
-			690 nm & 69.7213\\ \hline
-			700 nm & 71.6091\\ \hline
-		\end{tabulary}
-	\end{table}
-	
+		El iluminante est\'{a}ndar D65, seg\'{u}n es descrito por la \cite{CIE}, tiene el prop\'{o}sito de representar la luz de d\'{i}a promedio, y tiene una temperatura de color correlacionada de aproximadamente 6500 K\degree. Los valores num\'{e}ricos que representan este iluminante se muestran en la tabla 2.1, y su representaci\'{o}n gr\'{a}fica se ilustra en la figura 2.2.
+
 	\subsection{Observador est\'{a}ndar de 10\degree}
 	
 		\cite{HunterLab-applications} describe que en la observaci\'{o}n visual, el observador es el ojo humano que recibe la luz reflejada desde o a trav\'{e}s de un objeto, y el cerebro el cual percibe la visi\'{o}n. Debido a que los humanos perciben el color y la apariencia de formas distintas, subjetivamente, se han hecho intentos para estandarizar el observador humano como una representaci\'{o}n de lo que una persona promedio ve u observa.
 		
-		En 1964, se desarroll\'{o} la funci\'{o}n del observador est\'{a}ndar CIE de 10\degree, denominado as\'{i} debido a que los experimentos llevados a cabo para establecer dicho est\'{a}ndar involucraron a sujetos que juzgaban colores, mientras observaban a trav\'{e}s de un agujero que les permit\'{i}a tener un campo de visi\'{o}n de 10\degree. Este observador est\'{a}ndar, en la forma de una funci\'{o}n matem\'{a}tica de la respuesta humana a cada longitud de onda de luz, es utilizado en c\'{a}lculos del color. Los valores num\'{e}ricos de las funciones que representan este est\'{a}ndar se muestran en la tabla 2.2.
-	
-	\begin{table}[h]
-		\small
-		\caption[Valores del observador de 10\degree]{\textit{Valores del observador de 10\degree} (Fuente: CIE, 2004).}
-		\centering
-		\setlength{\extrarowheight}{\altocelda}
-		\begin{tabulary}{\anchotabla}{|c|c|c|c|}
-			\hline
-			Longitud de onda $\lambda$ & Funci\'{o}n $\overline{x}(\lambda)$ & Funci\'{o}n $\overline{y}(\lambda)$ & Funci\'{o}n $\overline{z}(\lambda)$\\ \hline
-			400 nm & 0.019110 & 0.002004 & 0.086011\\ \hline
-			410 nm & 0.084736 & 0.008756 & 0.389366\\ \hline
-			420 nm & 0.204492 & 0.021391 & 0.972542\\ \hline
-			430 nm & 0.314679 & 0.038676 & 1.553480\\ \hline
-			440 nm & 0.383734 & 0.062077 & 1.967280\\ \hline
-			450 nm & 0.370702 & 0.089456 & 1.994800\\ \hline
-			460 nm & 0.302273 & 0.128201 & 1.745370\\ \hline
-			470 nm & 0.195618 & 0.185190 & 1.317560\\ \hline
-			480 nm & 0.080507 & 0.253589 & 0.772125\\ \hline
-			490 nm & 0.016172 & 0.339133 & 0.415254\\ \hline
-			500 nm & 0.003816 & 0.460777 & 0.218502\\ \hline
-			510 nm & 0.037465 & 0.606741 & 0.112044\\ \hline
-			520 nm & 0.117749 & 0.761757 & 0.060709\\ \hline
-			530 nm & 0.236491 & 0.875211 & 0.030451\\ \hline
-			540 nm & 0.376772 & 0.961988 & 0.013676\\ \hline
-			550 nm & 0.529826 & 0.991761 & 0.003988\\ \hline
-			560 nm & 0.705224 & 0.997340 & 0.000000\\ \hline
-			570 nm & 0.705224 & 0.955552 & 0.000000\\ \hline
-			580 nm & 1.014160 & 0.868934 & 0.000000\\ \hline
-			590 nm & 1.118520 & 0.777405 & 0.000000\\ \hline
-			600 nm & 1.123990 & 0.658341 & 0.000000\\ \hline
-			610 nm & 1.030480 & 0.527963 & 0.000000\\ \hline
-			620 nm & 0.856297 & 0.398057 & 0.000000\\ \hline
-			630 nm & 0.647467 & 0.283493 & 0.000000\\ \hline
-			640 nm & 0.431567 & 0.179828 & 0.000000\\ \hline
-			650 nm & 0.268329 & 0.107633 & 0.000000\\ \hline
-			660 nm & 0.152568 & 0.060281 & 0.000000\\ \hline
-			670 nm & 0.081261 & 0.031800 & 0.000000\\ \hline
-			680 nm & 0.040851 & 0.015905 & 0.000000\\ \hline
-			690 nm & 0.019941 & 0.007749 & 0.000000\\ \hline
-			700 nm & 0.009577 & 0.003718 & 0.000000\\ \hline
-		\end{tabulary}
-		
-	\end{table}
+		En 1964, se desarroll\'{o} la funci\'{o}n del observador est\'{a}ndar CIE de 10\degree, denominado as\'{i} debido a que los experimentos llevados a cabo para establecer dicho est\'{a}ndar involucraron a sujetos que juzgaban colores, mientras observaban a trav\'{e}s de un agujero que les permit\'{i}a tener un campo de visi\'{o}n de 10\degree. Este observador est\'{a}ndar, en la forma de una funci\'{o}n matem\'{a}tica de la respuesta humana a cada longitud de onda de luz, es utilizado en c\'{a}lculos del color. Los valores num\'{e}ricos de las funciones que representan este est\'{a}ndar se muestran en la tabla 2.2, y su representaci\'{o}n gr\'{a}fica se ilustra en la figura 2.3.
 	
 	\subsection{Coordenadas de cromaticidad CIE xyz}
 	
@@ -150,7 +65,7 @@
 		
 		En donde $R(\lambda)$ es el factor de reflectancia difusa, $S(\lambda)$ es la distribuci\'{o}n de energ\'{i}a espectral relativa de un iluminante est\'{a}ndar, en este caso del iluminante D65 (v\'{e}ase la tabla 2.1), $\overline{x}(\lambda)$, $\overline{y}(\lambda)$ y $\overline{z}(\lambda)$ son las funciones de correspondencia del color, dado el observador est\'{a}ndar CIE de 10\degree (v\'{e}ase la tabla 2.2), y por \'{u}ltimo, $k$ es una constante que se calcula con la f\'{o}rmula mostrada a continuaci\'{o}n.
 		
-		$$k = \frac{100}{\sum_{\lambda} \overline{y}(\lambda)d\lambda}$$
+		$$k = \frac{100}{\sum_{\lambda} S(\lambda) \overline{y}(\lambda)d\lambda}$$
 		
 		De acuerdo con la recomendaci\'{o}n de la CIE, la integraci\'{o}n puede llevarse a cabo con una sumatoria num\'{e}rica a intervalos de longitud de onda, $\bigtriangleup\lambda$, equivalentes a 10 nan\'{o}metros, para el caso del MiniScan XE Plus.
 		
@@ -207,8 +122,6 @@
 		
 		En donde $Z=0,2796$, $k=-7,174$, y $a_{0}$ es un coeficiente hallado aplicando ajuste polinomial por series trigonom\'{e}tricas a la curva espectral $R(\lambda)$.
 	
-	\subsection{Coeficiente de esparcimiento}
-	
 	\subsection{\'{I}ndice de eritema}
 	
 		Una propiedad fundamental de la piel es su capacidad para responder a la radiaci\'{o}n ultravioleta. En muchas personas y poblaciones estas respuestas son claramente adaptativas, en donde la primera respuesta, el eritema (enrojecimiento), es tanto una se\~{n}al para la persona quemada por el sol de quedarse dentro, como una se\~{n}al de que el sistema inmunol\'{o}gico est\'{a} activo y el proceso de curaci\'{o}n ha comenzado (Wagner et al., 2002). 
@@ -222,5 +135,105 @@
 		Teniendo ya el promedio ponderado de dichas reflectancias, la f\'{o}rmula para calcular el \'{i}ndice de eritema es la siguiente.
 		
 		$$E = 100 \cdot [\log(1/R_{verde}) - \log(1/R_{roja})]$$
+
+\newpage
+
+		\begin{table}[h]
+		\small
+		\caption[Valores del iluminante D65]{\textit{Valores del iluminante D65} (Fuente: CIE, 2004).}
+		\centering
+		\setlength{\extrarowheight}{\altocelda}
+		\begin{tabulary}{\anchotabla}{|c|c|}
+			\hline
+			Longitud de onda $\lambda$ & Funci\'{o}n $S(\lambda)$\\ \hline
+			400 nm & 82.7549\\ \hline
+			410 nm & 91.4860\\ \hline
+			420 nm & 93.4318\\ \hline
+			430 nm & 86.6823\\ \hline
+			440 nm & 104.865\\ \hline
+			450 nm & 117.008\\ \hline
+			460 nm & 117.812\\ \hline
+			470 nm & 114.861\\ \hline
+			480 nm & 115.923\\ \hline
+			490 nm & 108.811\\ \hline
+			500 nm & 109.354\\ \hline
+			510 nm & 107.802\\ \hline
+			520 nm & 104.790\\ \hline
+			530 nm & 107.689\\ \hline
+			540 nm & 104.405\\ \hline
+			550 nm & 104.046\\ \hline
+			560 nm & 100.000\\ \hline
+			570 nm & 96.3342\\ \hline
+			580 nm & 95.7880\\ \hline
+			590 nm & 88.6856\\ \hline
+			600 nm & 90.0062\\ \hline
+			610 nm & 89.5991\\ \hline
+			620 nm & 87.6987\\ \hline
+			630 nm & 83.2886\\ \hline
+			640 nm & 83.6992\\ \hline
+			650 nm & 80.0268\\ \hline
+			660 nm & 80.2146\\ \hline
+			670 nm & 82.2778\\ \hline
+			680 nm & 78.2842\\ \hline
+			690 nm & 69.7213\\ \hline
+			700 nm & 71.6091\\ \hline
+		\end{tabulary}
+	\end{table}
+	
+	\begin{table}[h]
+		\small
+		\caption[Valores del observador de 10\degree]{\textit{Valores del observador de 10\degree} (Fuente: CIE, 2004).}
+		\centering
+		\setlength{\extrarowheight}{\altocelda}
+		\begin{tabulary}{\anchotabla}{|c|c|c|c|}
+			\hline
+			Longitud de onda $\lambda$ & Funci\'{o}n $\overline{x}(\lambda)$ & Funci\'{o}n $\overline{y}(\lambda)$ & Funci\'{o}n $\overline{z}(\lambda)$\\ \hline
+			400 nm & 0.019110 & 0.002004 & 0.086011\\ \hline
+			410 nm & 0.084736 & 0.008756 & 0.389366\\ \hline
+			420 nm & 0.204492 & 0.021391 & 0.972542\\ \hline
+			430 nm & 0.314679 & 0.038676 & 1.553480\\ \hline
+			440 nm & 0.383734 & 0.062077 & 1.967280\\ \hline
+			450 nm & 0.370702 & 0.089456 & 1.994800\\ \hline
+			460 nm & 0.302273 & 0.128201 & 1.745370\\ \hline
+			470 nm & 0.195618 & 0.185190 & 1.317560\\ \hline
+			480 nm & 0.080507 & 0.253589 & 0.772125\\ \hline
+			490 nm & 0.016172 & 0.339133 & 0.415254\\ \hline
+			500 nm & 0.003816 & 0.460777 & 0.218502\\ \hline
+			510 nm & 0.037465 & 0.606741 & 0.112044\\ \hline
+			520 nm & 0.117749 & 0.761757 & 0.060709\\ \hline
+			530 nm & 0.236491 & 0.875211 & 0.030451\\ \hline
+			540 nm & 0.376772 & 0.961988 & 0.013676\\ \hline
+			550 nm & 0.529826 & 0.991761 & 0.003988\\ \hline
+			560 nm & 0.705224 & 0.997340 & 0.000000\\ \hline
+			570 nm & 0.705224 & 0.955552 & 0.000000\\ \hline
+			580 nm & 1.014160 & 0.868934 & 0.000000\\ \hline
+			590 nm & 1.118520 & 0.777405 & 0.000000\\ \hline
+			600 nm & 1.123990 & 0.658341 & 0.000000\\ \hline
+			610 nm & 1.030480 & 0.527963 & 0.000000\\ \hline
+			620 nm & 0.856297 & 0.398057 & 0.000000\\ \hline
+			630 nm & 0.647467 & 0.283493 & 0.000000\\ \hline
+			640 nm & 0.431567 & 0.179828 & 0.000000\\ \hline
+			650 nm & 0.268329 & 0.107633 & 0.000000\\ \hline
+			660 nm & 0.152568 & 0.060281 & 0.000000\\ \hline
+			670 nm & 0.081261 & 0.031800 & 0.000000\\ \hline
+			680 nm & 0.040851 & 0.015905 & 0.000000\\ \hline
+			690 nm & 0.019941 & 0.007749 & 0.000000\\ \hline
+			700 nm & 0.009577 & 0.003718 & 0.000000\\ \hline
+		\end{tabulary}
 		
+	\end{table}
+
+\FloatBarrier
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.6]{img/curva-iluminante.jpg}
+			\caption[Representaci\'{o}n gr\'{a}fica del iluminante est\'{a}ndar D65]{\textit{Representaci\'{o}n gr\'{a}fica del iluminante est\'{a}ndar D65} (Fuente: Autor).}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.6]{img/curva-observador.jpg}
+			\caption[Representaci\'{o}n gr\'{a}fica del observador de 10\degree]{\textit{Representaci\'{o}n gr\'{a}fica del observador de 10\degree. La l\'{i}nea roja representa la funci\'{o}n $\overline{x}(\lambda)$, la l\'{i}nea verde representa la funci\'{o}n $\overline{y}(\lambda)$, y la l\'{i}nea cyan representa la funci\'{o}n $\overline{z}(\lambda)$.} (Fuente: Autor).}
+	\end{figure}
 		

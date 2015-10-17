@@ -148,19 +148,17 @@
 
 			\textbf{RF08} & Calcular y graficar el coeficiente de absorci\'{o}n de la epidermis. & Esencial\\ \hline
 
-			\textbf{RF09} & Calcular y graficar el coeficiente de esparcimiento de la epidermis. & Esencial\\ \hline
+			\textbf{RF09} & Calcular y mostrar el \'{i}ndice de eritema. & Esencial\\ \hline
 
-			\textbf{RF010} & Calcular y mostrar el \'{i}ndice de eritema. & Esencial\\ \hline
+			\textbf{RF10} & Almacenar la informaci\'{o}n de los usuarios, las historias m\'{e}dicas, las muestras y los resultados de las mediciones en una base de datos. & Esencial\\ \hline			
 
-			\textbf{RF11} & Almacenar la informaci\'{o}n de los usuarios, las historias m\'{e}dicas, las muestras y los resultados de las mediciones en una base de datos. & Esencial\\ \hline			
-
-			\textbf{RF12} & Gestionar la creaci\'{o}n, consulta, modificaci\'{o}n y eliminaci\'{o}n de los usuarios. & Esencial\\ \hline
+			\textbf{RF11} & Gestionar la creaci\'{o}n, consulta, modificaci\'{o}n y eliminaci\'{o}n de los usuarios. & Esencial\\ \hline
 			
-			\textbf{RF13} & Gestionar la creaci\'{o}n, consulta, modificaci\'{o}n y eliminaci\'{o}n de las historias m\'{e}dicas de pacientes. & Esencial\\ \hline
+			\textbf{RF12} & Gestionar la creaci\'{o}n, consulta, modificaci\'{o}n y eliminaci\'{o}n de las historias m\'{e}dicas de pacientes. & Esencial\\ \hline
 			
-			\textbf{RF14} & Gestionar la creaci\'{o}n, consulta, modificaci\'{o}n y eliminaci\'{o}n de las muestras pertenecientes a las historias m\'{e}dicas. & Esencial\\ \hline	
+			\textbf{RF13} & Gestionar la creaci\'{o}n, consulta, modificaci\'{o}n y eliminaci\'{o}n de las muestras pertenecientes a las historias m\'{e}dicas. & Esencial\\ \hline	
 			
-			\textbf{RF15} & Exportar los datos de una muestra a un archivo port\'{a}til. & Esencial\\ \hline
+			\textbf{RF14} & Exportar los datos de una muestra a un archivo port\'{a}til. & Esencial\\ \hline
 		\end{tabulary}
 	\end{table}
 	
@@ -251,7 +249,7 @@
 			
 			\item \textbf{Gestionar medici\'{o}n:} Permite a todos los usuarios efectuar una medici\'{o}n con el MiniScan XE Plus conectado, visualizar los resultados obtenidos de la misma, y borrarlos.
 			
-			\item \textbf{Consultar medici\'{o}n:} Permite a todos los usuarios visualizar tanto la informaci\'{o}n obtenida directamente del MiniScan XE Plus, como la informaci\'{o}n calculada a partir de la misma, como la curva de reflectancia difusa, la curva de absorbancia aparente, las coordenadas de cromaticidad CIE xyz, las coordenadas CIELAB y el \'{i}ndice de eritema de una medici\'{o}n realizada.
+			\item \textbf{Consultar medici\'{o}n:} Permite a todos los usuarios visualizar tanto la informaci\'{o}n obtenida directamente del MiniScan XE Plus, como la informaci\'{o}n calculada a partir de la misma, como la curva de reflectancia difusa, la curva de absorbancia aparente, las coordenadas de cromaticidad CIE xyz, las coordenadas CIELAB, el coeficiente de absorci\'{o}n y el \'{i}ndice de eritema de una medici\'{o}n realizada.
 			
 			\item \textbf{Gestionar sesi\'{o}n:} Permite a cualquier usuario iniciar sesi\'{o}n para acceder a las funciones pertinentes para su rol, consultar y modificar su informaci\'{o}n, cambiar su contrase\~{n}a, y cerrar sesi\'{o}n.
 			
@@ -315,8 +313,6 @@
 	
 	\item \textbf{Coeficiente de absorci\'{o}n: }
 	
-	\item \textbf{Coeficiente de esparcimiento: }
-	
 	\item \textbf{\'{I}ndice de eritema: }
 	
 	\item \textbf{Hoja de c\'{a}lculo: }
@@ -348,8 +344,6 @@
 				\item \textbf{datos\_espectrales:} contiene los 31 puntos espectrales resultantes de la medici\'{o}n realizada de cada muestra por medio del MiniScan XE Plus.
 				
 				\item \textbf{datos\_absorcion:} contiene los 31 puntos espectrales resultantes del c\'{a}lculo del coeficiente de absorci\'{o}n asociado con los datos espectrales.
-				
-				\item \textbf{datos\_esparcimiento:} contiene los 31 puntos espectrales resultantes del c\'{a}lculo del coeficiente de esparcimiento asociado con los datos espectrales.
 				
 				\item \textbf{datos\_adicionales:} almacena los datos que son calculados a partir de los 31 puntos espectrales de cada muestra, estos son las coordenadas de cromaticiad CIE xyz, las coordenadas del espacio del color CIELAB y el \'{i}ndice de eritema.
 				
@@ -479,7 +473,7 @@ QVector<float> CIEXYZ(QVector<float> medicion){
 		auxK+= iluCIED65[i]*yCIE10[i];
         auxX+= medicion[i]*iluCIED65[i]*xCIE10[i];
         auxY+= medicion[i]*iluCIED65[i]*yCIE10[i];
-        auxY+= medicion[i]*iluCIED65[i]*zCIE10[i];
+        auxZ+= medicion[i]*iluCIED65[i]*zCIE10[i];
     }
 
     //calcula la constante k
