@@ -190,12 +190,12 @@
 
  \begin{itemize}
  	
- 	\item \textbf{Manejar el MiniScan XE Plus:}
+ 	\item \textbf{Operar el MiniScan XE Plus:}
  	
  		\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.4]{img/cu-manejar-miniscan.png}
-			\caption[Caso de uso: manejar el MiniScan XE Plus]{\textit{ Caso de uso: manejar el MiniScan XE Plus} (Fuente: Autor).}
+			\caption[Caso de uso: operar el MiniScan XE Plus]{\textit{ Caso de uso: operar el MiniScan XE Plus} (Fuente: Autor).}
 	\end{figure}
 	
 	 	\item \textbf{Gestionar medici\'{o}n:}
@@ -207,12 +207,12 @@
 	\end{figure}
 
 \newpage
-	 	\item \textbf{Gestionar sesi\'{o}n:}
+	 	\item \textbf{Gestionar sesi\'{o}n de usuario:}
  	
  		\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.5]{img/cu-gestion-sesion.png}
-			\caption[Caso de uso: gestionar sesi\'{o}n]{\textit{ Caso de uso: gestionar sesi\'{o}n} (Fuente: Autor).}
+			\caption[Caso de uso: gestionar sesi\'{o}n de usuario]{\textit{ Caso de uso: gestionar sesi\'{o}n de usuario} (Fuente: Autor).}
 	\end{figure}
 	
 		 	\item \textbf{Gestionar historia:}
@@ -245,13 +245,13 @@
 	\subsubsection{Descripci\'{o}n de los casos de uso}
 	
 		\begin{itemize}
-			\item \textbf{Manejar instrumento:} Permite a todos los usuarios conectar, desconectar y calibrar el MiniScan XE Plus, esto \'{u}ltimo haciendo uso de una trampa de luz y una cer\'{a}mica blanca.
+			\item \textbf{Operar MiniScan:} Permite a todos los usuarios conectar, desconectar y calibrar el MiniScan XE Plus, esto \'{u}ltimo haciendo uso de una trampa de luz y una cer\'{a}mica blanca.
 			
 			\item \textbf{Gestionar medici\'{o}n:} Permite a todos los usuarios efectuar una medici\'{o}n con el MiniScan XE Plus conectado, visualizar los resultados obtenidos de la misma, y borrarlos.
 			
 			\item \textbf{Consultar medici\'{o}n:} Permite a todos los usuarios visualizar tanto la informaci\'{o}n obtenida directamente del MiniScan XE Plus, como la informaci\'{o}n calculada a partir de la misma, como la curva de reflectancia difusa, la curva de absorbancia aparente, las coordenadas de cromaticidad CIE xyz, las coordenadas CIELAB, el coeficiente de absorci\'{o}n y el \'{i}ndice de eritema de una medici\'{o}n realizada.
 			
-			\item \textbf{Gestionar sesi\'{o}n:} Permite a cualquier usuario iniciar sesi\'{o}n para acceder a las funciones pertinentes para su rol, consultar y modificar su informaci\'{o}n, cambiar su contrase\~{n}a, y cerrar sesi\'{o}n.
+			\item \textbf{Gestionar sesi\'{o}n de usuario:} Permite a cualquier usuario iniciar sesi\'{o}n para acceder a las funciones pertinentes para su rol, consultar y modificar su informaci\'{o}n, cambiar su contrase\~{n}a, y cerrar sesi\'{o}n.
 			
 			\item \textbf{Gestionar historia:} Permite a todos los usuarios consultar la informaci\'{o}n perteneciente a las historias m\'{e}dicas, y s\'{o}lo permite a los usuarios con el rol de dermat\'{o}logo registrar, modificar y eliminar dichas historias. 
 			
@@ -327,7 +327,7 @@
 
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.4]{img/diagramaER.png}
+		\includegraphics[scale=.4]{img/diagramaER.png}
 			\caption[Diagrama ER de la base de datos]{\textit{Diagrama ER de la base de datos} (Fuente: Autor).}
 	\end{figure}
 	
@@ -385,7 +385,7 @@
 		\includegraphics[scale=1]{img/MiniScanXEPlus.png}
 			\caption[MiniScan XE Plus]{\textit{MiniScan XE Plus} (Fuente: HunterLab, 2006).}
 	\end{figure}
-	
+\newpage
 \section{Comunicaci\'{o}n con el MiniScan XE Plus}
 
 	Para establecer la comunicaci\'{o}n entre el MiniScan XE Plus y el Spectrasoft, se recurri\'{o} a la documentaci\'{o}n del instrumento, en la cual se describe el MSXE.ocx, un archivo que implementa las funciones comunmente utilizadas por dicho instrumento. Se contact\'{o} al personal de soporte t\'{e}cnico de HunterLab por correo electr\'{o}nico, para solicitarle el c\'{o}digo fuente de dicho archivo y la documentaci\'{o}n relativa a su utilizaci\'{o}n que se pudiera proporcionar para la investigaci\'{o}n.
@@ -393,7 +393,7 @@
 	Si bien el personal no comparti\'{o} el c\'{o}digo fuente del archivo, s\'{i} envi\'{o} la documentaci\'{o}n solicitada y un ejemplo de su uso escrito en Visual Basic for Applications (VBA). Primero se intent\'{o} cargar el archivo y utilizarlo directamente en Qt; sin embargo, ocurr\'{i}a un error de compatibilidad de datos al invocar algunas de sus funciones. La soluci\'{o}n a este problema fue desarrollar una librer\'{i}a escrita en Visual Basic .NET, con la cual se pueden invocar todas las funciones de este archivo sin problema alguno.
 
 	As\'{i} pues, por medio del cable adaptador RS232-USB, y empleando la librer\'{i}a escrita en Visual Basic .NET, se logr\'{o} establecer la comunicaci\'{o}n entre el Spectrasoft y el MiniScan XE Plus.
-
+\newpage
 \section{F\'{o}rmulas implementadas}
 	A continuaci\'{o}n se muestra el c\'{o}digo fuente de las f\'{o}rmulas de \'{o}ptica y colorimetr\'{i}a que fueron definidas en las bases te\'{o}ricas, e implementadas en el Spectrasoft.
 	

@@ -7,7 +7,8 @@
 %\renewcommand{\rmdefault}{phv} % Arial
 %\renewcommand{\sfdefault}{phv} % Arial
 \usepackage{placeins} % ayuda a que las tablas no queden en medio de los textos
-\usepackage{tabulary} %tabla que ajusta celdas al texto
+\usepackage{tabulary} % ajusta el alto de la tabla
+\usepackage{tabularx} % ajusta el ancho de la tabla
 \usepackage[font={footnotesize}]{caption} % tamano para la descripcion de las tablas
 \usepackage{array}
 \usepackage{float}
@@ -94,7 +95,7 @@
 	Prof. Harold Vasquez
 }
 
-\newcommand{\fecha}{Naguanagua, 
+\newcommand{\fechaPortada}{Naguanagua, 
 \ifcase \month \or Enero\or Febrero\or Marzo\or Abril\or Mayo\or Junio\or Julio\or Agosto\or Septiembre\or Octubre\or Noviembre\or Diciembre\fi \space de \the\year.}
 
 \newcommand{\anchotabla}{14cm}
@@ -125,12 +126,16 @@
 	En este cap\'{i}tulo se muestran los resultados que fueron alcanzados en el desarrollo del presente trabajo de investigaci\'{o}n, incluyendo las fases metodol\'{o}gicas, las tecnolog\'{i}as y los recursos utilizados, la interfaz gr\'{a}fica de usuario del software resultante y las pruebas realizadas.
 }
 
+\newcommand{\capV}{
+	En este cap\'{i}tulo se establecen las conclusiones a las que se lleg\'{o} con el presente trabajo de investigaci\'{o}n, y las recomendaciones consideradas a tomar para trabajos futuros.
+}
+
 \begin{document}
 	\include{portada_0}
 	\include{portada_1}
 	\pagenumbering{roman}%numeracion romana
-	\include{dedicatoria}
-	\include{agradecimientos}
+	%\include{dedicatoria}
+	%\include{agradecimientos}
 	\include{resumen}
 	\pagestyle{fancy}%estilo del header
 	\pagenumbering{arabic}%numeracion arabica
