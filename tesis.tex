@@ -14,6 +14,7 @@
 \usepackage{float}
 \usepackage{makecell}
 \usepackage{graphicx}
+\usepackage{multirow}
 \usepackage[spanish,es-tabla,es-lcroman]{babel}
 \selectlanguage{spanish}
 \usepackage[authoryear,datebegin]{flexbib}
@@ -98,6 +99,18 @@
 \newcommand{\fechaPortada}{Naguanagua, 
 \ifcase \month \or Enero\or Febrero\or Marzo\or Abril\or Mayo\or Junio\or Julio\or Agosto\or Septiembre\or Octubre\or Noviembre\or Diciembre\fi \space de \the\year.}
 
+\newcommand{\proyecto}{
+	Software para el MiniScan XE Plus.
+}
+
+\newcommand{\nombre}{
+	Gabriel N\'{u}\~{n}ez.
+}
+
+\newcommand{\fecha}{
+	15 de octubre, 2015.
+}
+
 \newcommand{\anchotabla}{14cm}
 
 \newcommand{\altocelda}{2pt}
@@ -109,6 +122,19 @@
 \renewcommand\thefigure{\arabic{chapter}.\arabic{figure}}
 
 \renewcommand\thetable{\arabic{chapter}.\arabic{table}}
+
+\usepackage{appendix}
+\usepackage{titlesec}
+\usepackage{sectsty}
+\usepackage{subcaption}
+
+\addto\captionsspanish{
+  \renewcommand\appendixname{Anexo}
+  \renewcommand{\appendixtocname}{Anexos}
+  \renewcommand\appendixpagename{Anexos}
+}
+
+\chapterfont{\centering}
 
 \begin{document}
 	\include{portada_0}
@@ -132,5 +158,21 @@
 	\nocite{*}
 	\renewcommand\bibname{Referencias}
 	\bibliography{bibliografia}
+
+	\titleformat{\chapter}[hang]
+	{\normalfont\bfseries}{\chaptertitlename\ \thechapter:}{1em}{}
+	\makeatletter
+	\def\ttl@mkchap@i#1#2#3#4#5#6#7{%
+    \ttl@assign\@tempskipa#3\relax\beforetitleunit
+    \vspace{\@tempskipa}%<<<<<< REMOVE THE * AFTER \vspace
+    \global\@afterindenttrue
+    \ifcase#5 \global\@afterindentfalse\fi
+    \ttl@assign\@tempskipb#4\relax\aftertitleunit
+    \ttl@topmode{\@tempskipb}{%
+        \ttl@select{#6}{#1}{#2}{#7}}%
+    \ttl@finmarks  % Outside the box!
+    \@ifundefined{ttlp@#6}{}{\ttlp@write{#6}}}
+    \makeatother
+	\include{capitulos/anexos}
 	
 \end{document}

@@ -1,0 +1,924 @@
+\appendix
+\clearpage
+\addappheadtotoc
+\appendixpage
+
+\chapter{Manual de instalaci\'{o}n}
+\thispagestyle{fancy}
+\section*{Requerimientos del sistema}
+
+\subsection*{Requerimientos de hardware}
+
+	\begin{itemize}
+		\item Procesador de 1 gigahertz (GHz) o superior.
+		
+		\item 1 gigabyte (GB) de memoria RAM o m\'{a}s.
+		
+		\item Resoluci\'{o}n de pantalla de 1024x768 o superior.
+	\end{itemize}
+	
+\subsection*{Requerimientos de arquitectura}
+
+	\begin{itemize}
+		\item Arquitectura de 32 bits o de 64 bits.
+	\end{itemize}
+
+\subsection*{Requerimientos del sistema operativo}
+
+	\begin{itemize}
+		\item Sistema operativo Microsoft Windows 7 Service Pack 1 o superior.
+	\end{itemize}
+	
+\subsection*{Requerimientos de software}
+
+	\begin{itemize}
+		\item Microsoft .NET framework 4 o superior.
+		
+		\item Microsoft Internet Explorer 10 o superior.
+	\end{itemize}
+
+\newpage
+
+\section*{Acciones previas}
+
+	\subsection*{Controlador para el adaptador serial-USB}
+	
+	Conecte el MiniScan XE Plus utilizando el cable adaptador serial-USB, luego instale el controlador para el adaptador dejando todas las opciones de instalaci\'{o}n por defecto.
+
+	\subsection*{Paquete MSXP-CFLX Utility}
+	
+	Instale el paquete MSXP-CFLX Utility, ejecut\'{a}ndolo como administrador y dejando todas las opciones de instalaci\'{o}n por defecto.
+	
+	\subsection*{Carpeta MSXEBridge}
+	
+	Copie la carpeta <<MSXEBridge>> en el disco local C, en la ruta <<C:\textbackslash>>.
+	
+\section*{Versiones de los paquetes a instalar}
+
+\begin{itemize}
+	\item Visual Studio 2013 community/professional/ultimate.
+	
+	\item PostgreSQL 9.4.4-3.
+\end{itemize}
+
+\newpage
+
+\section*{Instalaci\'{o}n de Visual Studio}
+	
+Ejecute la instalaci\'{o}n de Visual Studio como administrador. Seleccione la opci\'{o}n <<Acepto los t\'{e}rminos de licencia y la declaraci\'{o}n de privacidad.>> y haga click en el bot\'{o}n <<Siguiente>> (v\'{e}ase la figura \ref{fig:vs-instalacion1}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.8\linewidth]{./img/vs-instalacion1.jpg}
+\caption[]{Inicio de instalaci\'{o}n de Visual Studio\label{fig:vs-instalacion1}}
+\end{figure}
+\newpage
+Deje todas las opciones por defecto de <<Caracter\'{i}sticas opcionales para instalar:>> y haga click en el bot\'{o}n <<INSTALAR>> (v\'{e}ase la figura \ref{fig:vs-instalacion2}).	
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.8\linewidth]{./img/vs-instalacion2.jpg}
+\caption[]{Caracter\'{i}sticas opcionales de Visual Studio\label{fig:vs-instalacion2}}
+\end{figure}
+\newpage
+Espere a que el proceso de instalaci\'{o}n finalice (v\'{e}ase la figura \ref{fig:vs-instalacion3}).	
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.8\linewidth]{./img/vs-instalacion3.jpg}
+\caption[]{Progreso de la instalaci\'{o}n de Visual Studio\label{fig:vs-instalacion3}}
+\end{figure}
+\newpage
+Despu\'{e}s de finalizar la instalaci\'{o}n, no inicie Visual Studio, haga click en el bot\'{o}n con forma de equis (x) en la esquina superior para cerrar la ventana (v\'{e}ase la figura \ref{fig:vs-instalacion4}).	
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.8\linewidth]{./img/vs-instalacion4.jpg}
+\caption[]{Cerrar ventana de instalaci\'{o}n de Visual Studio\label{fig:vs-instalacion4}}
+\end{figure}
+
+\newpage
+
+\section*{Instalaci\'{o}n de PostgreSQL}
+	
+Ejecute la instalaci\'{o}n de PostgreSQL como administrador. Haga click en el bot\'{o}n <<Siguiente>> (v\'{e}ase la figura \ref{fig:postgres1}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.6\linewidth]{./img/postgres1.jpg}
+\caption[]{Inicio de instalaci\'{o}n de PostgreSQL\label{fig:postgres1}}
+\end{figure}
+
+Deje la ubicaci\'{o}n del directorio de instalaci\'{o}n por defecto y haga click en el bot\'{o}n <<Siguiente>> (v\'{e}ase la figura \ref{fig:postgres2}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.6\linewidth]{./img/postgres2.jpg}
+\caption[]{Directorio de instalaci\'{o}n de PostgreSQL\label{fig:postgres2}}
+\end{figure}
+
+\newpage
+
+Deje la ubicaci\'{o}n del directorio de datos por defecto y haga click en el bot\'{o}n <<Siguiente>> (v\'{e}ase la figura \ref{fig:postgres3}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.6\linewidth]{./img/postgres3.jpg}
+\caption[]{Inicio de datos de PostgreSQL\label{fig:postgres3}}
+\end{figure}
+
+Introduzca una contrase\~{n}a de su preferencia, gu\'{a}rdela en un lugar seguro y haga click en el bot\'{o}n <<Siguiente>> (v\'{e}ase la figura \ref{fig:postgres4}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.6\linewidth]{./img/postgres4.jpg}
+\caption[]{Contrase\~{n}a para el superusuario de PostgreSQL\label{fig:postgres4}}
+\end{figure}
+
+\newpage
+
+Deje el n\'{u}mero del puerto por defecto y haga click en el bot\'{o}n <<Siguiente>> (v\'{e}ase la figura \ref{fig:postgres5}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.6\linewidth]{./img/postgres5.jpg}
+\caption[]{N\'{u}mero de puerto para PostgreSQL\label{fig:postgres5}}
+\end{figure}
+
+Deje la configuraci\'{o}n regional por defecto y haga click en el bot\'{o}n <<Siguiente>> (v\'{e}ase la figura \ref{fig:postgres6}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.6\linewidth]{./img/postgres6.jpg}
+\caption[]{Configuraci\'{o}n regional para PostgreSQL\label{fig:postgres6}}
+\end{figure}
+
+\newpage
+
+Haga click en el bot\'{o}n <<Siguiente>> para empezar el proceso de instalaci\'{o}n y espere a que finalice (v\'{e}ase las figuras \ref{fig:postgres7} y \ref{fig:postgres8}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.7\linewidth]{./img/postgres7.jpg}
+\caption[]{Inicio de la instalaci\'{o}n de PostgreSQL\label{fig:postgres7}}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.7\linewidth]{./img/postgres8.jpg}
+\caption[]{Proceso de instalaci\'{o}n de PostgreSQL\label{fig:postgres8}}
+\end{figure}
+
+\newpage
+
+Despu\'{e}s de finalizar la instalaci\'{o}n, aseg\'{u}rese de que la opci\'{o}n <<Lanzar Stack Builder al finalizar>> no este seleccionada, y por \'{u}ltimo haga click en el bot\'{o}n <<Terminar>> (v\'{e}ase la figura \ref{fig:vs-instalacion9}).	
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.8\linewidth]{./img/postgres9.jpg}
+\caption[]{Finalizaci\'{o}n de la instalaci\'{o}n de PostgreSQL\label{fig:vs-instalacion9}}
+\end{figure}
+
+\newpage
+
+\section*{Configuraci\'{o}n de Visual Studio}
+	
+	Ejecute el software Visual Studio como administrador. En caso de que al iniciar se le pregunte si desea iniciar sesi\'{o}n, elija la opci\'{o}n <<De momento no, quiz\'{a}s m\'{a}s tarde>> (v\'{e}ase la figura \ref{fig:vs-inicio}).	
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.8\linewidth]{./img/vs-inicio.jpg}
+\caption[]{Vista de inicio de Visual Studio\label{fig:vs-inicio}}
+\end{figure}
+
+En el men\'{u} <<ARCHIVO>> entre al submen\'{u} <<Abrir>> y haga click en la opci\'{o}n <<Proyecto o soluci\'{o}n...>> (v\'{e}ase la figura \ref{fig:vs-abrir}).	
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.8\linewidth]{./img/vs-proyecto-abrir.jpg}
+\caption[]{Abrir proyecto\label{fig:vs-abrir}}
+\end{figure}
+
+\newpage
+
+En la carpeta <<MSXEBridge>> ubicada en el disco <<C:\textbackslash>>, seleccione el archivo <<MSXEBridge>> y haga click en el bot\'{o}n <<Abrir>> (v\'{e}ase la figura \ref{fig:vs-abrir-buscar}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.8\linewidth]{./img/vs-abrir-buscar.jpg}
+\caption[]{Buscar el archivo MSXEBridge\label{fig:vs-abrir-buscar}}
+\end{figure}
+
+En la parte derecha de Visual Studio, haga click con el bot\'{o}n derecho en <<MSXEBridge>> y seleccione la opci\'{o}n <<Propiedades>> (v\'{e}ase la figura \ref{fig:vs-propiedades}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.7\linewidth]{./img/vs-propiedades.jpg}
+\caption[]{Propiedades de MSXEBridge\label{fig:vs-propiedades}}
+\end{figure}
+
+\newpage
+
+Haga click al bot\'{o}n <<Informaci\'{o}n de ensamblado...>>, aseg\'{u}rese de que la opci\'{o}n <<Crear ensamblado visible a trav\'{e}s de COM>> est\'{e} seleccionada, y haga click en el bot\'{o}n <<Aceptar>> (v\'{e}ase la figura \ref{fig:vs-ensamblado}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.75\linewidth]{./img/vs-ensamblado.jpg}
+\caption[]{Ensamblado de MSXEBridge\label{fig:vs-ensamblado}}
+\end{figure}
+
+Haga click en la pesta\~{n}a <<Compilar>> y aseg\'{u}rese de que la opci\'{o}n <<Registrar para interoperabilidad COM>> est\'{e} seleccionada (v\'{e}ase la figura \ref{fig:vs-compilar}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.75\linewidth]{./img/vs-compilar.jpg}
+\caption[]{Interoperabilidad de MSXEBridge\label{fig:vs-compilar}}
+\end{figure}
+
+\newpage
+
+En el men\'{u} <<COMPILAR>>, haga click en la opci\'{o}n <<Compilar soluci\'{o}n>> est\'{e} seleccionada (v\'{e}ase la figura \ref{fig:vs-compilar-solucion}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{./img/vs-compilar-solucion.jpg}
+\caption[]{Compilar MSXEBridge\label{fig:vs-compilar-solucion}}
+\end{figure}
+
+En la parte inferior de Visual Studio podr\'{a} ver que la compilaci\'{o}n finaliz\'{o} correctamente (v\'{e}ase la figura \ref{fig:vs-resultados}). Por \'{u}ltimo, cierre el software Visual Studio.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{./img/vs-resultados.jpg}
+\caption[]{Resultados de la compilaci\'{o}n\label{fig:vs-resultados}}
+\end{figure}
+
+Es importante destacar que los pasos seguidos previamente s\'{o}lo se deben realizar una vez, y no es necesario que ejecute Visual Studio posteriormente para ejecutar el Spectrasoft.
+
+\newpage
+
+\section*{Configuraci\'{o}n de PostgreSQL}
+	
+Ejecute el software pgAdmin como administrador (v\'{e}ase la figura \ref{fig:pgadmin-inicio}).
+	
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{./img/pgadmin-inicio.jpg}
+\caption[]{Vista de inicio de pgAdmin\label{fig:pgadmin-inicio}}
+\end{figure}
+
+Para accesar al servidor, haga doble click en la opci\'{o}n <<PostgreSQL (localhost:5432)>>, e introduzca la contrase\~{n}a que estableci\'{o} durante el proceso de instalaci\'{o}n (v\'{e}ase la figura \ref{fig:pgadmin-acceso}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{./img/pgadmin-acceso.jpg}
+\caption[]{Acceso al servidor\label{fig:pgadmin-acceso}}
+\end{figure}
+
+\newpage
+
+Haga click derecho en el men\'{u} <<Login Roles>> y seleccione la opci\'{o}n <<New Login Role...>> (v\'{e}ase la figura \ref{fig:pgadmin-rol}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{./img/pgadmin-rol.jpg}
+\caption[]{Crear nuevo rol\label{fig:pgadmin-rol}}
+\end{figure}
+
+Introduzca <<CIMBUC>> en <<Role name>> (v\'{e}ase la figura \ref{fig:pgadmin-rol-nombre}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.5\linewidth]{./img/pgadmin-rol-nombre.jpg}
+\caption[]{Nombre del rol\label{fig:pgadmin-rol-nombre}}
+\end{figure}
+
+Haga click en la pesta\~{n}a <<Definition>> e introduzca <<CIMBUC>> como la contrase\~{n}a del rol (v\'{e}ase la figura \ref{fig:pgadmin-rol-clave}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.45\linewidth]{./img/pgadmin-rol-clave.jpg}
+\caption[]{Contrase\~{n}a del rol\label{fig:pgadmin-rol-clave}}
+\end{figure}
+
+Haga click en la pesta\~{n}a <<Role privileges>>, seleccione todas las opciones de privilegios disponibles para el rol y haga click en el bot\'{o}n <<OK>> (v\'{e}ase la figura \ref{fig:pgadmin-rol-privilegios}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.45\linewidth]{./img/pgadmin-rol-privilegios.jpg}
+\caption[]{Privilegios del rol\label{fig:pgadmin-rol-privilegios}}
+\end{figure}
+
+\newpage
+
+Haga click derecho en el men\'{u} <<Databases>> y seleccione la opci\'{o}n <<New Database...>> (v\'{e}ase la figura \ref{fig:pgadmin-bd}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{./img/pgadmin-bd.jpg}
+\caption[]{Crear nueva base de datos\label{fig:pgadmin-bd}}
+\end{figure}
+
+Introduzca <<CIMBUC>> en <<Name>> y haga click en el bot\'{o}n <<OK>> (v\'{e}ase la figura \ref{fig:pgadmin-bd-nombre}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.5\linewidth]{./img/pgadmin-bd-nombre.jpg}
+\caption[]{Nombre de la base de datos\label{fig:pgadmin-bd-nombre}}
+\end{figure}
+
+\newpage
+
+Haga click derecho en la base de datos <<CIMBUC>> y seleccione la opci\'{o}n <<Restore...>> (v\'{e}ase la figura \ref{fig:pgadmin-restaurar}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{./img/pgadmin-restaurar.jpg}
+\caption[]{Opci\'{o}n de restauraci\'{o}n de la base de datos\label{fig:pgadmin-restaurar}}
+\end{figure}
+
+\newpage
+
+Haga click en el bot\'{o}n <<...>> para buscar el archivo de respaldo de la base de datos (v\'{e}ase la figura \ref{fig:pgadmin-restaurar-ventana}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.6\linewidth]{./img/pgadmin-restaurar-ventana.jpg}
+\caption[]{Ventana de restauraci\'{o}n de la base de datos\label{fig:pgadmin-restaurar-ventana}}
+\end{figure}
+
+Busque y seleccione el archivo <<spectradb.backup>>, y haga click en el bot\'{o}n <<Abrir>> (v\'{e}ase la figura \ref{fig:pgadmin-restaurar-buscar}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{./img/pgadmin-restaurar-buscar.jpg}
+\caption[]{Buscar el archivo de respaldo\label{fig:pgadmin-restaurar-buscar}}
+\end{figure}
+
+\newpage
+
+De vuelta a la ventana de restauraci\'{o}n, haga click en la lista desplegable de <<Rolename>> y seleccione la opci\'{o}n <<CIMBUC>> (v\'{e}ase la figura \ref{fig:pgadmin-restaurar-rol}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.6\linewidth]{./img/pgadmin-restaurar-rol.jpg}
+\caption[]{Rol de restauraci\'{o}n de la base de datos\label{fig:pgadmin-restaurar-rol}}
+\end{figure}
+
+Haga click en la pesta\~{n}a <<Restore Options \#1>> y en el grupo <<Sections>> seleccione las opciones <<Pre-data>>, <<Data>> y <<Post-data>>, luego haga click en el bot\'{o}n <<Restore>> (v\'{e}ase la figura \ref{fig:pgadmin-restaurar-opciones}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.6\linewidth]{./img/pgadmin-restaurar-opciones.jpg}
+\caption[]{Opciones de restauraci\'{o}n de la base de datos\label{fig:pgadmin-restaurar-opciones}}
+\end{figure}
+
+\newpage
+
+En la misma ventana haga click en bot\'{o}n <<Done>>, y por \'{u}ltimo cierre el software pgAdmin (v\'{e}ase la figura \ref{fig:pgadmin-restaurar-listo}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.6\linewidth]{./img/pgadmin-restaurar-listo.jpg}
+\caption[]{Restauraci\'{o}n de la base de datos completa\label{fig:pgadmin-restaurar-listo}}
+\end{figure}
+
+Es importante destacar que los pasos seguidos previamente s\'{o}lo se deben realizar una vez, y no es necesario que ejecute pgAdmin posteriormente para ejecutar el Spectrasoft.
+
+La base de datos posee un usuario administrador por defecto para iniciar sesi\'{o}n y trabajar con el Spectrasoft, sus datos de ingreso son los siguientes: 
+
+\begin{itemize}
+	\item \textbf{C\'{e}dula de identidad:} V00000000
+	
+	\item \textbf{Contrase\~{n}a:} 12345Admin
+\end{itemize}
+
+Luego de iniciar sesi\'{o}n en el Spectrasoft con este usuario, puede crear otro usuario administrador de su preferencia y eliminar este.
+
+\section*{Instalaci\'{o}n del Spectrasoft}
+
+Ejecute el instalador <<setup-spectrasoft>> y haga click en el bot\'{o}n <<Next>>, dejando todas las opciones por defecto hasta llegar al acuerdo de licencia (v\'{e}ase la figura \ref{fig:spectrasoft-setup}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.5\linewidth]{./img/spectrasoft-setup.jpg}
+\caption[]{Instalador del Spectrasoft\label{fig:spectrasoft-setup}}
+\end{figure}
+
+En la ventana <<License Agreement>>, seleccione la opci\'{o}n <<I accept the license>> y haga click en el bot\'{o}n <<Next>> (v\'{e}ase la figura \ref{fig:spectrasoft-licencia}). Deje las siguientes opciones por defecto hasta llegar la opci\'{o}n de instalar.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.5\linewidth]{./img/spectrasoft-licencia.jpg}
+\caption[]{Licencia del Spectrasoft\label{fig:spectrasoft-licencia}}
+\end{figure}
+
+\newpage
+
+En la ventana <<Ready to Install>> haga click en el bot\'{o}n <<Install>> (v\'{e}ase la figura \ref{fig:spectrasoft-instalar}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.6\linewidth]{./img/spectrasoft-instalar.jpg}
+\caption[]{Instalar el Spectrasoft\label{fig:spectrasoft-instalar}}
+\end{figure}
+
+En la ventana <<Completing the Spectrasoft Wizard>> haga click en el bot\'{o}n <<Finish>> (v\'{e}ase la figura \ref{fig:spectrasoft-finalizar}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.6\linewidth]{./img/spectrasoft-finalizar.jpg}
+\caption[]{Finalizar la instalaci\'{o}n\label{fig:spectrasoft-finalizar}}
+\end{figure}
+
+\newpage
+
+Por \'{u}ltimo, para ejecutar el Spectrasoft abra el men\'{u} de inicio de Windows y haga click en la opci\'{o}n <<Spectrasoft>> (v\'{e}ase la figura \ref{fig:spectrasoft-ejecutable}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.4\linewidth]{./img/spectrasoft-ejecutable.jpg}
+\caption[]{Ejecutar el Spectrasoft\label{fig:spectrasoft-ejecutable}}
+\end{figure}
+
+Si desea entrar al men\'{u} del Spectrasoft, abra el men\'{u} de inicio de Windows, haga click en la opci\'{o}n <<Todos los programas>>, busque la carpeta llamada <<Spectrasoft>> y seleccionela (v\'{e}ase la figura \ref{fig:spectrasoft-menu}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.4\linewidth]{./img/spectrasoft-menu.jpg}
+\caption[]{Men\'{u} del Spectrasoft\label{fig:spectrasoft-menu}}
+\end{figure}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Manual de usuario}
+\thispagestyle{fancy}
+\vfill
+\section*{Introducci\'{o}n}
+	El Spectrasoft es un software de c\'{o}digo abierto para el manejo del MiniScan XE Plus, el cual es usado en el diagn\'{o}stico de patolog\'{i}as dermatol\'{o}gicas en pacientes. Este software ofrece funciones de gesti\'{o}n de mediciones, historias m\'{e}dicas de pacientes y muestras. La vista principal del Spectrasoft es la mostrada en la figura \ref{fig:vista-principal}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{./img/vista-principal.jpg}
+\caption[]{Vista principal del Spectrasoft\label{fig:vista-principal}}
+\end{figure}
+\vfill
+\newpage
+
+\section*{Permisolog\'{i}a de los usuarios}
+
+	Spectrasoft maneja tres roles de usuario: administradores, dermat\'{o}logos e investigadores. Si bien los tres roles comparten acciones comunes que pueden realizar, cada uno tiene permisos diferentes que lo distinguen de los dem\'{a}s. Estos permisos son descritos en la tabla 1.
+
+\begin{table}[h]
+		\small
+		\caption[]{Permisolog\'{i}a de los usuarios}
+		\centering
+		\setlength{\extrarowheight}{\altocelda}
+		\begin{tabulary}{\anchotabla}{|c|J|}
+			\hline
+			\thead{\textbf{\small{Usuario}}} & \thead{\textbf{\small{Permisos}}}\\ \hline
+			
+			\textbf{Administrador} &
+			
+			Manejar el MiniScan XE Plus.
+			
+			Registrar, buscar, modificar y eliminar usuarios.
+			
+			Buscar y ver historias m\'{e}dicas de pacientes.
+			
+			Buscar y ver muestras de pacientes.\\ \hline
+			
+			\textbf{Dermat\'{o}logo} &
+			
+			Manejar el MiniScan XE Plus.
+			
+			Registrar, buscar, ver, modificar y eliminar historias m\'{e}dicas de pacientes.
+			
+			Registrar, buscar, ver, modificar y eliminar muestras de pacientes.\\ \hline
+			
+			\textbf{Investigador} &
+			
+			Manejar el MiniScan XE Plus.
+			
+			Buscar y ver historias m\'{e}dicas de pacientes.
+			
+			Buscar y ver muestras de pacientes.\\ \hline
+		\end{tabulary}
+	\end{table}
+
+	Es importante destacar que todas las operaciones de registro, modificaci\'{o}n y eliminaci\'{o}n requieren de la contrase\~{n}a del usuario responsable de dicha operaci\'{o}n.
+	
+\newpage
+
+\section*{Manejo del MiniScan XE Plus}
+
+	\subsection*{Conectar y desconectar}
+		Para conectar o desconectar el MiniScan XE Plus, entre al men\'{u} del MiniScan (v\'{e}ase la figura \ref{fig:conectar-desconectar}).
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.6\linewidth]{./img/conectar.jpg}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.6\linewidth]{./img/desconectar.jpg}
+\end{subfigure}
+\caption[]{Conectar y desconectar MiniScan XE Plus\label{fig:conectar-desconectar}}
+\end{figure}
+
+	\subsection*{Calibrar}
+		Entre al men\'{u} del Miniscan y seleccione la opci\'{o}n estandarizar. Prepare la trampa negra del Miniscan para su medici\'{o}n y seleccione listo, por \'{u}ltimo prepare la cer\'{a}mica blanca para su medici\'{o}n y seleccione listo (v\'{e}ase la figura \ref{fig:calibrar}).
+	
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.33\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{./img/estandarizar.jpg}
+\end{subfigure}%
+\centering
+\begin{subfigure}{.33\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{./img/estandarizar-negro.jpg}
+\end{subfigure}%
+\begin{subfigure}{.33\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{./img/estandarizar-blanco.jpg}
+\end{subfigure}
+\caption[]{Calibrar el MiniScan XE Plus\label{fig:calibrar}}
+\end{figure}
+
+\section*{Gesti\'{o}n de mediciones}
+	
+	\subsection*{Realizar una medici\'{o}n}
+	
+	Entre al men\'{u} del MiniScan, o bien seleccione la opci\'{o}n directamente de la barra de herramientras (v\'{e}ase la figura \ref{fig:medicion}).
+	
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.6\linewidth]{./img/medir-menu.jpg}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.6\linewidth]{./img/medir-barra.jpg}
+\end{subfigure}
+\caption[]{Realizar medici\'{o}n\label{fig:medicion}}
+\end{figure}
+
+	\subsection*{Consultar resultados de una medici\'{o}n}
+	
+	El men\'{u} de los resultados de una medici\'{o}n es ilustrado en la figura \ref{fig:menu-resultados}, y todos los resultados son ilustrados desde la figura \ref{fig:datos-espectrales} a la figura \ref{fig:resultados-adicionales}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.5\linewidth]{./img/resultados-menu.jpg}
+\caption[]{Men\'{u} de resultados de una medici\'{o}n\label{fig:menu-resultados}}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{./img/resultados.jpg}
+\caption[]{Datos espectrales de una medici\'{o}n\label{fig:datos-espectrales}}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{./img/resultados-reflectancia.jpg}
+\caption[]{Curva de reflectancia de una medici\'{o}n\label{fig:resultados-reflectancia}}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{./img/resultados-absorbancia.jpg}
+\caption[]{Curva de absorbancia de una medici\'{o}n\label{fig:resultados-absorbancia}}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{./img/resultados-absorcion.jpg}
+\caption[]{Curva de absorci\'{o}n de una medici\'{o}n\label{fig:resultados-absorcion}}
+\end{figure}
+
+\newpage
+\null
+\vfill
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.6\linewidth]{./img/resultados-adicionales.jpg}
+\caption[]{Datos adicionales de una medici\'{o}n\label{fig:resultados-adicionales}}
+\end{figure}
+\vfill
+\newpage
+
+\section*{Gesti\'{o}n de sesiones}
+
+	\subsection*{Iniciar sesi\'{o}n}
+	
+	Para iniciar sesi\'{o}n entre al men\'{u} de usuario y seleccione la opci\'{o}n iniciar sesi\'{o}n. Debe ingresar su c\'{e}dula de identidad y su contrase\~{n}a. Esto es ilustrado en la figura \ref{fig:iniciar-sesion}.
+	
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{./img/inicio-sesion.jpg}
+\caption[]{Iniciar sesi\'{o}n\label{fig:iniciar-sesion}}
+\end{figure}
+	
+	\subsection*{Ver informaci\'{o}n del usuario}
+	
+	Seleccione la opci\'{o}n ver usuario, ubicada en el men\'{u} de usuario. El men\'{u} de usuario y la ventana de informaci\'{o}n son ilustrados en las figuras \ref{fig:menu-usuario} y \ref{fig:ver-usuario}.
+\newpage
+\null
+\vfill
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.3\linewidth]{./img/menu-usuario.jpg}
+\caption[]{Men\'{u} de usuario\label{fig:menu-usuario}}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.5\linewidth]{./img/ver-usuario.jpg}
+\caption[]{Ver usuario\label{fig:ver-usuario}}
+\end{figure}
+\vfill
+\newpage
+
+	\subsection*{Modificar informaci\'{o}n del usuario}
+
+	Seleccione la opci\'{o}n modificar usuario, ubicada en el men\'{u} de usuario. La ventana para modificar el usuario es ilustrada en la figura \ref{fig:modificar-usuario}.
+
+	\subsection*{Cambiar contrase\~{n}a del usuario}
+
+	Seleccione la opci\'{o}n cambiar contrase\~{n}a, ubicada en el men\'{u} de usuario. Debe ingresar la contrase\~{n}a actual del usuario y la nueva contrase\~{n}a (dos veces) para poder realizar el cambio. La ventana para realizar esta operaci\'{o}n se ilustra en la figura \ref{fig:cambiar-clave}.
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{./img/modificar-usuario.jpg}
+  \captionof{figure}[]{Modificar usuario\label{fig:modificar-usuario}}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{./img/cambiar-clave.jpg}
+  \captionof{figure}[]{Cambiar contrase\~{n}a\label{fig:cambiar-clave}}
+  \label{fig:test2}
+\end{minipage}
+\end{figure}
+
+	\subsection*{Cerrar sesi\'{o}n}
+	
+	Seleccione la opci\'{o}n cerrar sesi\'{o}n, ubicada en el men\'{u} usuario.
+
+\newpage
+
+\section*{Gesti\'{o}n de historias}
+
+	\subsection*{Registrar historia}
+	
+	Seleccione la opci\'{o}n registrar historia, ubicada en el men\'{u} historia. Solo los usuarios dermat\'{o}logos pueden registrar una historia m\'{e}dica. El men\'{u} de historia y la ventana de registro se ilustran en las figuras \ref{fig:menu-historia} y \ref{fig:registrar-historia}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.3\linewidth]{./img/menu-historia.jpg}
+\caption[]{Men\'{u} historia\label{fig:menu-historia}}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.4\linewidth]{./img/registrar-historia.jpg}
+\caption[]{Resgistrar historia\label{fig:registrar-historia}}
+\end{figure}
+
+	\subsection*{Buscar historia}
+	
+	En el men\'{u} de historia, seleccione la opci\'{o}n buscar historia. Esta ventana permite filtrar la b\'{u}squeda de historias empleando ciertos criterios. Para abrir la historia, seleccionela en la lista de historias y por \'{u}ltimo seleccione la opci\'{o}n abrir historia. Esta ventana se ilustra en la figura \ref{fig:buscar-historia}.
+	
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.9\linewidth]{./img/buscar-historia.jpg}
+\caption[]{Buscar historia\label{fig:buscar-historia}}
+\end{figure}
+	
+	\subsection*{Ver historia}
+	
+	Seleccione la opci\'{o}n ver historia, ubicada en el men\'{u} historia. Esta ventana es ilustrada en la figura \ref{fig:ver-historia}.
+	
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.5\linewidth]{./img/ver-historia1.jpg}
+\caption[]{Ver historia\label{fig:ver-historia}}
+\end{figure}
+\newpage
+	\subsection*{Modificar historia}
+	
+	Seleccione la opci\'{o}n modificar historia, ubicada en el submen\'{u} m\'{a}s opciones, dentro del men\'{u} historia. Esta ventana se ilustra en la figura \ref{fig:modificar-historia}.
+	
+	\subsection*{Eliminar historia}
+	
+	Seleccione la opci\'{o}n eliminar historia, ubicada en el submen\'{u} m\'{a}s opciones, dentro del men\'{u} historia. Esta ventana se ilustra en la figura \ref{fig:eliminar-historia}.
+	
+\begin{figure}[H]
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{./img/modificar-historia.jpg}
+  \captionof{figure}[]{Modificar historia}
+  \label{fig:modificar-historia}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{./img/eliminar-historia.jpg}
+  \captionof{figure}[]{Eliminar historia}
+  \label{fig:eliminar-historia}
+\end{minipage}
+\end{figure}
+
+	\subsection*{Cerrar historia}
+	
+	Seleccione la opci\'{o}n cerrar historia, ubicada en el men\'{u} historia.
+
+\newpage
+
+\section*{Gesti\'{o}n de muestras}
+
+	\subsection*{Registrar muestra}
+	
+	Seleccione la opci\'{o}n registrar muestra, ubicada en el men\'{u} de muestra (tambi\'{e}n disponible en la barra de herramientas). En la ventana de registro aparecer\'{a}n dos tipos de muestra que se pueden registrar, fototipo y lesi\'{o}n. Solo se puede registrar una muestra si el usuario es dermat\'{o}logo, si hay una historia m\'{e}dica cargada y si se realiz\'{o} una medici\'{o}n nueva. El men\'{u} muestra y la ventana de tipos de muestra se ilustran en las figuras \ref{fig:menu-muestra} y \ref{fig:tipos-muestra}.
+	
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.3\linewidth]{./img/menu-muestra.jpg}
+\caption[]{Men\'{u} muestra\label{fig:menu-muestra}}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.8\linewidth]{./img/tipo-muestra.jpg}
+\caption[]{Tipos de muestra\label{fig:tipos-muestra}}
+\end{figure}
+	
+		\subsubsection*{Registrar fototipo}
+		
+		En la ventana para registrar un fototipo, debe especificar el \'{a}rea en donde se le est\'{a} tomando la muestra al paciente, y se debe seleccionar el fototipo, en la opci\'{o}n clasificar fototipo. Esta ventana se puede apreciar en la figura \ref{fig:registrar-fototipo}.
+		
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.5\linewidth]{./img/registrar-fototipo1.jpg}
+\caption[]{Registrar fototipo\label{fig:registrar-fototipo}}
+\end{figure}
+
+		En la ventana de clasificaci\'{o}n del fototipo aparecer\'{a} el fototipo recomendado para la muestra dada, y ser\'{a} necesario elegir el fototipo que se desea registrar. Esto es ilustrado en la figura \ref{fig:clasificar-fototipo}.
+\newpage
+\null
+\vfill
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.8\linewidth]{./img/fototipo.jpg}
+\caption[]{Clasificar fototipo\label{fig:clasificar-fototipo}}
+\end{figure}
+\vfill
+\newpage
+	Luego de haber elegido el fototipo, aparecer\'{a} la ventana de registro nuevamente, con el fototipo elegido actualizado; por \'{u}ltimo, seleccione registrar fototipo. Esto es ilustrado en la figura \ref{fig:registrar-fototipo2}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.5\linewidth]{./img/registrar-fototipo2.jpg}
+\caption[]{Registrar fototipo\label{fig:registrar-fototipo2}}
+\end{figure}
+\newpage	
+
+\subsubsection*{Registrar lesi\'{o}n}
+			En la ventana de registrar lesi\'{o}n, debe especificar el nombre de la lesi\'{o}n y el \'{a}rea en donde se est\'{a} tomando la muestra de la misma. Esta ventana se puede apreciar en la figura \ref{fig:registrar-lesion}.
+		
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.6\linewidth]{./img/registrar-lesion.jpg}
+\caption[]{Registrar lesi\'{o}n\label{fig:registrar-lesion}}
+\end{figure}
+\newpage
+	\subsection*{Buscar muestra}
+
+		Seleccione la opci\'{o}n buscar muestra, ubicada en el men\'{u} de muestra (tambi\'{e}n disponible en la barra de herramientas). Esta ventana permite filtrar la b\'{u}squeda de las muestras pertenecientes a la historia que est\'{e} cargada en ese momento, empleando ciertos criterios. Para abrir la muestra, seleccionela en la lista de muestras y por \'{u}ltimo seleccione la opci\'{o}n abrir muestra. Esta ventana se ilustra en la figura \ref{fig:buscar-muestra}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.9\linewidth]{./img/buscar-muestra.jpg}
+\caption[]{Buscar muestra\label{fig:buscar-muestra}}
+\end{figure}
+\newpage
+	\subsection*{Ver muestra}
+	
+	Seleccione la opci\'{o}n ver muestra, ubicada en el men\'{u} de muestra (tambi\'{e}n disponible en la barra de herramientas). Esta ventana se ilustra en la figura \ref{fig:ver-muestra}.
+	
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.5\linewidth]{./img/ver-muestra.jpg}
+\caption[]{Ver muestra\label{fig:ver-muestra}}
+\end{figure}
+\newpage
+	\subsection*{Exportar muestra}
+	
+	Seleccione la opci\'{o}n exportar muestra, ubicada en el men\'{u} de muestra (tambi\'{e}n disponible en la barra de herramientas). Estas opciones se ilustran en la figura \ref{fig:exportar-muestra}.
+	
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.6\linewidth]{./img/exportar-menu.jpg}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.45\linewidth]{./img/exportar-barra.jpg}
+\end{subfigure}
+\caption[]{Exportar muestra\label{fig:exportar-muestra}}
+\end{figure}
+
+	La muestra se exporta en el escritorio a un archivo .xlsx, que puede abrirse y modificarse con cualquier programa que maneje hojas de c\'{a}lculo.
+
+	\subsection*{Modificar muestra}
+	
+	Seleccione la opci\'{o}n modificar muestra, ubicada en el submen\'{u} m\'{a}s opciones, dentro del men\'{u} muestra. Esta ventana se ilustra en la figura \ref{fig:modificar-muestra}.
+\newpage
+	\subsection*{Eliminar muestra}
+	
+	Seleccione la opci\'{o}n eliminar muestra, ubicada en el submen\'{u} m\'{a}s opciones, dentro del men\'{u} muestra. Esta ventana se ilustra en la figura \ref{fig:eliminar-muestra}.
+	
+\begin{figure}[H]
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{./img/modificar-muestra.jpg}
+  \captionof{figure}[]{Modificar muestra}
+  \label{fig:modificar-muestra}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{./img/eliminar-muestra.jpg}
+  \captionof{figure}[]{Eliminar muestra}
+  \label{fig:eliminar-muestra}
+\end{minipage}
+\end{figure}
+
+	\subsection*{Cerrar muestra}
+	
+	Seleccione la opci\'{o}n cerrar muestra, ubicada en el men\'{u} muestra.
+
+\newpage
+
+\section*{Gesti\'{o}n de usuarios}
+
+	\subsection*{Registrar usuario}
+	
+	Seleccione la opci\'{o}n registrar usuario, ubicada en el submen\'{u} m\'{a}s opciones, dentro del men\'{u} usuario. Esta ventana es ilustrada en la figura \ref{fig:registrar-usuario}.
+	
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.6\linewidth]{./img/registrar-usuario.jpg}
+\caption[]{Registrar usuario\label{fig:registrar-usuario}}
+\end{figure}
+	
+	\subsection*{Administrar usuarios}
+	
+	Seleccione la opci\'{o}n administrar usuarios, ubicada en el submen\'{u} m\'{a}s opciones, dentro del men\'{u} usuario. Administrar usuarios permite cambiar sus roles, cambiar sus contrase\~{n}as y eliminarlos. Esta ventana es ilustrada en la figura \ref{fig:administrar-usuarios}.
+	
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{./img/administrar-usuarios.jpg}
+\caption[]{Administrar usuarios\label{fig:administrar-usuarios}}
+\end{figure}
+	
+		\subsubsection*{Cambiar rol}
+		
+		Una vez haya seleccionado un usuario de la lista de usuarios, seleccione la opci\'{o}n cambiar rol. Esta ventana es ilustrada en la figura \ref{fig:cambiar-rol}.
+		
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{./img/administrar-rol.jpg}
+\caption[]{Cambiar rol\label{fig:cambiar-rol}}
+\end{figure}
+\newpage
+		\subsubsection*{Cambiar contrase\~{n}a}
+		
+		Una vez haya seleccionado un usuario de la lista de usuarios, seleccione la opci\'{o}n cambiar contrase\~{n}a. Esta opci\'{o}n requiere de la contrase\~{n}a del administrador que este realizando la operaci\'{o}n, y de la nueva contrase\~{n}a para el usuario. Esto es ilustrado en la figura \ref{fig:cambiar-clave2}.
+		
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{./img/administrar-clave.jpg}
+\caption[]{Cambiar contrase\~{n}a\label{fig:cambiar-clave2}}
+\end{figure}
+\newpage
+		\subsubsection*{Eliminar usuario}
+		
+		Una vez haya seleccionado un usuario de la lista de usuarios, seleccione la opci\'{o}n eliminar usuario. Esta opci\'{o}n solo se puede realizar con usuarios que no sean administradores. Esta opci\'{o}n es ilustrada en la figura \ref{fig:eliminar-usuario}.
+		
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\linewidth]{./img/administrar-eliminar.jpg}
+\caption[]{Eliminar usuario\label{fig:eliminar-usuario}}
+\end{figure}
