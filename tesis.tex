@@ -127,6 +127,7 @@
 \usepackage{titlesec}
 \usepackage{sectsty}
 \usepackage{subcaption}
+\usepackage{changepage}
 
 \addto\captionsspanish{
   \renewcommand\appendixname{Anexo}
@@ -150,11 +151,11 @@
 	\listoftables
 	\spacing{1.5} % interlineado
 	\include{introduccion}
-	\include{capitulo_1}
-	\include{capitulo_2}
-	\include{capitulo_3}
-	\include{capitulo_4}
-	\include{capitulo_5}
+	\include{capitulos/capitulo_1}
+	\include{capitulos/capitulo_2}
+	\include{capitulos/capitulo_3}
+	\include{capitulos/capitulo_4}
+	\include{capitulos/capitulo_5}
 	\nocite{*}
 	\renewcommand\bibname{Referencias}
 	\bibliography{bibliografia}
