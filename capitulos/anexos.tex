@@ -1,3 +1,20 @@
+	%titulos pequenos para los capitulos
+	\titleformat{\chapter}[hang]
+	{\normalfont\bfseries}{\chaptertitlename\ \thechapter:}{1em}{}
+	\makeatletter
+	\def\ttl@mkchap@i#1#2#3#4#5#6#7{%
+    \ttl@assign\@tempskipa#3\relax\beforetitleunit
+    \vspace{\@tempskipa}%<<<<<< REMOVE THE * AFTER \vspace
+    \global\@afterindenttrue
+    \ifcase#5 \global\@afterindentfalse\fi
+    \ttl@assign\@tempskipb#4\relax\aftertitleunit
+    \ttl@topmode{\@tempskipb}{%
+        \ttl@select{#6}{#1}{#2}{#7}}%
+    \ttl@finmarks  % Outside the box!
+    \@ifundefined{ttlp@#6}{}{\ttlp@write{#6}}}
+    \makeatother
+    %titulos pequenos para los capitulos
+
 \appendix
 \clearpage
 \addappheadtotoc

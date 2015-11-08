@@ -625,9 +625,9 @@ QVector<float> absorcion(QVector<float> medicion){
 
 \section{Pruebas realizadas}
 	
-	El desarrollo de un software incluye verificar y validar que \'{e}ste se encuentre libre de errores y que se haya logrado el objetivo de su dise\~{n}o. En este sentido, se realizaron pruebas de funcionalidad empleando el modelo de guiones de prueba y de pruebas de aceptaci\'{o}n propuestos por INSITE, cuyos resultados permitieron determinar que el software Spectrasoft cumple con todos los requerimientos y objetivos definidos.
+	El desarrollo de un software incluye verificar y validar que \'{e}ste se encuentre libre de errores y que se haya logrado el objetivo de su dise\~{n}o. En este sentido, se realizaron pruebas de funcionalidad empleando el modelo de guiones de prueba y de pruebas de aceptaci\'{o}n propuestos por \citeA{INSITE}, cuyos resultados permitieron determinar que el software Spectrasoft cumple con todos los requerimientos y objetivos definidos.
 	
-	Las pruebas de usabilidad se realizaron utilizando las heur\'{i}sticas de \cite{Nielsen}, tomando \'{u}nicamente los \'{i}tems de evaluaci\'{o}n que se pudieran aplicar en el software y adapt\'{a}ndolos para ese fin; dichas pruebas de usabilidad mostraron que el software Spectrasoft cumple con el atributo de usabilidad, necesario para ser considerado un software de calidad. Tales pruebas y las constancias de aceptaci\'{o}n firmadas por los clientes est\'{a}n disponibles en los anexos comprendidos desde el C, hasta el F.
+	Las pruebas de usabilidad se realizaron utilizando las heur\'{i}sticas de \citeA{Nielsen}, tomando \'{u}nicamente los \'{i}tems de evaluaci\'{o}n que se pudieran aplicar en el software y adapt\'{a}ndolos para ese fin; dichas pruebas de usabilidad mostraron que el software Spectrasoft cumple con el atributo de usabilidad, necesario para ser considerado un software de calidad. Tales pruebas y las constancias de aceptaci\'{o}n firmadas por los clientes est\'{a}n disponibles en los anexos comprendidos desde el C, hasta el F.
 	
 	\subsection{C\'{a}lculo de los valores triest\'{i}mulo CIE XYZ}
 	Para verificar que la implementaci\'{o}n de la f\'{o}rmula para calcular los valores triest\'{i}mulo CIE XYZ	es correcta, se realiz\'{o} una medici\'{o}n a la placa de diagn\'{o}stico de HunterLab con el MiniScan XE Plus, utilizando el Spectrasoft para calcular los valores triest\'{i}mulo de la misma. Esta placa proporciona valores triest\'{i}mulo de control, los cuales fueron le\'{i}dos de f\'{a}brica utilizando el iluminante est\'{a}ndar D65 y el observador est\'{a}ndar de 10\degree. Al comparar los valores triest\'{i}mulo calculados por el Spectrasoft con los valores triest\'{i}mulo de control de la placa, se puede observar que los valores se asemejan. La tabla 4.6 muestra los valores comparados.
@@ -671,11 +671,11 @@ QVector<float> absorcion(QVector<float> medicion){
 		
 		\item \textbf{Coordenadas del espacio CIELAB:} La f\'{o}rmula utilizada para calcular estas coordenadas no es m\'{a}s que la transformaci\'{o}n de los valores triest\'{i}mulo CIE XYZ, raz\'{o}n por la cual no hace falta realizar su verificaci\'{o}n.
 		
-		\item \textbf{Coeficiente de absorci\'{o}n:} La f\'{o}rmula utilizada para determinar este coeficiente es la definida por \cite{Narea}, en cuyo art\'{i}culo deja documentadas las pruebas y los an\'{a}lisis relacionados con la misma, por este motivo esta f\'{o}rmula no es verificada.
+		\item \textbf{Coeficiente de absorci\'{o}n:} La f\'{o}rmula utilizada para determinar este coeficiente es la definida por \citeA{Narea}, en cuyo art\'{i}culo deja documentadas las pruebas y los an\'{a}lisis relacionados con la misma, por este motivo esta f\'{o}rmula no es verificada.
 		
-		\item \textbf{\'{I}ndice de eritema:} La f\'{o}rmula utilizada para determinar este \'{i}ndice es la definida por \cite{Wagner}, en cuyo art\'{i}culo deja documentadas las pruebas y los an\'{a}lisis relacionados con la misma, por esta raz\'{o}n no es verificada.
+		\item \textbf{\'{I}ndice de eritema:} La f\'{o}rmula utilizada para determinar este \'{i}ndice es la definida por \citeA{Wagner}, en cuyo art\'{i}culo deja documentadas las pruebas y los an\'{a}lisis relacionados con la misma, por esta raz\'{o}n no es verificada.
 	\end{itemize}
 	
 \section{Colores utilizados en el software}
 
-	Es importante destacar que los colores utilizados en las gr\'{a}ficas generadas por el Spectrasoft son referencias visuales, por lo tanto no son una reproducci\'{o}n real de los colores que representan. De la misma manera, los colores utilizados para representar los fototipos de piel en el Spectrasoft son solamente referencias visuales de la escala propuesta por \cite{Fitzpatrick}.
+	Es importante destacar que los colores utilizados en las gr\'{a}ficas generadas por el Spectrasoft son referencias visuales, por lo tanto no son una reproducci\'{o}n real de los colores que representan. De la misma manera, los colores utilizados para representar los fototipos de piel en el Spectrasoft son solamente referencias visuales de la escala propuesta por \citeA{Fitzpatrick}.

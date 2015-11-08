@@ -17,8 +17,8 @@
 \usepackage{multirow}
 \usepackage[spanish,es-tabla,es-lcroman]{babel}
 \selectlanguage{spanish}
-\usepackage[authoryear,datebegin]{flexbib}
-\bibliographystyle{flexbib}
+\usepackage{apacite}
+\bibliographystyle{apacite}
 \usepackage{fancyhdr}
 \fancyhead{}
 \fancyhead[L]{\nouppercase{\leftmark}}
@@ -148,6 +148,7 @@
 	\listoftables
 	\spacing{1.5} % interlineado
 	\include{introduccion}
+	\renewcommand{\BOthers}[1]{et al.,\hbox{}}
 	\include{capitulos/capitulo_1}
 	\include{capitulos/capitulo_2}
 	\include{capitulos/capitulo_3}
@@ -155,22 +156,7 @@
 	\include{capitulos/capitulo_5}
 	\nocite{*}
 	\renewcommand\bibname{Referencias}
-	\bibliography{bibliografia}
-
-	\titleformat{\chapter}[hang]
-	{\normalfont\bfseries}{\chaptertitlename\ \thechapter:}{1em}{}
-	\makeatletter
-	\def\ttl@mkchap@i#1#2#3#4#5#6#7{%
-    \ttl@assign\@tempskipa#3\relax\beforetitleunit
-    \vspace{\@tempskipa}%<<<<<< REMOVE THE * AFTER \vspace
-    \global\@afterindenttrue
-    \ifcase#5 \global\@afterindentfalse\fi
-    \ttl@assign\@tempskipb#4\relax\aftertitleunit
-    \ttl@topmode{\@tempskipb}{%
-        \ttl@select{#6}{#1}{#2}{#7}}%
-    \ttl@finmarks  % Outside the box!
-    \@ifundefined{ttlp@#6}{}{\ttlp@write{#6}}}
-    \makeatother
+	\setlength\bibitemsep{10pt}
+	\bibliography{bibliografia}	
 	\include{capitulos/anexos}
-	
 \end{document}
