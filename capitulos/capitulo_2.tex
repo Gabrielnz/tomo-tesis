@@ -32,9 +32,13 @@
 	
 	\subsection{Absorbancia aparente}
 	
-	Seg\'{u}n el \textit{Random House Kernerman Webster's College Dictionary} (2010), el espectro de absorci\'{o}n es la radiaci\'{o}n electromagn\'{e}tica en ciertas longitudes de onda que atraviesa un medio, y que es absorbida por el mismo. En cierto modo, es el opuesto del espectro de reflectancia, es decir, es la luz que no es re-emitida por el tejido en estudio hacia la superficie irradiada, y que aparentemente est\'{a} siendo absorbida por el mismo. 
+	Seg\'{u}n el \textit{Random House Kernerman Webster's College Dictionary} (2010), el espectro de absorci\'{o}n es la radiaci\'{o}n electromagn\'{e}tica en ciertas longitudes de onda que atraviesa un medio, y que es absorbida por el mismo. En cierto modo, es el opuesto del espectro de reflectancia, es decir, es la luz que est\'{a} siendo absorbida aparentemente por el tejido en estudio, y que no est\'{a} siendo reflejada de vuelta al MiniScan XE Plus. Recordando que la reflectancia es multiplicada por un factor de 100 por el MiniScan XE Plus, la absorbancia se puede calcular con la ecuaci\'{o}n \ref{eq:absorbancia}.
 	
-	Por lo tanto, la absorbancia aparente es la luz que est\'{a} siendo absorbida aparentemente por el tejido en estudio, y que no est\'{a} siendo reflejada de vuelta al MiniScan XE Plus. La misma se puede calcular de la siguiente manera: $A(\lambda) = 100 - R(\lambda)$ (recordando que la reflectancia es multiplicada por un factor de 100 por el MiniScan XE Plus) y se puede representar en forma de curva, de la misma manera que la reflectancia difusa.
+\begin{equation}\label{eq:absorbancia}
+	A(\lambda) = 100 - R(\lambda)
+\end{equation}	
+	 
+	 Los valores resultantes se pueden representar en forma de curva, de la misma manera que la reflectancia difusa.
 
 	\subsection{Iluminante est\'{a}ndar D65}
 		
@@ -178,7 +182,7 @@
 			k = \frac{100}{\sum_{\lambda} S(\lambda) \overline{y}(\lambda)d\lambda}
 		\end{equation}
 		
-		De acuerdo con la recomendaci\'{o}n de la CIE, la integraci\'{o}n en las f\'{o}rmulas \ref{eq:X}, \ref{eq:Y} y \ref{eq:Z} puede llevarse a cabo con una sumatoria num\'{e}rica, con intervalos de longitud de onda equivalentes a 10 nan\'{o}metros para el caso del MiniScan XE Plus. Tomando en cuenta esto, los valores triest\'{i}mulo CIE XYZ ahora son calculados con las ecuaciones \ref{eq:Xsum}, \ref{eq:Ysum} y \ref{eq:Zsum}.
+		De acuerdo con la recomendaci\'{o}n de la CIE, la integraci\'{o}n en las f\'{o}rmulas \ref{eq:X}, \ref{eq:Y} y \ref{eq:Z} puede llevarse a cabo con una sumatoria num\'{e}rica, con intervalos de longitud de onda equivalentes a 10 nan\'{o}metros para el caso del MiniScan XE Plus. Tomando en cuenta esto, los valores triest\'{i}mulo CIE XYZ se calculan con las ecuaciones \ref{eq:Xsum}, \ref{eq:Ysum} y \ref{eq:Zsum}.
 		
 		\begin{equation}\label{eq:Xsum}
 			X = k \sum_{\lambda} R(\lambda) S(\lambda) \overline{x}(\lambda)\bigtriangleup\lambda
