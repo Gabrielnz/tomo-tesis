@@ -45,7 +45,7 @@
 		El tipo de luz bajo el cual se observa un objeto puede afectar su apariencia. Para cuantificar estas fuentes de luz blanca, la \textit{Commission Internationale de l'Eclairage} (CIE) desarroll\'{o} iluminantes est\'{a}ndares para la medici\'{o}n del color.
 		\citeA{HunterLab} define el iluminante como una tabla cuantificable de n\'{u}meros que representan la energ\'{i}a relativa en comparaci\'{o}n con la longitud de onda de una fuente de luz. 
 		
-		El iluminante est\'{a}ndar D65, seg\'{u}n es descrito por la \citeA{CIE}, tiene el prop\'{o}sito de representar la luz de d\'{i}a promedio, y tiene una temperatura de color correlacionada de aproximadamente 6500 K\degree. Los valores num\'{e}ricos que representan este iluminante se muestran en la tabla 2.1, y su representaci\'{o}n gr\'{a}fica se ilustra en la figura 2.2.
+		El iluminante est\'{a}ndar D65, seg\'{u}n es descrito por la \citeA{CIE}, tiene el prop\'{o}sito de representar la luz de d\'{i}a promedio, y tiene una temperatura de color correlacionada de aproximadamente 6500 grados Kelvin. Los valores num\'{e}ricos que representan este iluminante se muestran en la tabla 2.1, y su representaci\'{o}n gr\'{a}fica se ilustra en la figura 2.2.
 		
 \newpage
 
@@ -99,17 +99,17 @@
 			\caption[Representaci\'{o}n gr\'{a}fica del iluminante est\'{a}ndar D65]{\textit{Representaci\'{o}n gr\'{a}fica del iluminante est\'{a}ndar D65} (Fuente: Autor).}
 	\end{figure}
 
-	\subsection{Observador est\'{a}ndar de 10\degree}
+	\subsection{Observador est\'{a}ndar de 10 grados}
 	
 		\citeA{HunterLab-applications} describe que en la observaci\'{o}n visual, el observador es el ojo humano que recibe la luz reflejada desde o a trav\'{e}s de un objeto, y el cerebro el cual percibe la visi\'{o}n. Debido a que los humanos perciben el color y la apariencia de formas distintas, subjetivamente, se han hecho intentos para estandarizar el observador humano como una representaci\'{o}n de lo que una persona promedio ve u observa.
 		
-		En 1964, se desarroll\'{o} la funci\'{o}n del observador est\'{a}ndar CIE de 10\degree, denominado as\'{i} debido a que los experimentos llevados a cabo para establecer dicho est\'{a}ndar involucraron a sujetos que juzgaban colores, mientras observaban a trav\'{e}s de un agujero que les permit\'{i}a tener un campo de visi\'{o}n de 10\degree. Este observador est\'{a}ndar, en la forma de una funci\'{o}n matem\'{a}tica de la respuesta humana a cada longitud de onda de luz, es utilizado en c\'{a}lculos del color. Los valores num\'{e}ricos de las funciones que representan este est\'{a}ndar se muestran en la tabla 2.2, y su representaci\'{o}n gr\'{a}fica se ilustra en la figura 2.3.
+		En 1964, se desarroll\'{o} la funci\'{o}n del observador est\'{a}ndar CIE de 10 grados, denominado as\'{i} debido a que los experimentos llevados a cabo para establecer dicho est\'{a}ndar involucraron a sujetos que juzgaban colores, mientras observaban a trav\'{e}s de un agujero que les permit\'{i}a tener un campo de visi\'{o}n de 10 grados. Este observador est\'{a}ndar, en la forma de una funci\'{o}n matem\'{a}tica de la respuesta humana a cada longitud de onda de luz, es utilizado en c\'{a}lculos del color. Los valores num\'{e}ricos de las funciones que representan este est\'{a}ndar se muestran en la tabla 2.2, y su representaci\'{o}n gr\'{a}fica se ilustra en la figura 2.3.
 
 \newpage
 
 	\begin{table}[h]
 		\small
-		\caption[Valores del observador de 10\degree]{\textit{Valores del observador de 10\degree} (Fuente: CIE, 2004).}
+		\caption[Valores del observador de 10 grados]{\textit{Valores del observador de 10 grados} (Fuente: CIE, 2004).}
 		\centering
 		\setlength{\extrarowheight}{\altocelda}
 		\begin{tabulary}{\anchotabla}{|c|c|c|c|}
@@ -155,7 +155,7 @@
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.6]{img/curva-observador.jpg}
-			\caption[Representaci\'{o}n gr\'{a}fica del observador de 10\degree]{\textit{Representaci\'{o}n gr\'{a}fica del observador de 10\degree. La l\'{i}nea roja representa la funci\'{o}n $\overline{x}(\lambda)$, la l\'{i}nea verde representa la funci\'{o}n $\overline{y}(\lambda)$, y la l\'{i}nea azul representa la funci\'{o}n $\overline{z}(\lambda)$.} (Fuente: Autor).}
+			\caption[Representaci\'{o}n gr\'{a}fica del observador de 10 grados]{\textit{Representaci\'{o}n gr\'{a}fica del observador de 10 grados. La l\'{i}nea roja representa la funci\'{o}n $\overline{x}(\lambda)$, la l\'{i}nea verde representa la funci\'{o}n $\overline{y}(\lambda)$, y la l\'{i}nea azul representa la funci\'{o}n $\overline{z}(\lambda)$.} (Fuente: Autor).}
 	\end{figure}
 	
 	\subsection{Coordenadas de cromaticidad CIE xyz}
@@ -176,7 +176,7 @@
 			Z = k \int_{400 \text{ nm}}^{700 \text{ nm}} R(\lambda) S(\lambda) \overline{z}(\lambda)d\lambda
 		\end{equation}				
 		
-		En donde $R(\lambda)$ es el factor de reflectancia difusa, $S(\lambda)$ es la distribuci\'{o}n de energ\'{i}a espectral relativa de un iluminante est\'{a}ndar, en este caso del iluminante D65 (v\'{e}ase la tabla 2.1), $\overline{x}(\lambda)$, $\overline{y}(\lambda)$ y $\overline{z}(\lambda)$ son las funciones de correspondencia del color, dado el observador est\'{a}ndar CIE de 10\degree (v\'{e}ase la tabla 2.2), y por \'{u}ltimo, $k$ es una constante que se calcula con la f\'{o}rmula \ref{eq:k}.
+		En donde $R(\lambda)$ es el factor de reflectancia difusa, $S(\lambda)$ es la distribuci\'{o}n de energ\'{i}a espectral relativa de un iluminante est\'{a}ndar, en este caso del iluminante D65 (v\'{e}ase la tabla 2.1), $\overline{x}(\lambda)$, $\overline{y}(\lambda)$ y $\overline{z}(\lambda)$ son las funciones de correspondencia del color, dado el observador est\'{a}ndar CIE de 10 grados (v\'{e}ase la tabla 2.2), y por \'{u}ltimo, $k$ es una constante que se calcula con la f\'{o}rmula \ref{eq:k}.
 		
 		\begin{equation}\label{eq:k}
 			k = \frac{100}{\sum_{\lambda} S(\lambda) \overline{y}(\lambda)d\lambda}
@@ -237,7 +237,7 @@
 		$$\text{Donde } f(Z/Z_n) = (Z/Z_n)^{1/3} \text{ si } (Z/Z_n) > (24/116)^3$$
 		$$f(Z/Z_n) = (841/108)(Z/Z_n) + 16/116 \text{ si } (Z/Z_n) \leq (24/116)^3$$
 		
-		En donde $X$, $Y$, $Z$ son los valores triest\'{i}mulo del color considerado del objeto o tejido en estudio y $X_n$, $Y_n$, $Z_n$ son los valores triest\'{i}mulo de la fuente de luz. Para el caso del iluminante est\'{a}ndar D65, y tomando en cuenta el observador est\'{a}ndar de 10\degree, los valores de $X_n$, $Y_n$, $Z_n$ son $X_n = 94.81$ $Y_n = 100.00$ y $Z_n = 107.32$.
+		En donde $X$, $Y$, $Z$ son los valores triest\'{i}mulo del color considerado del objeto o tejido en estudio y $X_n$, $Y_n$, $Z_n$ son los valores triest\'{i}mulo de la fuente de luz. Para el caso del iluminante est\'{a}ndar D65, y tomando en cuenta el observador est\'{a}ndar de 10 grados, los valores de $X_n$, $Y_n$, $Z_n$ son $X_n = 94.81$ $Y_n = 100.00$ y $Z_n = 107.32$.
 
 	\subsection{Coeficiente de absorci\'{o}n}
 	
