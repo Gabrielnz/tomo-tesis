@@ -23,10 +23,6 @@
 \chapter{Manual de instalaci\'{o}n}
 \thispagestyle{fancy}
 
-\begin{center}
-	\includegraphics[width=0.10\textwidth]{./img/logo_gris.png}
-\end{center}
-
 \section*{Requerimientos del sistema}
 
 \begin{enumerate}
@@ -494,10 +490,6 @@ Si desea entrar al men\'{u} del Spectrasoft, abra el men\'{u} de inicio de Windo
 %%%%%%%%%%%%%%%%%%%%%%
 \chapter{Manual de usuario}
 \thispagestyle{fancy}
-
-\begin{center}
-	\includegraphics[width=0.10\textwidth]{./img/logo.png}
-\end{center}
 
 \vfill
 \section*{Introducci\'{o}n}
@@ -979,6 +971,77 @@ Si desea entrar al men\'{u} del Spectrasoft, abra el men\'{u} de inicio de Windo
 \caption[]{Eliminar usuario\label{fig:eliminar-usuario}}
 \end{figure}
 \vfill
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Manual del desarrollador}
+\thispagestyle{fancy}
+
+\section{Requerimientos del sistema}
+
+	Antes de instalar el software requerido para desarrollar en el Spectrasoft, se debe seguir el manual de instalaci\'{o}n del mismo.
+	
+\subsection*{Software requerido para el desarrollo}
+
+	\begin{itemize}
+	
+		\item Framework de desarrollo Qt versi\'{o}n \textit{open source} 5.4.1.
+		
+		\item Sistema de control de versiones git versi\'{o}n 1.9.5.
+	\end{itemize}
+
+\section*{Descargas previas}
+
+\begin{enumerate}
+	\item \textbf{Proyecto MSXEBridge:} https://github.com/Gabnz/MSXEBridge/.
+	
+	\item \textbf{Proyecto Spectrasoft:} https://github.com/Gabnz/Spectrasoft/.
+\end{enumerate}
+
+\section*{Descripci\'{o}n de los proyectos}
+
+\begin{enumerate}
+	\item \textbf{Proyecto MSXEBridge:} librer\'{i}a intermediaria entre el OCX Kit del MiniScan XE Plus y el Spectrasoft, que contiene la l\'{o}gica necesaria para la utilizaci\'{o}n de las funciones comunmente usadas de dicho instrumento. La misma est\'{a} escrita en el lenguaje Visual Basic .NET.
+	
+	\item \textbf{Proyecto Spectrasoft:} software para el manejo del MiniScan XE Plus, escrito en el lenguaje C++ y desarrollado en el \textit{framework} Qt.
+\end{enumerate}
+
+\section*{Contenido del proyecto Spectrasoft}
+
+Los siguientes archivos y carpetas est\'{a}n ubicados dentro de la carpeta ra\'{i}z del proyecto Spectrasoft.
+
+\begin{enumerate}
+	\item \textbf{mainwindow.h y mainwindow.cpp:} estos archivos contienen la definici\'{o}n y la implementaci\'{o}n de las funciones principales del Spectrasoft, respectivamente.
+	
+	\item \textbf{miniscanxe.h y miniscanxe.cpp:} estos archivos contienen la definici\'{o}n y la implementaci\'{o}n de las funciones de comunicaci\'{o}n con el MSXEBridge, respectivamente.
+	
+	\item \textbf{spectralops.h y spectralops.cpp:} estos archivos contienen la definici\'{o}n y la implementaci\'{o}n de las f\'{o}rmulas y funciones que utilizan los datos espectrales del MiniScan XE Plus como insumo.
+	
+	\item \textbf{polyfit.h y polyfit.cpp:} estos archivos contienen la definici\'{o}n y la implementaci\'{o}n del ajuste polinomial utilizado para calcular el coeficiente de absorci\'{o}n.
+	
+	\item \textbf{img\textbackslash:} esta carpeta contiene todas las im\'{a}genes e \'{i}conos utilizados en el Spectrasoft.
+	
+	\item \textbf{recursos.qrc:} este archivo administra todos los recursos del proyecto Spectrasoft, incluyendo im\'{a}genes e \'{i}conos.
+	
+	\item \textbf{deployment-test\textbackslash:} esta carpeta contiene la estructura de carpetas necesaria para realizar un \textit{deploy} de la aplicaci\'{o}n Spectrasoft.
+	
+	\item \textbf{database\textbackslash:} esta carpeta contiene el respaldo de la estructura de la base de datos spectradb, en las extensiones <<.backup>> y <<.sql>>.
+	
+	\item \textbf{Archivos <<.h>> y <<.cpp>> con el prefijo <<dlg>>:} estos archivos contienen la definici\'{o}n y la implementaci\'{o}n de cada una de las vistas disponibles en el Spectrasoft.
+	
+	\item \textbf{Archivos con extensi\'{o}n <<.ui>>:} estos archivos definen las interfaces gr\'{a}ficas de usuario de cada una de sus vistas respectivas en el Spectrasoft.
+\end{enumerate}
+
+\subsection*{Librer\'{i}as de terceros}
+
+	\begin{enumerate}
+		
+		\item \textbf{QtXlsx:} exporta datos almacenados en Qt a hojas de c\'{a}lculo con extensi\'{o}n xlsx. Los archivos de esta librer\'{i}a est\'{a}n ubicados en la carpeta <<qtxlsx\textbackslash>>.
+		
+		\item \textbf{QCustomPlot:} permite realizar visualizaci\'{o}n y trazado de datos en Qt. La cabecera de esta librer\'{i}a es <<qcustomplot.h>> y la implementaci\'{o}n de la misma es <<qcustomplot.cpp>>.
+		
+		\item \textbf{MSV:} determina el tipo de piel en pacientes. Los archivos de la misma est\'{a}n ubicados en la carpeta <<clasificador\textbackslash>>.
+	\end{enumerate}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2058,3 +2121,69 @@ Escala (50\%, 0\%] $\rightarrow$ malo
 	\end{flushright}
 \end{minipage}
 \vfill
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%
+\newgeometry{top=3cm, bottom=3cm, left=4cm,right=3cm}
+\fontsize{12pt}{12pt}\selectfont
+\fancyheadoffset{0cm}
+\chapter{Protocolo de respaldo y recuperaci\'{o}n de la base de datos}
+\thispagestyle{fancy}
+
+El respaldo de los datos de la base de datos spectradb se debe realizar de forma semanal.
+
+\section*{Respaldar datos}
+
+En la aplicaci\'{o}n pgAdmin, haga click con el bot\'{o}n derecho al esquema <<spectradb>> y seleccione la opci\'{o}n <<Backup...>> ( v\'{e}ase la figura \ref{fig:respaldar1}).
+\vfill
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.7\linewidth]{./img/respaldar1.jpg}
+\caption[]{Opci\'{o}n de respaldo\label{fig:respaldar1}}
+\end{figure}
+\vfill
+\newpage
+
+Haga click en el bot\'{o}n <<...>>, seleccione la ubicaci\'{o}n y el nombre del archivo de respaldo (v\'{e}ase la figura \ref{fig:respaldar2}).
+\vfill
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.6\linewidth]{./img/respaldar2.jpg}
+\caption[]{Archivo de respaldo\label{fig:respaldar2}}
+\end{figure}
+\vfill
+
+En la pesta\~{n}a <<Dump Options \#1>>, seleccione \'{u}nicamente la opci\'{o}n <<Data>>, y por \'{u}ltimo haga click en el bot\'{o}n <<Backup>> (v\'{e}ase la figura \ref{fig:respaldar3}).
+restaurar
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.6\linewidth]{./img/respaldar3.jpg}
+\caption[]{Respaldar datos\label{fig:respaldar3}}
+\end{figure}
+restaurar
+\newpage
+\section*{Restaurar datos}
+
+En la aplicaci\'{o}n pgAdmin, haga click con el bot\'{o}n derecho al esquema <<spectradb>> y seleccione la opci\'{o}n <<Restore...>> ( v\'{e}ase la figura \ref{fig:restaurar1}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.6\linewidth]{./img/restaurar1.jpg}
+\caption[]{Opci\'{o}n de restauraci\'{o}n\label{fig:restaurar1}}
+\end{figure}
+
+Haga click en el bot\'{o}n <<...>>, ubique y seleccione el nombre del archivo de respaldo (v\'{e}ase la figura \ref{fig:restaurar2}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.6\linewidth]{./img/restaurar2.jpg}
+\caption[]{Archivo de respaldo\label{fig:restaurar2}}
+\end{figure}
+
+En la pesta\~{n}a <<Restore Options \#1>>, seleccione \'{u}nicamente la opci\'{o}n <<Data>>, y por \'{u}ltimo haga click en el bot\'{o}n <<Restore>> (v\'{e}ase la figura \ref{fig:restaurar3}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.7\linewidth]{./img/restaurar3.jpg}
+\caption[]{Restaurar datos\label{fig:restaurar3}}
+\end{figure}
