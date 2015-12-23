@@ -332,7 +332,25 @@
 				
 		\end{itemize}
 
-\section{Tecnolog\'{i}as y recursos utilizados}
+\section{Recursos y tecnolog\'{i}as utilizados}
+
+	\subsection{Recursos}
+	
+		\begin{itemize}
+			
+			\item \textbf{Adaptador RS232-USB:} es un cable adaptador que habilita la comunicaci\'{o}n de dispositivos que utilizan puerto serial con computadoras que disponen de puertos USB, creando puertos COM virtuales con las mismas mientras se realiza dicha comunicaci\'{o}n. Este cable es utilizado como adaptador para el cable de comunicaci\'{o}n RS232 DB-9 hembra a RJ-45 del MiniScan XE Plus, habilitando su utilizaci\'{o}n en computadoras que no poseen puerto serial.
+			
+			\item \textbf{MiniScan XE Plus OCX Kit (MSXE.ocx):} es un archivo dise\~{n}ado por la empresa HunterLab para controlar y realizar mediciones con el MiniScan XE Plus. Su objetivo es proporcionar a los desarrolladores un componente reutilizable de software que d\'{e} acceso a las caracter\'{i}sticas comunmente utilizadas por el instrumento.
+			
+			\item \textbf{MiniScan XE Plus:} es un instrumento de medici\'{o}n del color creado por la empresa HunterLab, de dise\~{n}o compacto y port\'{a}til, que emplea la t\'{e}cnica de espectroscop\'{i}a de reflectancia difusa, el cual se puede apreciar en la figura 4.9. Este instrumento mide la cantidad de luz que refleja una muestra dentro de un rango de longitudes de onda que va desde los 400 hasta los 700 nan\'{o}metros, generando como resultado 31 puntos espectrales dentro de ese rango, que son el insumo principal del Spectrasoft.
+			
+		\end{itemize}
+		
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=1]{img/MiniScanXEPlus.png}
+			\caption[MiniScan XE Plus]{\textit{MiniScan XE Plus} (Fuente: HunterLab, 2006).}
+	\end{figure}
 
 	\subsection{Tecnolog\'{i}as}
 	
@@ -350,24 +368,7 @@
 			
 			\item \textbf{QtXlsx:} es una librer\'{i}a \textit{open source} para Qt que permite leer y escribir archivos con extensi\'{o}n xlsx. Esta librer\'{i}a fue utilizada para implementar en el Spectrasoft la opci\'{o}n de exportar los resultados de una muestra a un archivo port\'{a}til, manejable por medio de aplicaciones de hojas de c\'{a}lculo.
 		\end{itemize}
-	
-	\subsection{Recursos}
-	
-		\begin{itemize}
-			
-			\item \textbf{Adaptador RS232-USB:} es un cable adaptador que habilita la comunicaci\'{o}n de dispositivos que utilizan puerto serial con computadoras que disponen de puertos USB, creando puertos COM virtuales con las mismas mientras se realiza dicha comunicaci\'{o}n. Este cable es utilizado como adaptador para el cable de comunicaci\'{o}n RS232 DB-9 hembra a RJ-45 del MiniScan XE Plus, habilitando su utilizaci\'{o}n en computadoras que no poseen puerto serial.
-			
-			\item \textbf{MiniScan XE Plus OCX Kit (MSXE.ocx):} es un archivo dise\~{n}ado por la empresa HunterLab para controlar y/o realizar mediciones con el MiniScan XE Plus. Su objetivo es proporcionar a los desarrolladores un componente reutilizable de software que d\'{e} acceso a las caracter\'{i}sticas comunmente utilizadas por el instrumento.
-			
-			\item \textbf{MiniScan XE Plus:} es un instrumento de medici\'{o}n del color creado por la empresa HunterLab, de dise\~{n}o compacto y port\'{a}til, que emplea la t\'{e}cnica de espectroscop\'{i}a de reflectancia difusa, el cual se puede apreciar en la figura 4.9. Este instrumento mide la cantidad de luz que refleja una muestra dentro de un rango de longitudes de onda que va desde los 400 hasta los 700 nan\'{o}metros, generando como resultado 31 puntos espectrales dentro de ese rango, que son el insumo principal del Spectrasoft.
-			
-		\end{itemize}
-		
-	\begin{figure}[H]
-		\centering
-		\includegraphics[scale=1]{img/MiniScanXEPlus.png}
-			\caption[MiniScan XE Plus]{\textit{MiniScan XE Plus} (Fuente: HunterLab, 2006).}
-	\end{figure}
+
 \newpage
 \section{Comunicaci\'{o}n con el MiniScan XE Plus}
 
